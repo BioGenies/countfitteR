@@ -28,13 +28,13 @@ plot_fitlist <- function(fitlist) {
                lowest_BIC = ifelse(1L:nrow(single_count_dat) == which.min(single_count_dat[["BIC"]]), TRUE, FALSE))
   }))
 
-  ggplot(plot_dat, aes(x = model, y = lambda, ymax = upper, ymin = lower, color = lowest_BIC)) +
-    geom_point() +
-    geom_errorbar(width = 0.5) +
-    facet_wrap(~ count) +
-    scale_x_discrete("Model") +
-    scale_y_continuous(expression(lambda)) +
-    scale_color_discrete("The lowest BIC") +
+  ggplot2::ggplot(plot_dat, aes(x = model, y = lambda, ymax = upper, ymin = lower, color = lowest_BIC)) +
+    ggplot2::geom_point() +
+    ggplot2::geom_errorbar(width = 0.5) +
+    ggplot2::facet_wrap(~ count) +
+    ggplot2::scale_x_discrete("Model") +
+    ggplot2::scale_y_continuous(expression(lambda)) +
+    ggplot2::scale_color_discrete("The lowest BIC") +
     my_theme
 }
 

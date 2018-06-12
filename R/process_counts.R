@@ -33,10 +33,10 @@ get_occs <- function(count_list)
 
 
 plot_occs <- function(occs)
-  ggplot(occs, aes(x = x, y = n, label = n)) +
-  geom_bar(stat = "identity") +
-  geom_text(vjust = -0.25) +
-  scale_y_continuous("Frequency", limits = c(0, max(occs[["n"]]*1.2))) +
-  scale_x_continuous("Count") +
-  facet_wrap(~ count, ncol = 1) +
+  ggplot2::ggplot(occs, aes(x = x, y = n, label = n)) +
+  ggplot2::geom_bar(stat = "identity") +
+  ggplot2::geom_text(vjust = -0.25) +
+  ggplot2::scale_y_continuous("Frequency", limits = c(0, max(occs[["n"]]*1.2))) +
+  ggplot2::scale_x_continuous("Count") +
+  ggplot2::facet_wrap(~ count, ncol = 1) +
   my_theme

@@ -48,10 +48,10 @@ compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "al
 }
 
 plot_fitcmp <- function(fitcmp) {
-  ggplot(fitcmp, aes(x = x, y = value)) +
-    geom_bar(stat = "identity", fill = NA, color = "black") +
-    facet_grid(model ~ count) +
-    geom_point(aes(x = x, y = n, color = "red")) +
-    scale_color_discrete(guide = FALSE) +
+  ggplot2::ggplot(fitcmp, aes(x = x, y = value)) +
+    ggplot2::geom_bar(stat = "identity", fill = NA, color = "black") +
+    ggplot2::facet_grid(model ~ count) +
+    ggplot2::geom_point(aes(x = x, y = n, color = "red")) +
+    ggplot2::scale_color_discrete(guide = FALSE) +
     my_theme
 }

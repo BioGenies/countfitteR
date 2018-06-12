@@ -46,11 +46,11 @@ cmp_dat <- compare_fit(plot_sim, fit_counts(plot_sim, separate = TRUE, model = "
 
 
 png("abstract_BIC.png", height = 480, width = 480)
-ggplot(cmp_dat, aes(x = x, y = value, fill = distr)) +
-  geom_bar(stat = "identity", color = "black", position = "dodge") +
-  facet_wrap( ~ model, ncol = 1) +
-  scale_y_continuous("n") +
-  scale_fill_manual("", values = c("cadetblue", "orangered")) +
+ggplot2::ggplot(cmp_dat, aes(x = x, y = value, fill = distr)) +
+  ggplot2::geom_bar(stat = "identity", color = "black", position = "dodge") +
+  ggplot2::facet_wrap( ~ model, ncol = 1) +
+  ggplot2::scale_y_continuous("n") +
+  ggplot2::scale_fill_manual("", values = c("cadetblue", "orangered")) +
   abstr_theme
 dev.off()
 

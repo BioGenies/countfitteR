@@ -1,6 +1,6 @@
 
 fit_pois_separate <- function(x, level, ...) {
-  fit <- glm(x ~ 1, family = poisson(link = "log"), ...)
+  fit <- stats::glm(x ~ 1, family = poisson(link = "log"), ...)
 
   confint_raw <- exp(suppressMessages(confint(fit, level =  level)))
   confint <- matrix(confint_raw, ncol = 2, dimnames = list("lambda", c("lower", "upper")))
