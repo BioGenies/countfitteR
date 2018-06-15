@@ -4,7 +4,7 @@ library(reshape2)
 
 size_mod <- 1
 
-abstr_theme <- theme(
+abstr_theme <- ggplot2::theme(
   axis.text = element_text(size=13 + size_mod),
   axis.title.x = element_text(size=14 + size_mod, vjust = -1),
   axis.title.y = element_text(size=14 + size_mod, vjust = 1),

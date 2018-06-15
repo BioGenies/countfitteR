@@ -1,3 +1,6 @@
+#' Function that creates a list of fitted models
+#'
+#' @name fit_counts
 #' @param separate \code{logical}. If \code{TRUE}, each count is separately fitted
 #' to the model. If \code{FALSE}, all counts are fitted to the same models having
 #' the count name as the independent variable.

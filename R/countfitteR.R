@@ -2,11 +2,11 @@
 #'
 #' Launches graphical user interface that counts double strand breaks.
 #'
+#' @name countfitteR_gui
+#'
 #' @section Warning : Any ad-blocking software may cause malfunctions.
 #'
-#' @param  Location of server.R and ui.R for shiny app to run.
-#'
-# @keywords
+#' @keywords
 #'
 #' @export countfitteR_gui
 #'

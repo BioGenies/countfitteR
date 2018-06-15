@@ -1,4 +1,8 @@
-functions <- c('check_overdispersion.R', 'compare_fit.R', 'distrs.R',
+#' Loads all important functions
+#'
+#' @name load_all_func
+
+functions <- c('compare_fit.R', 'distrs.R',
                'fit_counts.R', 'fit_counts_separate.R', 'fit_counts_whole.R',
                'fitlist.R', 'ggtheme.R', 'process_counts.R',
                'utils.R', 'zeroinfl2.R')

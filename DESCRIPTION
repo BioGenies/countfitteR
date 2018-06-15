@@ -1,9 +1,11 @@
 Package: countfitteR
 Type: Package
-Title: Software to select the most appropriate count distribution
+Title: Software that predicts the most appropriate count distribution
 Version: 1.0
-Author@R: c(person("Michal", "Burdukiewicz", email = "michalburdukiewicz@gmail.com", role = c("cre", "aut")),
-    person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb"))
+Author@R: c(
+	person("Michal", "Burdukiewicz", email = "michalburdukiewicz@gmail.com", role = c("cre", "aut")),
+	person("Stefan", "Roediger", email = "stefan.roedigier@b-tu.de", role = "ctb"))
+	person("Jaroslaw", "Chilimoniuk", email = "jaroslaw.chilimoniuk@gmail.com", role = "ctb"))
 Maintainer: The package maintainer <michalburdukiewicz@gmail.com>
 Description: countfitter is a web server for selecting the most appropriate count distribution to the dataset supplied by an user.
 License: GPL-3
@@ -12,7 +14,7 @@ LazyData: true
 Date: 2018-04-01
 URL: https://github.com/michbur/countfitter
 BugReports: https://github.com/michbur/countfitter/issues
-RoxygenNote: NA
+RoxygenNote: 6.0.1
 Imports: shiny,
     ggplot2,
     MASS,

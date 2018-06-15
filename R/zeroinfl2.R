@@ -1,4 +1,19 @@
-# code in this file comes from the pscl package and was only slightly changes by few
+#' Zero-Inflated Count Data Regression
+#'
+#' Slightly changed code from \code{pscl} package.
+#'
+#' @param formula symbolic description of the model.
+#' @param data,subset,na.action arguments controlling formula processing via model.frame.
+#' @param weights optional numeric vector of weights.
+#' @param offset optional numeric vector with an a priori known component to be included in the linear predictor of the count model. See below for more information on offsets.
+#' @param dist character specification of count model family (a log link is always used).
+#' @param link character specification of link function in the binary zero-inflation model (a binomial family is always used).
+#' @param control a list of control arguments specified via zeroinfl.control.
+#' @param model,x,y logicals. If TRUE the corresponding components of the fit (model frame, response, model matrix) are returned.
+#' @param ... arguments passed to zeroinfl.control in the default setup.
+#' @export
+
+# code in this file comes from the pscl package and was only slightly changed by few
 # some error messages
 
 

@@ -9,8 +9,8 @@
 NULL
 
 #' @name example_counts
-#' @title An example data
-#' @description Data was created using from the healthy list data.
+#' @title An example dataset
+#' @description Data was created using the healthy list data (not provided in package)
 #' @docType data
 #' @format
 #' @keywords datasets

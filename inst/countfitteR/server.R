@@ -8,7 +8,7 @@ library(pscl)
 
 setwd("../..")
 
-source("./R/load_all.R")
+source("./R/load_all_func.R")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
@@ -36,7 +36,7 @@ shinyServer(function(input, output) {
         dat
     })
 
-    output[["hot_counts"]] = renderRHandsontable({
+    output[["hot_counts"]] = rhandsontable::renderRHandsontable({
         rhandsontable(raw_counts(), readOnly = FALSE, selectCallback = TRUE)
     })
 

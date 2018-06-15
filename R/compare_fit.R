@@ -1,3 +1,11 @@
+#' Functons that calculates and compares densities
+#'
+#' @name compare_fit
+NULL
+
+#' @rdname compare_fit
+#' @param single_fit
+#' @return Returns density function
 # returns density function
 
 get_density_fun <- function(single_fit) {
@@ -17,13 +25,20 @@ get_density_fun <- function(single_fit) {
   }
 }
 
-
+#' @rdname compare_fit
+#' @param fitlist
+#' @return Compares density functions
 compare_fit_single <- function(fitlist) {
   lapply(fitlist, function(single_fit)
     get_density_fun(single_fit)(occs[["x"]])
   )
 }
 
+#' @rdname compare_fit
+#' @param count_list List created by process_counts function.
+#' @param fitlist
+#' @return Returns density function
+#' @section Function that needs both input data and fits
 # function that needs both input data and fits
 
 compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "all")) {
@@ -46,7 +61,9 @@ compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "al
     cmp
   }))
 }
-
+#' @rdname compare_fit
+#' @param fitcmp
+#' @return Creates a plot
 plot_fitcmp <- function(fitcmp) {
   ggplot2::ggplot(fitcmp, aes(x = x, y = value)) +
     ggplot2::geom_bar(stat = "identity", fill = NA, color = "black") +

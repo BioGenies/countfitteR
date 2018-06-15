@@ -1,6 +1,17 @@
+#' Functions used in fit_counts
+#'
+#' Fits the model to all counts treating the count id as the independent variable.
+#'
+#' @name fit_counts_whole
+NULL
 
+#' @rdname fit_counts_whole
+#' @param x
+#' @param level
+#' @param ...
+#' @return
 fit_pois_whole <- function(x, level, ...) {
-  fit <- stats::glm(value ~ count_name - 1, data = x, family = poisson(link = "log"), ...)
+  fit <- glm(value ~ count_name - 1, data = x, family = poisson(link = "log"), ...)
   summ <- summary(fit)
 
   coefs <- exp(summ[["coefficients"]][, "Estimate"])
@@ -17,7 +28,11 @@ fit_pois_whole <- function(x, level, ...) {
   )
 }
 
-
+#' @rdname fit_counts_whole
+#' @param x
+#' @param level
+#' @param ...
+#' @return
 fit_nb_whole <- function(x, level, ...) {
   fit <- MASS::glm.nb(value ~ count_name - 1, data = x, ...)
   # the data is required for BIC computation
@@ -38,7 +53,11 @@ fit_nb_whole <- function(x, level, ...) {
   )
 }
 
-
+#' @rdname fit_counts_whole
+#' @param x
+#' @param level
+#' @param ...
+#' @return
 fit_zip_whole <- function(x, level, ...) {
   fit <- zeroinfl2(value ~ count_name - 1, data = x, dist = "poisson", ...)
   summ <- summary(fit)
@@ -60,7 +79,11 @@ fit_zip_whole <- function(x, level, ...) {
 }
 
 # the model is fitted to all counts treating the count id as the independent variable.
-
+#' @rdname fit_counts_whole
+#' @param x
+#' @param level
+#' @param ...
+#' @return
 fit_zinb_whole <- function(x, level, ...) {
   fit <- zeroinfl2(value ~ count_name - 1, data = x, dist = "negbin", ...)
   summ <- summary(fit)
@@ -83,9 +106,12 @@ fit_zinb_whole <- function(x, level, ...) {
   )
 }
 
-
+#' @rdname fit_counts_whole
+#' @param x
+#' @param model
+#' @return
 fit2fitlist <- function(x, model) {
-  BIC_val <- AIC(x[["fit"]], k = log(sum(!is.na(x[["fit"]][["data"]][["value"]]))))
+  BIC_val <- stats::AIC(x[["fit"]], k = log(sum(!is.na(x[["fit"]][["data"]][["value"]]))))
 
   fitlist <- lapply(1L:length(x[["coefficients"]]), function(single_count) {
     list(coefficients = x[["coefficients"]][[single_count]],
@@ -97,7 +123,12 @@ fit2fitlist <- function(x, model) {
   fitlist
 }
 
-
+#' @rdname fit_counts_whole
+#' @param x
+#' @param model
+#' @param level
+#' @param ...
+#' @return fit_counts_whole is used in fit_counts function
 fit_counts_whole <- function(x, model, level, ...) {
   tryCatch(fit2fitlist(switch(model,
                               pois = fit_pois_whole(x, level = level, ...),
