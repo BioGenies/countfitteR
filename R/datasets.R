@@ -4,7 +4,6 @@
 #' @docType data
 #' @seealso \code{\link[dplyr]{dplyr}}
 #' @seealso \code{\link[pbapply]{pbapply}}
-#' @format
 #' @keywords datasets
 NULL
 
@@ -12,22 +11,19 @@ NULL
 #' @title An example dataset
 #' @description Data was created using the healthy list data (not provided in package)
 #' @docType data
-#' @format
 #' @keywords datasets
 NULL
 
 #' @name six_replicates
-#' @title Data of six replicates exported from \code{example_counts}
-#' @description
+#' @title Six replicates
+#' @description Data of six replicates exported from \code{example_counts}
 #' @docType data
-#' @format
 #' @keywords datasets
 NULL
 
 #' @name six_replicates_bad
-#' @title Data of six bad replicates exported from \code{example_counts}
-#' @description
+#' @title Six bad replicates
+#' @description Data of six bad replicates exported from \code{example_counts}
 #' @docType data
-#' @format
 #' @keywords datasets
 NULL

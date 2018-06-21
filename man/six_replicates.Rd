@@ -3,5 +3,8 @@
 \docType{data}
 \name{six_replicates}
 \alias{six_replicates}
-\title{Data of six replicates exported from \code{example_counts}}
+\title{Six replicates}
+\description{
+Data of six replicates exported from \code{example_counts}
+}
 \keyword{datasets}
