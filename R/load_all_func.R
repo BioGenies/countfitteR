@@ -1,6 +1,7 @@
 #' Loads all important functions
 #'
 #' @name load_all_func
+#' @export
 
 functions <- c('compare_fit.R', 'distrs.R',
                'fit_counts.R', 'fit_counts_separate.R', 'fit_counts_whole.R',

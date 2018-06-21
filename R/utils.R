@@ -3,7 +3,6 @@
 #' Inverse-logit function, transforms continuous values to the range (0, 1).
 #'
 #' @name utils
-#' @param x A vector of continuous values
 NULL
 
 #' @rdname utils
@@ -22,4 +21,5 @@ no_fit <- function() {
 }
 
 #' @rdname utils
+#' @return Gives full names to distribution models
 nice_model_names <- c(pois = "Poisson", nb = "NB", zip = "ZIP", zinb = "ZINB")

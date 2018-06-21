@@ -6,9 +6,6 @@ NULL
 
 # omit NAs, convert table into list --------------------
 
-#' @rdname process_counts
-#' @param input Data file to process
-#' @return Coverts table into a list omitting NAs
 process_counts <- function(input) {
   count_list <- lapply(1L:ncol(input), function(single_column) as.vector(na.omit(input[, single_column])))
   names(count_list) <- colnames(input)
@@ -17,9 +14,6 @@ process_counts <- function(input) {
 
 # summary counts -----------------------------------------
 
-#' @rdname process_counts
-#' @param count_list List created by process_counts function
-#' @return Summary counts
 summary_counts <- function(count_list) {
   summaries <- data.frame(vapply(c(mean, median, sd, mad, max, min, length), function(single_fun)
     vapply(count_list, single_fun, 0),
@@ -40,19 +34,11 @@ fast_tabulate <- function(x) {
   data.frame(x = 0L:(length(tabs) - 1), n = tabs)
 }
 
-
-#' @rdname process_counts
-#' @param count_list List created by process_counts function
-#' @return Creates data frame with occurrences
 get_occs <- function(count_list)
   do.call(rbind, lapply(names(count_list), function(single_count_name)
     occs <- data.frame(count = single_count_name, fast_tabulate(count_list[[single_count_name]]))
   ))
 
-
-#' @rdname process_counts
-#' @param occs Data frame with occurrences created by get_occs function
-#' @return Creates a plot from data frame with occurrences
 plot_occs <- function(occs)
   ggplot2::ggplot(occs, aes(x = x, y = n, label = n)) +
   ggplot2::geom_bar(stat = "identity") +

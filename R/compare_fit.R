@@ -1,11 +1,3 @@
-#' Functons that calculates and compares densities
-#'
-#' @name compare_fit
-NULL
-
-#' @rdname compare_fit
-#' @param single_fit
-#' @return Returns density function
 # returns density function
 
 get_density_fun <- function(single_fit) {
@@ -25,21 +17,24 @@ get_density_fun <- function(single_fit) {
   }
 }
 
-#' @rdname compare_fit
-#' @param fitlist
-#' @return Compares density functions
+
 compare_fit_single <- function(fitlist) {
   lapply(fitlist, function(single_fit)
     get_density_fun(single_fit)(occs[["x"]])
   )
 }
 
-#' @rdname compare_fit
-#' @param count_list List created by process_counts function.
-#' @param fitlist
-#' @return Returns density function
-#' @section Function that needs both input data and fits
-# function that needs both input data and fits
+#' @name compare_fit
+#' @param count_list Table with count data. Each count should be in separate column, rows should represent
+#' values of that counts.
+#' @param fitlist Uses fit_count function to calculate value for each unique observation using different
+#' distribution models.
+#' @return Data table with distribution values for each unique observation in count.
+#' Then it creates data table.
+#' @section Function calculates distribution of each unique observation value taking in account their
+#' number of occurances for each count.
+#' @export
+#
 
 compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "all")) {
   summ <- summary_fitlist(fitlist)
@@ -61,9 +56,12 @@ compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "al
     cmp
   }))
 }
-#' @rdname compare_fit
-#' @param fitcmp
-#' @return Creates a plot
+#' @name plot_fitcmp
+#' @section Creates a plot from counts name and distribution values of each unique observation, which allows to compare
+#' all the distributions and find the most suitable.
+#' @param fitcmp You need to input data frame that is created by compare_fit function.
+#' @export
+
 plot_fitcmp <- function(fitcmp) {
   ggplot2::ggplot(fitcmp, aes(x = x, y = value)) +
     ggplot2::geom_bar(stat = "identity", fill = NA, color = "black") +
