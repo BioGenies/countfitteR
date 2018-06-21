@@ -1,6 +1,7 @@
 #' countfitteR Graphical User Interface
 #'
-#' Launches graphical user interface that counts double strand breaks.
+#' Launches graphical user interface that analyses given count data and
+#' chooses the best performing distribution model
 #'
 #' @name countfitteR_gui
 #'

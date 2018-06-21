@@ -24,15 +24,16 @@ compare_fit_single <- function(fitlist) {
   )
 }
 
+#' @title Compare_fit
+#'
 #' @name compare_fit
+#' @description  Function calculates distribution of each unique observation value taking in account their
+#' number of occurances for each count.
 #' @param count_list Table with count data. Each count should be in separate column, rows should represent
 #' values of that counts.
 #' @param fitlist Uses fit_count function to calculate value for each unique observation using different
 #' distribution models.
 #' @return Data table with distribution values for each unique observation in count.
-#' Then it creates data table.
-#' @section Function calculates distribution of each unique observation value taking in account their
-#' number of occurances for each count.
 #' @export
 #
 
@@ -56,8 +57,11 @@ compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "al
     cmp
   }))
 }
+
+#' @title plot_fitcmp
+#'
 #' @name plot_fitcmp
-#' @section Creates a plot from counts name and distribution values of each unique observation, which allows to compare
+#' @description Creates a plot from counts name and distribution values of each unique observation, which allows to compare
 #' all the distributions and find the most suitable.
 #' @param fitcmp You need to input data frame that is created by compare_fit function.
 #' @export

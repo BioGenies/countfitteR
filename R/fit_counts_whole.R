@@ -1,9 +1,3 @@
-#' Functions used in fit_counts
-#'
-#' Fits the model to all counts treating the count id as the independent variable.
-#'
-#' @name fit_counts_whole
-NULL
 
 fit_pois_whole <- function(x, level, ...) {
   fit <- glm(value ~ count_name - 1, data = x, family = poisson(link = "log"), ...)

@@ -4,11 +4,13 @@ get_count_names <- function(fitlist) {
   vapply(model_names, function(single_name) paste0(single_name[-length(single_name)], collapse = "_"), "a")
 }
 
+#' @title summary_fitlist
+#'
 #' @name summary_fitlist
+#' @description Function that creates summarized table with parameters of distribution model for each count. Those parameters
+#' are: lambda, lower and upper confidence intervals, BIC, theta and r.
 #' @param fitlist List is created by fitlist = fit_counts(count_list, model = "all"). It takes all the counts and for each count
 #' it creates distribution model
-#' @section Function that creates summarized table with parameters of distribution model for each count. Those parameters
-#' are: lambda, lower and upper confidence intervals, BIC, theta and r.
 #' @return Data frame with summarised results of all distribution models
 #' @export
 

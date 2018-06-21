@@ -1,15 +1,4 @@
-#' Functions used in fit_counts
-#'
-#' Fits the model to all counts treating the count id variable as one variable.
-#'
-#' @name fit_counts_separate
-NULL
 
-#' @rdname fit_counts_separate
-#' @param x
-#' @param level
-#' @param ...
-#' @return
 fit_pois_separate <- function(x, level, ...) {
   fit <- stats::glm(x ~ 1, family = poisson(link = "log"), ...)
 
@@ -28,11 +17,6 @@ fit_pois_separate <- function(x, level, ...) {
   )
 }
 
-#' @rdname fit_counts_separate
-#' @param x
-#' @param level
-#' @param ...
-#' @return
 fit_nb_separate <- function(x, level, ...) {
   fit <- MASS::glm.nb(x ~ 1, ...)
   summ <- summary(fit)
@@ -48,11 +32,6 @@ fit_nb_separate <- function(x, level, ...) {
   )
 }
 
-#' @rdname fit_counts_separate
-#' @param x
-#' @param level
-#' @param ...
-#' @return
 fit_zip_separate <- function(x, level, ...) {
   fit <- zeroinfl2(x ~ 1, dist = "poisson", ...)
   summ <- summary(fit)
@@ -64,11 +43,6 @@ fit_zip_separate <- function(x, level, ...) {
   )
 }
 
-#' @rdname fit_counts_separate
-#' @param x
-#' @param level
-#' @param ...
-#' @return
 fit_zinb_separate <- function(x, level, ...) {
   fit <- zeroinfl2(x ~ 1, dist = "negbin", ...)
   summ <- summary(fit)
@@ -83,9 +57,7 @@ fit_zinb_separate <- function(x, level, ...) {
   )
 }
 
-#' @rdname fit_counts_separate
-#' @param confid_data
-#' @return
+
 transform_zi_confint <- function(confint_data) {
   rownames(confint_data) <- c("lambda", "r")
   colnames(confint_data) <- c("lower", "upper")
@@ -96,12 +68,6 @@ transform_zi_confint <- function(confint_data) {
   confint_data
 }
 
-#' @rdname fit_counts_separate
-#' @param count_list List created by process_counts function.
-#' @param model
-#' @param level
-#' @param ...
-#' @return fit_counts_separate is used in fit_counts function
 fit_counts_separate <- function(counts_list, model, level, ...) {
 
   lapply(counts_list, function(x) {

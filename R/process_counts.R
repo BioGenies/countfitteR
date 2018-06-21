@@ -1,8 +1,3 @@
-#' Functons that process inputed data
-#'
-#' @name process_counts
-#'
-NULL
 
 # omit NAs, convert table into list --------------------
 
@@ -25,9 +20,6 @@ summary_counts <- function(count_list) {
 # fast_tabulate (helper function) ---------------------------------------------------------
 # x is a vector of counts
 
-#' @rdname process_counts
-#' @param x Vector of counts
-#' @return Helper function - fast_tabulate
 fast_tabulate <- function(x) {
   # + 1, since we also count zeros
   tabs <- tabulate(x + 1)

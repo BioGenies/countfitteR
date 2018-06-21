@@ -1,4 +1,4 @@
-source("./R/load_all.R")
+source("./R/load_all_func.R")
 library(dplyr)
 library(reshape2)
 
