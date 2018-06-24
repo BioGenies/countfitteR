@@ -4,14 +4,19 @@ get_count_names <- function(fitlist) {
   vapply(model_names, function(single_name) paste0(single_name[-length(single_name)], collapse = "_"), "a")
 }
 
-#' @title summary_fitlist
+#' @title Summary of estimates
 #'
 #' @name summary_fitlist
-#' @description Function that creates summarized table with parameters of distribution model for each count. Those parameters
-#' are: lambda, lower and upper confidence intervals, BIC, theta and r.
-#' @param fitlist List is created by fitlist = fit_counts(count_list, model = "all"). It takes all the counts and for each count
+#' @description Counts are fitted to model(s) using the count name as the explanatory variable.
+#' Estimates are presented in the table below along with the BIC values of their models.
+#' Estimated coefficients of models (λ for all distributions, θ for NB and ZINB, r for ZIP and ZINB).
+#' @param fitlist List is created by fitlist = fit_counts(count_list, model = "all"). For each count
 #' it creates distribution model
-#' @return Data frame with summarised results of all distribution models
+#' @return Data frame with summarised results of all distribution models. Count is name of the original count.
+#' λ(lambda) - Poisson parameter (average number of foci per cell), lower and upper confidence intervals,
+#' BIC - Bayesian information criterion, θ(theta) - dispersion parameter, r - zero inflation (fraction of
+#' cells treated by system as having no foci regardless of their real state), model is the name of distribution model.
+#'
 #' @export
 
 summary_fitlist <- function(fitlist) {

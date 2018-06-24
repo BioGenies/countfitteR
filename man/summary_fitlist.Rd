@@ -2,18 +2,22 @@
 % Please edit documentation in R/fitlist.R
 \name{summary_fitlist}
 \alias{summary_fitlist}
-\title{summary_fitlist}
+\title{Summary of estimates}
 \usage{
 summary_fitlist(fitlist)
 }
 \arguments{
-\item{fitlist}{List is created by fitlist = fit_counts(count_list, model = "all"). It takes all the counts and for each count
+\item{fitlist}{List is created by fitlist = fit_counts(count_list, model = "all"). For each count
 it creates distribution model}
 }
 \value{
-Data frame with summarised results of all distribution models
+Data frame with summarised results of all distribution models. Count is name of the original count.
+λ(lambda) - Poisson parameter (average number of foci per cell), lower and upper confidence intervals,
+BIC - Bayesian information criterion, θ(theta) - dispersion parameter, r - zero inflation (fraction of
+cells treated by system as having no foci regardless of their real state), model is the name of distribution model.
 }
 \description{
-Function that creates summarized table with parameters of distribution model for each count. Those parameters
-are: lambda, lower and upper confidence intervals, BIC, theta and r.
+Counts are fitted to model(s) using the count name as the explanatory variable.
+Estimates are presented in the table below along with the BIC values of their models.
+Estimated coefficients of models (λ for all distributions, θ for NB and ZINB, r for ZIP and ZINB).
 }

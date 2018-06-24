@@ -10,6 +10,8 @@ plot_fitcmp(fitcmp)
 \item{fitcmp}{You need to input data frame that is created by compare_fit function.}
 }
 \description{
-Creates a plot from counts name and distribution values of each unique observation, which allows to compare
-all the distributions and find the most suitable.
+Compare empirical distribution of counts with the distribution defined by the model
+fitted to counts.
+The bar charts represent theoretical counts depending on the chosen distribution. Red dots describe
+the real number of counts.
 }

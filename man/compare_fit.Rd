@@ -2,7 +2,7 @@
 % Please edit documentation in R/compare_fit.R
 \name{compare_fit}
 \alias{compare_fit}
-\title{Compare_fit}
+\title{Compare distributions}
 \usage{
 compare_fit(count_list, fitlist = fit_counts(count_list, model = "all"))
 }
@@ -14,9 +14,11 @@ values of that counts.}
 distribution models.}
 }
 \value{
-Data table with distribution values for each unique observation in count.
+Data table with distribution values for each unique count. Count is the name
+of the original count, model is the name of distribution model, x is unique count value, n is the
+frequency of unique counts, value is result of calculations made by chosen distribution model.
 }
 \description{
-Function calculates distribution of each unique observation value taking in account their
-number of occurances for each count.
+Compare empirical distribution of counts with the distribution defined by the model
+fitted to counts.
 }
