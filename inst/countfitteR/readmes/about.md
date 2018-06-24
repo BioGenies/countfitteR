@@ -6,6 +6,6 @@ The source code of countfitter is avaible on [GitHub](https://github.com/michbur
 
 [Michal Burdukiewicz](https://github.com/michbur)  
 
-[Stefan Roediger](https://www.researchgate.net/profile/Stefan_Roediger)  #added new link, previous was dead
+[Stefan Roediger](https://www.researchgate.net/profile/Stefan_Roediger)
 
 [Jaroslaw Chilimoniuk](https://www.researchgate.net/profile/Jaroslaw_Chilimoniuk)  
