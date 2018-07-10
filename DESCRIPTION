@@ -2,17 +2,18 @@ Package: countfitteR
 Type: Package
 Title: Software that predicts the most appropriate count distribution
 Version: 1.0
-Author@R: c(person("Michal", "Burdukiewicz", 
+Authors@R: c(person("Michal", "Burdukiewicz", 
            email = "michalburdukiewicz@gmail.com", 
            comment = c(ORCID = "0000-0001-8926-582X"),
            role = c("cre", "aut")),
            person("Stefan", "Roediger", 
            email = "stefan.roedigier@b-tu.de", 
            comment = c(ORCID = "0000-0002-1441-6512"),
-           role = "ctb"))
+           role = ("ctb")),
            person("Jaroslaw", "Chilimoniuk", 
            email = "jaroslaw.chilimoniuk@gmail.com", 
-           role = "ctb"))
+           role = c("ctb"))
+           )
 Maintainer: The package maintainer <michalburdukiewicz@gmail.com>
 Description: countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution to the dataset supplied by an user.
 License: GPL-3
