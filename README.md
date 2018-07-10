@@ -10,3 +10,11 @@ can install the latest development version of the code using the following code:
 ```R
 source("https://install-github.me/jarochi/countfitteR")
 ```
+
+## Run countfitteR
+
+To run countfitteR type the following command into an R console.
+
+```R
+require(shiny); countfitteR_gui()
+```
