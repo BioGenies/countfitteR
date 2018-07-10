@@ -8,5 +8,5 @@ countfitteR is a web server based on shiny technology for selecting the most app
 can install the latest development version of the code using the following code:
 
 ```R
-source(https://install-github.me/jarochi/countfitteR)
+source("https://install-github.me/jarochi/countfitteR")
 ```
