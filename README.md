@@ -16,5 +16,5 @@ source("https://install-github.me/jarochi/countfitteR")
 To run countfitteR type the following command into an R console.
 
 ```R
-require(shiny); countfitteR_gui()
+require(shiny); countfitteR::countfitteR_gui()
 ```
