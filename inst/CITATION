@@ -8,4 +8,4 @@ title = "{countfitteR}: a web server for the analysis of count data",
                     person("Michal", "Burdukiewicz")),
          year = year,
          note = note,
-         url = "https://github.com/michbur/countfitter")
+         url = "https://github.com/jarochi/countfitteR")
