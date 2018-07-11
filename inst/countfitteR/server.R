@@ -37,7 +37,7 @@ shinyServer(function(input, output) {
     })
 
     output[["hot_counts"]] = rhandsontable::renderRHandsontable({
-        rhandsontable(raw_counts(), readOnly = FALSE, selectCallback = TRUE)
+      rhandsontable::rhandsontable(raw_counts(), readOnly = FALSE, selectCallback = TRUE)
     })
 
     processed_counts <- reactive({

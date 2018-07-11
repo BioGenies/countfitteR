@@ -27,4 +27,8 @@ Imports:
     ggplot2,
     MASS,
     shiny,
-    stats
+    stats,
+    shinythemes,
+    rhandsontable,
+    pscl,
+    DT
