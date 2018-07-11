@@ -23,6 +23,8 @@ require(shiny); countfitteR::countfitteR_gui()
 
 Jaroslaw Chilimoniuk, Madleine Ruhe, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR - a web server for the analysis of count data. [https://github.com/michbur/countfitter](https://github.com/michbur/countfitter)
 
+
+```tex
 @misc{countfitteR_2018,
 	author = {Chilimoniuk, Jaroslaw and Ruhe, Madeleine and R\"odiger, Stefan and Burdukiewicz, Michał},
 	month = may,
@@ -32,3 +34,4 @@ Jaroslaw Chilimoniuk, Madleine Ruhe, Stefan Rödiger, Michał Burdukiewicz (2018
 	urldate = {2018-07-11},
 	year = {2018}
 }
+```
