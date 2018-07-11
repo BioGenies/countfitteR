@@ -4,7 +4,7 @@ countfitteR is a web server based on shiny technology for selecting the most app
 
 ## Installation
 
-*countfitteR* is net yet available on CRAN. However, you 
+*countfitteR* is net yet available on [CRAN](http://cran.us.r-project.org/). However, you 
 can install the latest development version of the code using the following code:
 
 ```R
@@ -23,7 +23,7 @@ require(shiny); countfitteR::countfitteR_gui()
 
 Jaroslaw Chilimoniuk, Madleine Ruhe, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR - a web server for the analysis of count data. [https://github.com/michbur/countfitter](https://github.com/michbur/countfitter)
 
-@misc{burdukiewicz_contribute_2018,
+@misc{countfitteR_2018,
 	author = {Chilimoniuk, Jaroslaw and Ruhe, Madeleine and R\"odiger, Stefan and Burdukiewicz, Michał},
 	month = may,
 	note = {original-date: 2016-03-16T15:28:03Z},
