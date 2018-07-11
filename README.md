@@ -18,3 +18,17 @@ To run countfitteR type the following command into an R console.
 ```R
 require(shiny); countfitteR::countfitteR_gui()
 ```
+
+## How to cite
+
+Jaroslaw Chilimoniuk, Madleine Ruhe, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR - a web server for the analysis of count data. [https://github.com/michbur/countfitter](https://github.com/michbur/countfitter)
+
+@misc{burdukiewicz_contribute_2018,
+	author = {Chilimoniuk, Jaroslaw and Ruhe, Madeleine and R\"odiger, Stefan and Burdukiewicz, Michał},
+	month = may,
+	note = {original-date: 2016-03-16T15:28:03Z},
+	title = {Contribute to countfitter development by creating an account on {GitHub}},
+	url = {https://github.com/michbur/countfitter},
+	urldate = {2018-07-11},
+	year = {2018}
+}
