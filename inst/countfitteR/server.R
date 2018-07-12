@@ -8,7 +8,7 @@ library(pscl)
 
 setwd("../..")
 
-source("./R/load_all_func.R")
+source("R/load_all_func.R")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
