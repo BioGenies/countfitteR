@@ -21,16 +21,16 @@ require(shiny); countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Jaroslaw Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/michbur/countfitter](https://github.com/michbur/countfitter)
+Jaroslaw Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/jarochi/countfitteR](https://github.com/jarochi/countfitteR)
 
 
 ```tex
 @misc{countfitteR_2018,
 	author = {Chilimoniuk, Jaroslaw and R\"odiger, Stefan and Burdukiewicz, Michał},
 	month = may,
-	note = {original-date: 2016-03-16T15:28:03Z},
+	note = R package,
     title = {{countfitteR}: a web server for the analysis of count data},
-	url = {https://github.com/michbur/countfitter},
+	url = {https://github.com/jarochi/countfitteR},
 	urldate = {2018-07-11},
 	year = {2018}
 }
