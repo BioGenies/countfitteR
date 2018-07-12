@@ -7,8 +7,8 @@ library(rmarkdown)
 library(pscl)
 
 data("example_counts")
-data("")
-./data/example_counts.csv
+#data("")
+#./data/example_counts.csv
 # source("../R/load_all_func.R")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
