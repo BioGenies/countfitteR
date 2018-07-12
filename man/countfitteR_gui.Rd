@@ -3,9 +3,6 @@
 \name{countfitteR_gui}
 \alias{countfitteR_gui}
 \title{countfitteR Graphical User Interface}
-\usage{
-countfitteR_gui()
-}
 \description{
 Launches graphical user interface that analyses given count data and
 chooses the best performing distribution model
