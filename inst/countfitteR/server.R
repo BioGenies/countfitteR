@@ -6,7 +6,7 @@ library(rhandsontable)
 library(rmarkdown)
 library(pscl)
 
-example_counts <- system.file("extdata", "example_counts.csv", package = "countfitteR")
+# example_counts <- system.file("extdata", "example_counts.csv", package = "countfitteR")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 

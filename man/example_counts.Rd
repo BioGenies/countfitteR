@@ -4,6 +4,9 @@
 \name{example_counts}
 \alias{example_counts}
 \title{An example dataset}
+\usage{
+example_counts
+}
 \description{
 Data was created using the healthy list data (not provided in package)
 }

@@ -4,6 +4,9 @@
 \name{sim_dat}
 \alias{sim_dat}
 \title{Data created from simulation of NB Poiss}
+\usage{
+sim_dat
+}
 \description{
 Data was created using the \code{dplyr} and \code{pbapply} package
 }

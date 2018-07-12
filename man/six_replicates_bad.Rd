@@ -4,6 +4,9 @@
 \name{six_replicates_bad}
 \alias{six_replicates_bad}
 \title{Six bad replicates}
+\usage{
+six_replicates_bad
+}
 \description{
 Data of six bad replicates exported from \code{example_counts}
 }

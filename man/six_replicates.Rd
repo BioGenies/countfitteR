@@ -4,6 +4,9 @@
 \name{six_replicates}
 \alias{six_replicates}
 \title{Six replicates}
+\usage{
+six_replicates
+}
 \description{
 Data of six replicates exported from \code{example_counts}
 }
