@@ -6,7 +6,7 @@ library(rhandsontable)
 library(rmarkdown)
 library(pscl)
 
-data("example_counts")
+data(example_counts.csv)
 #data("")
 #./data/example_counts.csv
 # source("../R/load_all_func.R")
@@ -21,7 +21,7 @@ shinyServer(function(input, output) {
     raw_counts <- reactive({
         # if there is no data, example is loaded
         if (is.null(input[["input_file"]])) {
-            dat <- read.csv("example_counts", check.names = FALSE)
+            dat <- read.csv("./data/example_counts.csv", check.names = FALSE)
         } else {
             dat <- switch(input[["csv_type"]], csv1 = read.csv(input[["input_file"]][["datapath"]], header = input[["header"]],
                 check.names = FALSE), csv2 = read.csv2(input[["input_file"]][["datapath"]], header = input[["header"]],
