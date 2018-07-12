@@ -11,7 +11,7 @@ print(lolo)
 setwd("../")
 lolo <- getwd()
 print(lolo)
-source("./R/load_all_func.R")
+source("R/load_all_func.R")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
