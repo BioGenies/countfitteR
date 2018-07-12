@@ -14,7 +14,8 @@
 #' @examples
 #' countfitter_gui()
 
+library(shiny)
 countfitteR_gui <- function(){
-  runApp(system.file("countfitteR", package = "countfitteR"))
+  shiny::runApp(system.file("countfitteR", package = "countfitteR"))
   # runApp("./inst/countfitteR/")
   }
