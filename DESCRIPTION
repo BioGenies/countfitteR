@@ -31,4 +31,9 @@ Imports:
     shinythemes,
     rhandsontable,
     pscl,
-    DT
+    DT,
+    rmarkdown,
+    reshape2,
+    grid,
+    gridExtra,
+    dplyr
