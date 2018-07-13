@@ -1,4 +1,4 @@
-#' @export
+
 get_count_names <- function(fitlist) {
   model_names <- strsplit(names(fitlist), "_")
   vapply(model_names, function(single_name) paste0(single_name[-length(single_name)], collapse = "_"), "a")
@@ -31,7 +31,7 @@ summary_fitlist <- function(fitlist) {
              model = nice_model_names[vapply(fitlist, function(single_fit) single_fit[["model"]], "a")])
 }
 
-#' @export
+
 plot_fitlist <- function(fitlist) {
   summ <- summary_fitlist(fitlist)
 
@@ -51,7 +51,7 @@ plot_fitlist <- function(fitlist) {
     my_theme
 }
 
-#' @export
+
 decide <- function(summary_fit, separate) {
   if (separate) {
     paste0(vapply(levels(summary_fit[["count"]]), function(single_count) {
@@ -64,7 +64,7 @@ decide <- function(summary_fit, separate) {
   }
 }
 
-#' @export
+
 decide_single <- function(BICs, model_names) {
   res <- paste0("The most appropriate model (model with the lowest BIC value): ",
                 as.character(model_names[which.min(BICs)]), ".<br/>")
@@ -74,7 +74,7 @@ decide_single <- function(BICs, model_names) {
   res
 }
 
-#' @export
+
 assess_difference <- function(BICs) {
   BIC_difference <- min(BICs[-which.min(BICs)] - min(BICs))
   id <- as.numeric(cut(BIC_difference, c(0, 3.2, 10, 100, max(BIC_difference))))

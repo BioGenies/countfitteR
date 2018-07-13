@@ -1,5 +1,4 @@
 # returns density function
-#' @export
 get_density_fun <- function(single_fit) {
   if(is.na(single_fit[["coefficients"]][["lambda"]])) {
     function(x) NA
@@ -17,7 +16,7 @@ get_density_fun <- function(single_fit) {
   }
 }
 
-#' @export
+
 compare_fit_single <- function(fitlist) {
   lapply(fitlist, function(single_fit)
     get_density_fun(single_fit)(occs[["x"]])
