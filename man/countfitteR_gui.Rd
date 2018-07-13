@@ -20,4 +20,6 @@ chooses the best performing distribution model
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }
-\keyword{}
+\keyword{Poisson}
+\keyword{count}
+\keyword{zero-inflated}
