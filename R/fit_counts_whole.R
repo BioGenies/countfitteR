@@ -113,3 +113,10 @@ fit_counts_whole <- function(x, model, level, ...) {
   # list(coefficients = fitted_model[["coefficients"]],
   #      confint = fitted_model[["confint"]],
 }
+
+no_fit <- function() {
+  list(fit = NA,
+       coefficients = c(lambda = NA),
+       confint = matrix(c(NA, NA), ncol = 2, dimnames = list("lambda", c("lower", "upper")))
+  )
+}
