@@ -95,3 +95,7 @@ no_fit <- function() {
        confint = matrix(c(NA, NA), ncol = 2, dimnames = list("lambda", c("lower", "upper")))
   )
 }
+
+invlogit <- function(x) {
+  1/(1 + exp(-x))
+}
