@@ -80,3 +80,5 @@ assess_difference <- function(BICs) {
   id <- as.numeric(cut(BIC_difference, c(0, 3.2, 10, 100, max(BIC_difference))))
   c("negligible", "substantial", "strong", "decisive")[id]
 }
+
+nice_model_names <- c(pois = "Poisson", nb = "NB", zip = "ZIP", zinb = "ZINB")
