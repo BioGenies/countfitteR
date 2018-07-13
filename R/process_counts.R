@@ -9,6 +9,9 @@ process_counts <- function(input) {
 
 # summary counts -----------------------------------------
 
+
+# #' @title summary counts
+#' @export
 summary_counts <- function(count_list) {
   summaries <- data.frame(vapply(c(mean, median, sd, mad, max, min, length), function(single_fun)
     vapply(count_list, single_fun, 0),
