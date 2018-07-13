@@ -49,21 +49,21 @@ if(input[["mean_value_rep"]]) {
 
 ```{r}
 if(input[["coef_rep"]]) {
-  cat("\n", readLines("readmes/mean_value/3.md"), sep = "    \n")
+  cat("\n", readLines("../readmes/mean_value/3.md"), sep = "    \n")
   print_table(summarized_fits()[, c("count", "lambda", "theta", "r", "model")])
 }
 ```
 
 ```{r}
 if(input[["decision_rep"]]) {
-  cat("\n", readLines("readmes/mean_value/4.md"), sep = "    \n")
+  cat("\n", readLines("../readmes/mean_value/4.md"), sep = "    \n")
   cat(decide(summarized_fits(), input[["sep_exp"]]))
 }
 ```
 
 ```{r}
 if(input[["cmp_distr_rep"]]) {
-  cat("\n", readLines("readmes/cmp_distr/1.md"), sep = "    \n")
+  cat("\n", readLines("../readmes/cmp_distr/1.md"), sep = "    \n")
   plot(plot_fitcmp(compared_fits()))
   cat("\n")
   print_table(compared_fits())
