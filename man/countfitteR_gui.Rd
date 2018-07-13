@@ -18,6 +18,12 @@ chooses the best performing distribution model
  Any ad-blocking software may cause malfunctions.
 }
 
+<<<<<<< HEAD
+\examples{
+countfitteR_gui()
+}
+=======
+>>>>>>> dc7d2cea86fd73df06b65ac042f57688829da0f7
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }
