@@ -1,6 +1,6 @@
 
 # omit NAs, convert table into list --------------------
-
+#' @export
 process_counts <- function(input) {
   count_list <- lapply(1L:ncol(input), function(single_column) as.vector(na.omit(input[, single_column])))
   names(count_list) <- colnames(input)
