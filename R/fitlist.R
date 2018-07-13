@@ -34,7 +34,7 @@ summary_fitlist <- function(fitlist) {
 }
 
 
-plot_fitlist <- function(fitlist) {
+countfitteR:::plot_fitlist <- function(fitlist) {
   summ <- summary_fitlist(fitlist)
 
   plot_dat <- do.call(rbind, lapply(levels(summ[["count"]]), function(single_count) {
@@ -54,7 +54,7 @@ plot_fitlist <- function(fitlist) {
 }
 
 
-decide <- function(summary_fit, separate) {
+countfitteR:::decide <- function(summary_fit, separate) {
   if (separate) {
     paste0(vapply(levels(summary_fit[["count"]]), function(single_count) {
       dat <- summary_fit[summary_fit[["count"]] == single_count, ]
@@ -67,7 +67,7 @@ decide <- function(summary_fit, separate) {
 }
 
 
-decide_single <- function(BICs, model_names) {
+countfitteR:::decide_single <- function(BICs, model_names) {
   res <- paste0("The most appropriate model (model with the lowest BIC value): ",
                 as.character(model_names[which.min(BICs)]), ".<br/>")
   if(length(BICs) > 1)
@@ -77,7 +77,7 @@ decide_single <- function(BICs, model_names) {
 }
 
 
-assess_difference <- function(BICs) {
+countfitteR:::assess_difference <- function(BICs) {
   BIC_difference <- min(BICs[-which.min(BICs)] - min(BICs))
   id <- as.numeric(cut(BIC_difference, c(0, 3.2, 10, 100, max(BIC_difference))))
   c("negligible", "substantial", "strong", "decisive")[id]
