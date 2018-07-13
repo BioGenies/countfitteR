@@ -11,14 +11,19 @@
 #'
 #' @export countfitteR_gui
 #'
-#' @examples
-#' countfitteR_gui()
-
 #' @importFrom stats .getXlevels AIC binomial confint delete.response dnbinom dpois filter glm glm.fit lag logLik mad make.link median model.frame model.matrix model.response model.weights na.omit na.pass optim pnorm poisson predict printCoefmat quantile residuals sd terms update 
 #' @importFrom gridExtra combine
+
+#' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
+#' @docType package
+#' @name countfitteR-package
+#' @aliases countfitteR
+#' @examples countfitteR_gui()
 
 library(shiny)
 countfitteR_gui <- function(){
   shiny::runApp(system.file("countfitteR", package = "countfitteR"))
   # runApp("./inst/countfitteR/")
   }
+
+NULL
