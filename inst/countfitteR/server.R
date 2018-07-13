@@ -1,11 +1,11 @@
 library(countfitteR)
 library(shiny)
-# must use development DT devtools::install_github('rstudio/DT')
 library(DT)
 library(reshape2)
 library(rhandsontable)
 library(rmarkdown)
 library(pscl)
+library(ggplot2)
 
 # load("./countfitteR/data/laf.RData")
 

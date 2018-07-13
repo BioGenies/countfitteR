@@ -1,4 +1,5 @@
-source("./R/load_all_func.R")
+# source("./R/load_all_func.R")
+# load("./countfitteR/data/laf.RData")
 library(dplyr)
 library(reshape2)
 
