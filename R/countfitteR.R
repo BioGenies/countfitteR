@@ -11,8 +11,7 @@
 #'
 #' @export countfitteR_gui
 #'
-#' @examples
-#' countfitter_gui()
+#' @examples countfitteR_gui()
 
 library(shiny)
 countfitteR_gui <- function(){

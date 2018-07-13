@@ -12,6 +12,6 @@ chooses the best performing distribution model
 }
 
 \examples{
-countfitter_gui()
+countfitteR_gui()
 }
 \keyword{}
