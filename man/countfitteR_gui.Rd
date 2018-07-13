@@ -15,7 +15,7 @@ chooses the best performing distribution model
 }
 
 \examples{
-# countfitteR_gui()
+countfitteR_gui()
 }
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
