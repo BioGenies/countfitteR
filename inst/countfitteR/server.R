@@ -139,6 +139,8 @@ shinyServer(function(input, output) {
     })
 
     output[["countfitteR_report_download"]] <- downloadHandler(filename = "countfitter_report.html", content = function(file) {
+      aaa <- getwd()
+      print(aaa)
         knitr::knit(input = "countfitteR/report/countfitter_report.Rmd", output = "countfitter_report.md", quiet = TRUE)
         on.exit(unlink(c("countfitter_report.md", "figure"), recursive = TRUE))
         markdown::markdownToHTML("countfitter_report.md", file, stylesheet = "countfitteR/report/report.css", options = c("toc", markdown::markdownHTMLOptions(TRUE)))
