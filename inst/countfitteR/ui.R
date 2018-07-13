@@ -5,7 +5,7 @@ library(rhandsontable)
 
 shinyUI(navbarPage(title = "countfitteR",
                    #theme = shinytheme("cerulean"),
-                   theme = "./shiny_paper.css",
+                   theme = "www/shiny_paper.css",
                    id = "navbar", windowTitle = "countfitteR", collapsible=TRUE,
                    tabPanel("Data upload",
                             includeMarkdown("readmes/data_upload/1.md"),
