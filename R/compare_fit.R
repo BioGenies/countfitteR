@@ -77,3 +77,9 @@ plot_fitcmp <- function(fitcmp) {
     ggplot2::scale_color_discrete(guide = FALSE) +
     my_theme
 }
+
+fast_tabulate <- function(x) {
+  # + 1, since we also count zeros
+  tabs <- tabulate(x + 1)
+  data.frame(x = 0L:(length(tabs) - 1), n = tabs)
+}
