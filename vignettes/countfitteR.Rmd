@@ -1,9 +1,9 @@
 ---
 title: "countfitteR package - an overview"
-author: "Jaroslaw Chilimoniuk, Madleine Ruhe, Stefan R&ouml;diger, Micha&#322; Burdukiewicz"
+author: "Jarosław Chilimoniuk, Madleine Ruhe, Stefan Rödiger, Michał Burdukiewicz"
 date: "`r Sys.Date()`"
 output: 
-  rmarkdown::html_document:
+  rmarkdown::html_vignette:
     number_sections: true
     toc: true
     toc_depth: 4

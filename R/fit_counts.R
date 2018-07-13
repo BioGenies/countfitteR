@@ -2,14 +2,15 @@
 #'
 #'
 #' @name fit_counts
-#' @param count_list Table with count data. Each count should be in separate column, rows should represent
+#' @param counts_list Table with count data. Each count should be in separate column, rows should represent
 #' values of that counts.
 #' @param separate \code{logical}. If \code{TRUE}, each count is separately fitted
 #' to the model. If \code{FALSE}, all counts are fitted to the same models having
 #' the count name as the independent variable.
 #' @param model single \code{character}: \code{"pois"}, \code{"nb"},
-#' \code{"zinb"}, \code{"zip"}, \code{"all"}. If \code{"all"}, dots parameters
-#' are ignored.
+#' \code{"zinb"}, \code{"zip"}, \code{"all"}. If \code{"all"}.
+#' @param level Confidence level, default is 0.95.
+#' @param ... Dots parameters are ignored.
 #' @return List of fitted models. Names are names of original counts, an underline
 #' and a name of model used.
 #' confint is a \code{matrix} with the number of rows equal to the number of
