@@ -1,3 +1,9 @@
+no_fit <- function() {
+  list(fit = NA,
+       coefficients = c(lambda = NA),
+       confint = matrix(c(NA, NA), ncol = 2, dimnames = list("lambda", c("lower", "upper")))
+  )
+}
 
 fit_pois_whole <- function(x, level, ...) {
   fit <- glm(value ~ count_name - 1, data = x, family = poisson(link = "log"), ...)

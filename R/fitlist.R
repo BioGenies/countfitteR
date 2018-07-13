@@ -1,3 +1,5 @@
+nice_model_names <- c(pois = "Poisson", nb = "NB", zip = "ZIP", zinb = "ZINB")
+
 #' @export
 get_count_names <- function(fitlist) {
   model_names <- strsplit(names(fitlist), "_")
