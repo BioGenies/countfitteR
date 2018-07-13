@@ -42,23 +42,23 @@ shinyServer(function(input, output) {
     })
 
     processed_counts <- reactive({
-        process_counts(raw_counts())
+        countfitteR:::process_counts(raw_counts())
     })
 
     occs <- reactive({
-      get_occs(processed_counts())
+      countfitteR:::get_occs(processed_counts())
     })
 
     fits <- reactive({
-      fit_counts(processed_counts(), separate = input[["sep_exp"]], model = input[["chosen_models"]], level = input[["conf_level"]])
+      countfitteR:::fit_counts(processed_counts(), separate = input[["sep_exp"]], model = input[["chosen_models"]], level = input[["conf_level"]])
     })
 
     compared_fits <- reactive({
-      compare_fit(processed_counts(), fits())
+      countfitteR:::compare_fit(processed_counts(), fits())
     })
 
     summarized_fits <- reactive({
-       summary_fitlist(fits())
+      countfitteR::: summary_fitlist(fits())
     })
 
 
@@ -67,7 +67,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_summary"]] <- DT::renderDataTable({
-        summ <- summary_counts(processed_counts())
+        summ <- countfitteR:::summary_counts(processed_counts())
         formatRound(my_DT(summ), c(2, 4, 5), digits = 4)
     })
 
@@ -88,7 +88,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_distr_plot"]] <- renderPlot({
-      plot_occs(occs())
+      countfitteR:::plot_occs(occs())
     })
 
     output[["input_data_distr_plot_ui"]] <- renderUI({
@@ -101,7 +101,7 @@ shinyServer(function(input, output) {
     })
     # mean values ----------------------------
     output[["fit_plot"]] <- renderPlot({
-        plot_fitlist(fits())
+        countfitteR::plot_fitlist(fits())
       # print(fits())
     })
 
@@ -110,7 +110,7 @@ shinyServer(function(input, output) {
     })
 
     output[["fit_plot_db"]] <- downloadHandler("fit_CI.svg", content = function(file) {
-        ggsave(file, plot_fitlist(fits()), device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitlist(fits()), device = svg, height = 297, width = 297, units = "mm")
     })
 
     output[["fit_tab"]] <- DT::renderDataTable({
@@ -127,11 +127,11 @@ shinyServer(function(input, output) {
 
     # compare distrs ----------------------------
     output[["cmp_plot"]] <- renderPlot({
-      plot_fitcmp(compared_fits())
+      countfitteR:::plot_fitcmp(compared_fits())
     })
 
     output[["cmp_plot_db"]] <- downloadHandler("cmp.svg", content = function(file) {
-        ggsave(file, plot_fitcmp(compared_fits()), device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitcmp(compared_fits()), device = svg, height = 297, width = 297, units = "mm")
     })
 
     output[["cmp_sep_tab"]] <- DT::renderDataTable({
