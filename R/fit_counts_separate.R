@@ -79,7 +79,7 @@ fit_counts_separate <- function(counts_list, model, level, ...) {
                                     nb = fit_nb_separate(x, level = level, ...),
                                     zip = fit_zip_separate(x, level = level, ...),
                                     zinb = fit_zinb_separate(x, level = level, ...)
-    ), error = function(e) countfitteR:::no_fit())
+    ), error = function(e) no_fit())
 
     list(coefficients = fitted_model[["coefficients"]],
          confint = fitted_model[["confint"]],
