@@ -22,7 +22,7 @@ require(shiny); countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Jaroslaw Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/jarochi/countfitteR](https://github.com/jarochi/countfitteR)
+Jarosław Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/jarochi/countfitteR](https://github.com/jarochi/countfitteR)
 
 
 ```tex
