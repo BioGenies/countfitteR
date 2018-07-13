@@ -4,6 +4,10 @@
 \name{countfitteR_gui}
 \alias{countfitteR_gui}
 \alias{countfitteR}
+\alias{@examples}
+\alias{\dontrun{}
+\alias{countfitteR_gui()}
+\alias{}}
 \alias{countfitteR_gui-package}
 \title{countfitteR Graphical User Interface}
 \description{
@@ -14,17 +18,9 @@ chooses the best performing distribution model
  Any ad-blocking software may cause malfunctions.
 }
 
-\examples{
-countfitteR_gui()
-}
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }
-<<<<<<< HEAD
-\keyword{count}
-\keyword{data}
-=======
 \keyword{Poisson}
 \keyword{count}
 \keyword{zero-inflated}
->>>>>>> 9d76d2444f401a08de35a372b567a1e15957de1f

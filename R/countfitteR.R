@@ -18,7 +18,9 @@
 #' @docType package
 #' @name countfitteR-package
 #' @aliases countfitteR
-#' @examples countfitteR_gui()
+#'  @examples \dontrun{ 
+#'  countfitteR_gui()
+#'  }
 
 library(shiny)
 countfitteR_gui <- function(){
