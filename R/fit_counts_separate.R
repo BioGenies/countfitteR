@@ -1,3 +1,4 @@
+#' @export
 fit_pois_separate <- function(x, level, ...) {
   fit <- stats::glm(x ~ 1, family = poisson(link = "log"), ...)
 
@@ -16,7 +17,7 @@ fit_pois_separate <- function(x, level, ...) {
   )
 }
 
-
+#' @export
 fit_nb_separate <- function(x, level, ...) {
   fit <- MASS::glm.nb(x ~ 1, ...)
   summ <- summary(fit)
@@ -32,7 +33,7 @@ fit_nb_separate <- function(x, level, ...) {
   )
 }
 
-
+#' @export
 fit_zip_separate <- function(x, level, ...) {
   fit <- zeroinfl2(x ~ 1, dist = "poisson", ...)
   summ <- summary(fit)
@@ -44,7 +45,7 @@ fit_zip_separate <- function(x, level, ...) {
   )
 }
 
-
+#' @export
 fit_zinb_separate <- function(x, level, ...) {
   fit <- zeroinfl2(x ~ 1, dist = "negbin", ...)
   summ <- summary(fit)
@@ -59,7 +60,7 @@ fit_zinb_separate <- function(x, level, ...) {
   )
 }
 
-
+#' @export
 transform_zi_confint <- function(confint_data) {
   rownames(confint_data) <- c("lambda", "r")
   colnames(confint_data) <- c("lower", "upper")
@@ -70,7 +71,7 @@ transform_zi_confint <- function(confint_data) {
   confint_data
 }
 
-
+#' @export
 fit_counts_separate <- function(counts_list, model, level, ...) {
 
   lapply(counts_list, function(x) {

@@ -1,6 +1,6 @@
 
 # omit NAs, convert table into list --------------------
-
+#' @export
 process_counts <- function(input) {
   count_list <- lapply(1L:ncol(input), function(single_column) as.vector(na.omit(input[, single_column])))
   names(count_list) <- colnames(input)
@@ -8,7 +8,7 @@ process_counts <- function(input) {
 }
 
 # summary counts -----------------------------------------
-
+#' @export
 summary_counts <- function(count_list) {
   summaries <- data.frame(vapply(c(mean, median, sd, mad, max, min, length), function(single_fun)
     vapply(count_list, single_fun, 0),
@@ -19,18 +19,18 @@ summary_counts <- function(count_list) {
 
 # fast_tabulate (helper function) ---------------------------------------------------------
 # x is a vector of counts
-
+#' @export
 fast_tabulate <- function(x) {
   # + 1, since we also count zeros
   tabs <- tabulate(x + 1)
   data.frame(x = 0L:(length(tabs) - 1), n = tabs)
 }
-
+#' @export
 get_occs <- function(count_list)
   do.call(rbind, lapply(names(count_list), function(single_count_name)
     occs <- data.frame(count = single_count_name, fast_tabulate(count_list[[single_count_name]]))
   ))
-
+#' @export
 plot_occs <- function(occs)
   ggplot2::ggplot(occs, aes(x = x, y = n, label = n)) +
   ggplot2::geom_bar(stat = "identity") +
