@@ -41,23 +41,23 @@ shinyServer(function(input, output) {
     })
 
     processed_counts <- reactive({
-        process_counts(raw_counts())
+      countfitteR:::process_counts(raw_counts())
     })
 
     occs <- reactive({
-      get_occs(processed_counts())
+      countfitteR:::get_occs(processed_counts())
     })
 
     fits <- reactive({
-      fit_counts(processed_counts(), separate = input[["sep_exp"]], model = input[["chosen_models"]], level = input[["conf_level"]])
+      countfitteR:::fit_counts(processed_counts(), separate = input[["sep_exp"]], model = input[["chosen_models"]], level = input[["conf_level"]])
     })
 
     compared_fits <- reactive({
-      compare_fit(processed_counts(), fits())
+      countfitteR:::compare_fit(processed_counts(), fits())
     })
 
     summarized_fits <- reactive({
-       summary_fitlist(fits())
+      countfitteR:::summary_fitlist(fits())
     })
 
 
