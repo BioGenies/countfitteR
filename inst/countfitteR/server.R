@@ -87,7 +87,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_distr_plot"]] <- renderPlot({
-      plot_occs(occs())
+      countfitteR:::plot_occs(occs())
     })
 
     output[["input_data_distr_plot_ui"]] <- renderUI({
@@ -100,16 +100,16 @@ shinyServer(function(input, output) {
     })
     # mean values ----------------------------
     output[["fit_plot"]] <- renderPlot({
-        countfitteR::plot_fitlist(fits())
+        countfitteR:::plot_fitlist(fits())
       # print(fits())
     })
 
     output[["model_decision"]] <- renderUI({
-        HTML(decide(summarized_fits(), input[["sep_exp"]]))
+        HTML(countfitteR:::decide(summarized_fits(), input[["sep_exp"]]))
     })
 
     output[["fit_plot_db"]] <- downloadHandler("fit_CI.svg", content = function(file) {
-        ggsave(file, plot_fitlist(fits()), device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitlist(fits()), device = svg, height = 297, width = 297, units = "mm")
     })
 
     output[["fit_tab"]] <- DT::renderDataTable({
@@ -126,11 +126,11 @@ shinyServer(function(input, output) {
 
     # compare distrs ----------------------------
     output[["cmp_plot"]] <- renderPlot({
-      plot_fitcmp(compared_fits())
+      countfitteR:::plot_fitcmp(compared_fits())
     })
 
     output[["cmp_plot_db"]] <- downloadHandler("cmp.svg", content = function(file) {
-        ggsave(file, plot_fitcmp(compared_fits()), device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitcmp(compared_fits()), device = svg, height = 297, width = 297, units = "mm")
     })
 
     output[["cmp_sep_tab"]] <- DT::renderDataTable({
