@@ -16,6 +16,7 @@ source("https://install-github.me/jarochi/countfitteR")
 To run countfitteR type the following command into an R console.
 
 ```R
+library(countfitteR)
 require(shiny); countfitteR::countfitteR_gui()
 ```
 
@@ -26,7 +27,7 @@ Jaroslaw Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: 
 
 ```tex
 @misc{countfitteR_2018,
-	author = {Chilimoniuk, Jaroslaw and R\"odiger, Stefan and Burdukiewicz, Michał},
+	author = {Chilimoniuk, Jarosław and R\"odiger, Stefan and Burdukiewicz, Michał},
 	month = may,
 	note = R package,
     title = {{countfitteR}: a web server for the analysis of count data},
