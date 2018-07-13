@@ -1,4 +1,3 @@
-source("utils.R")
 
 fit_pois_separate <- function(x, level, ...) {
   fit <- stats::glm(x ~ 1, family = poisson(link = "log"), ...)
