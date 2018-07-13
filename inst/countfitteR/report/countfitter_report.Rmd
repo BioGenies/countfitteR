@@ -1,6 +1,6 @@
 ---
 title: "countfitteR report"
-author: "Michal Burdukiewicz, Stefan Roediger"
+author: "Michał Burdukiewicz, Stefan Rödiger, Jarosław Chilimoniuk"
 date: ""
 output:
 html_document:
@@ -36,6 +36,8 @@ Models selected: `r paste0(countfitteR:::nice_model_names[input[["chosen_models"
 
 ```{r}
 if(input[["mean_value_rep"]]) {
+  aaa <- getwd()
+  print(aaa)
   cat("\n",readLines("readmes/mean_value/1.md"), sep = "    \n")
   plot(plot_fitlist(fits()))
   dat <- summarized_fits()[, c("count", "lambda", "lower", "upper", "BIC", "model")]
