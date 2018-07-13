@@ -7,7 +7,7 @@ library(rhandsontable)
 library(rmarkdown)
 library(pscl)
 
-load("./countfitteR/data/laf.RData")
+# load("./countfitteR/data/laf.RData")
 
 example_counts <- system.file("extdata", "example_counts.csv", package = "countfitteR")
 
