@@ -3,8 +3,5 @@
 export(compare_fit)
 export(countfitteR_gui)
 export(fit_counts)
-export(invlogit)
-export(nice_model_names)
-export(no_fit)
 export(plot_fitcmp)
 export(summary_fitlist)

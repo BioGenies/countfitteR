@@ -1,9 +1,8 @@
-#' @export
+
 invlogit <- function(x) {
   1/(1 + exp(-x))
 }
 
-#' @export
 no_fit <- function() {
   list(fit = NA,
        coefficients = c(lambda = NA),
@@ -11,5 +10,4 @@ no_fit <- function() {
   )
 }
 
-#' @export
 nice_model_names <- c(pois = "Poisson", nb = "NB", zip = "ZIP", zinb = "ZINB")
