@@ -3,7 +3,7 @@ invlogit <- function(x) {
   1/(1 + exp(-x))
 }
 
-
+#' @export
 no_fit <- function() {
   list(fit = NA,
        coefficients = c(lambda = NA),
