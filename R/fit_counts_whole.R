@@ -1,3 +1,4 @@
+source("utils.R")
 
 fit_pois_whole <- function(x, level, ...) {
   fit <- glm(value ~ count_name - 1, data = x, family = poisson(link = "log"), ...)
