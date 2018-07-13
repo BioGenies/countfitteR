@@ -20,5 +20,11 @@ countfitteR_gui()
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }
+<<<<<<< HEAD
 \keyword{count}
 \keyword{data}
+=======
+\keyword{Poisson}
+\keyword{count}
+\keyword{zero-inflated}
+>>>>>>> 9d76d2444f401a08de35a372b567a1e15957de1f

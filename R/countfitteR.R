@@ -7,7 +7,7 @@
 #'
 #' @section Warning : Any ad-blocking software may cause malfunctions.
 #'
-#' @keywords count data
+#' @keywords count Poisson zero-inflated
 #'
 #' @export countfitteR_gui
 #'
