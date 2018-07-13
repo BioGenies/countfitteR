@@ -1,7 +1,4 @@
-#' Loads all important functions
-#'
-#' @name load_all_func
-#'
+# Loads all important functions
 
 load_all_func <- c('compare_fit.R', 'distrs.R',
                'fit_counts.R', 'fit_counts_separate.R', 'fit_counts_whole.R',
@@ -9,7 +6,7 @@ load_all_func <- c('compare_fit.R', 'distrs.R',
                'utils.R', 'zeroinfl2.R')
 
 sapply(load_all_func, function(i) source(paste0("./R/", i)))
-# 
+
 # save.image("./data/laf.RData")
 
 # load("./data/laf.RData")
