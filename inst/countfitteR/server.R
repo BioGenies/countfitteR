@@ -1,3 +1,4 @@
+library(countfitteR)
 library(shiny)
 # must use development DT devtools::install_github('rstudio/DT')
 library(DT)
@@ -5,6 +6,8 @@ library(reshape2)
 library(rhandsontable)
 library(rmarkdown)
 library(pscl)
+
+load("./countfitteR/data/laf.RData")
 
 example_counts <- system.file("extdata", "example_counts.csv", package = "countfitteR")
 
