@@ -66,7 +66,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_summary"]] <- DT::renderDataTable({
-        summ <- summary_counts(processed_counts())
+        summ <- countfitteR:::summary_counts(processed_counts())
         formatRound(my_DT(summ), c(2, 4, 5), digits = 4)
     })
 
