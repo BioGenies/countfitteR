@@ -105,7 +105,7 @@ fit_counts_whole <- function(x, model, level, ...) {
                               zinb = fit_zinb_whole(x, level = level, ...)
   ), model = model), error = function(e) sapply(levels(x[["count_name"]]),
                                                 # add underscore to make it like normal fits
-                                                function(single_count) single_count = c(no_fit(),
+                                                function(single_count) single_count = c(countfitteR:::no_fit(),
                                                                                         BIC = NA,
                                                                                         model = model),
                                                 simplify = FALSE))
