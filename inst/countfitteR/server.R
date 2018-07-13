@@ -95,7 +95,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_distr_plot_db"]] <- downloadHandler("distr_barplot.svg", content = function(file) {
-        ggsave(file, plot_occs(occs()), device = svg, height = 260 + 70 * length(processed_counts()), width = 297,
+        ggsave(file, countfitteR:::plot_occs(occs()), device = svg, height = 260 + 70 * length(processed_counts()), width = 297,
             units = "mm")
     })
     # mean values ----------------------------
