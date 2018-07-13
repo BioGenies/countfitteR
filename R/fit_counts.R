@@ -16,6 +16,9 @@
 #' confint is a \code{matrix} with the number of rows equal to the number of
 #' parameters. Rownames are names of parameters. The columns contain respectively
 #' lower and upper confidence intervals.
+#' @examples 
+#' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
+#' fit_counts(df, model = "pois") 
 #' @export
 
 fit_counts <- function(counts_list, separate = TRUE, model, level = 0.95, ...) {

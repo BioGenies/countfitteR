@@ -70,6 +70,10 @@ compare_fit <- function(count_list, fitlist = fit_counts(count_list, model = "al
 #' The bar charts represent theoretical counts depending on the chosen distribution. Red dots describe
 #' the real number of counts.
 #' @param fitcmp You need to input data frame that is created by compare_fit function.
+#' @examples 
+#' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
+#' fitcmp <- compare_fit(df, fitlist = fit_counts(df, model = "all"))
+#' plot_fitcmp(fitcmp)
 #' @export
 
 plot_fitcmp <- function(fitcmp) {
