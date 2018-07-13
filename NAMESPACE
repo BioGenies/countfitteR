@@ -3,6 +3,5 @@
 export(compare_fit)
 export(countfitteR_gui)
 export(fit_counts)
-export(get_count_names)
 export(plot_fitcmp)
 export(summary_fitlist)

@@ -101,7 +101,7 @@ shinyServer(function(input, output) {
     })
     # mean values ----------------------------
     output[["fit_plot"]] <- renderPlot({
-        plot_fitlist(fits())
+        countfitteR:::plot_fitlist(fits())
       # print(fits())
     })
 

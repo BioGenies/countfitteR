@@ -1,9 +1,3 @@
-fast_tabulate <- function(x) {
-  # + 1, since we also count zeros
-  tabs <- tabulate(x + 1)
-  data.frame(x = 0L:(length(tabs) - 1), n = tabs)
-}
-
 # returns density function
 
 get_density_fun <- function(single_fit) {
