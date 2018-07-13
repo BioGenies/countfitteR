@@ -1,11 +1,11 @@
 ## About  
 
-The source code of countfitter is avaible on [GitHub](https://github.com/michbur/countfitter).
+The source code of countfitter is avaible on [GitHub](https://github.com/jarochi/countfitteR).
 
 ### Authors
 
-[Michal Burdukiewicz](https://github.com/michbur)  
+[Michał Burdukiewicz](https://github.com/michbur)  
 
-[Stefan Roediger](https://www.researchgate.net/profile/Stefan_Roediger)
+[Stefan Rödiger](https://www.researchgate.net/profile/Stefan_Roediger)
 
-[Jaroslaw Chilimoniuk](https://www.researchgate.net/profile/Jaroslaw_Chilimoniuk)  
+[Jarosław Chilimoniuk](https://www.researchgate.net/profile/Jaroslaw_Chilimoniuk)  
