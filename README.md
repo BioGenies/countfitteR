@@ -27,7 +27,7 @@ Jarosław Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR:
 
 ```tex
 @misc{countfitteR_2018,
-	author = {Chilimoniuk, Jarosław and R\"odiger, Stefan and Burdukiewicz, Michał},
+	author = {Chilimoniuk, Jaros\l{}aw and R\"odiger, Stefan and Burdukiewicz, Micha\l{}},
 	month = may,
 	note = R package,
     title = {{countfitteR}: a web server for the analysis of count data},
