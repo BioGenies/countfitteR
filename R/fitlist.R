@@ -45,7 +45,7 @@ plot_fitlist <- function(fitlist) {
                lowest_BIC = ifelse(1L:nrow(single_count_dat) == which.min(single_count_dat[["BIC"]]), TRUE, FALSE))
   }))
 
-  ggplot2::ggplot(plot_dat, aes(x = model, y = lambda, ymax = upper, ymin = lower, color = lowest_BIC)) +
+  ggplot2::ggplot(plot_dat, ggplot2::aes(x = model, y = lambda, ymax = upper, ymin = lower, color = lowest_BIC)) +
     ggplot2::geom_point() +
     ggplot2::geom_errorbar(width = 0.5) +
     ggplot2::facet_wrap(~ count) +

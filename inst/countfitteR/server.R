@@ -5,6 +5,7 @@ library(rhandsontable)
 library(rmarkdown)
 library(pscl)
 library(ggplot2)
+library(MASS)
 
 # load("./countfitteR/data/laf.RData")
 

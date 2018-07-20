@@ -4,6 +4,10 @@
 \name{countfitteR_gui}
 \alias{countfitteR_gui}
 \alias{countfitteR}
+\alias{@examples}
+\alias{\dontrun{}
+\alias{countfitteR_gui()}
+\alias{}}
 \alias{countfitteR_gui-package}
 \title{countfitteR Graphical User Interface}
 \description{
@@ -14,11 +18,6 @@ chooses the best performing distribution model
  Any ad-blocking software may cause malfunctions.
 }
 
-\examples{
-\dontrun{ 
-countfitteR_gui()
-}
-}
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }

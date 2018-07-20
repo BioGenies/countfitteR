@@ -12,6 +12,7 @@ Authors@R: c(person("Michal", "Burdukiewicz",
            role = ("ctb")),
            person("Jaroslaw", "Chilimoniuk", 
            email = "jaroslaw.chilimoniuk@gmail.com", 
+           comment = c(ORCID = "0000-0001-5467-018X"),
            role = c("ctb"))
            )
 Maintainer: The package maintainer <michalburdukiewicz@gmail.com>

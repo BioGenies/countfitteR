@@ -32,7 +32,7 @@ get_occs <- function(count_list)
   ))
 
 plot_occs <- function(occs)
-  ggplot2::ggplot(occs, aes(x = x, y = n, label = n)) +
+  ggplot2::ggplot(occs, ggplot2::aes(x = x, y = n, label = n)) +
   ggplot2::geom_bar(stat = "identity") +
   ggplot2::geom_text(vjust = -0.25) +
   ggplot2::scale_y_continuous("Frequency", limits = c(0, max(occs[["n"]]*1.2))) +

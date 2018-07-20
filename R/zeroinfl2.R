@@ -1,4 +1,4 @@
-
+library(pscl)
 # Slightly changed code from \code{pscl} package.
 
 
@@ -322,7 +322,7 @@ zeroinfl2 <- function(formula, data, subset, na.action, weights, offset,
 
       while(abs((ll_old - ll_new)/ll_old) > control$reltol) {
         ll_old <- ll_new
-        model_count <- suppressWarnings(glm.nb(Y ~ 0 + X + offset(offset), weights = weights * (1-probi),
+        model_count <- suppressWarnings(MASS::glm.nb(Y ~ 0 + X + offset(offset), weights = weights * (1-probi),
                                                start = start$count, init.theta = start$theta))
         model_zero <- suppressWarnings(glm.fit(Z, probi, weights = weights, offset = offsetz,
                                                family = binomial(link = linkstr), start = start$zero))
@@ -665,4 +665,25 @@ predprob.zeroinfl <- function(obj, ...) {
 
 extractAIC.zeroinfl <- function(fit, scale = NULL, k = 2, ...) {
   c(attr(logLik(fit), "df"), AIC(fit, k = k))
+}
+
+
+## convenience helper function
+model_offset_2 <- function(x, terms = NULL, offset = TRUE)
+  ## allow optionally different terms
+  ## potentially exclude "(offset)"
+{
+  if(is.null(terms)) terms <- attr(x, "terms")
+  offsets <- attr(terms, "offset")
+  if(length(offsets) > 0) {
+    ans <- if(offset) x$"(offset)" else NULL
+    if(is.null(ans)) ans <- 0
+    for(i in offsets) ans <- ans + x[[deparse(attr(terms, "variables")[[i + 1]])]]
+    ans
+  }
+  else {
+    ans <- if(offset) x$"(offset)" else NULL
+  }
+  if(!is.null(ans) && !is.numeric(ans)) stop("'offset' must be numeric")
+  ans
 }

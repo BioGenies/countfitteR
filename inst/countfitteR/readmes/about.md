@@ -4,7 +4,7 @@ The source code of countfitter is avaible on [GitHub](https://github.com/jarochi
 
 ### Authors
 
-[Michał Burdukiewicz](https://github.com/michbur)  
+[Michał Burdukiewicz](https://www.researchgate.net/profile/Michal_Burdukiewicz)
 
 [Stefan Rödiger](https://www.researchgate.net/profile/Stefan_Roediger)
 

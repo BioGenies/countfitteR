@@ -47,7 +47,7 @@ cmp_dat <- compare_fit(plot_sim, fit_counts(plot_sim, separate = TRUE, model = "
 
 
 png("abstract_BIC.png", height = 480, width = 480)
-ggplot2::ggplot(cmp_dat, aes(x = x, y = value, fill = distr)) +
+ggplot2::ggplot(cmp_dat, ggplot2::aes(x = x, y = value, fill = distr)) +
   ggplot2::geom_bar(stat = "identity", color = "black", position = "dodge") +
   ggplot2::facet_wrap( ~ model, ncol = 1) +
   ggplot2::scale_y_continuous("n") +
