@@ -7,3 +7,5 @@ r:
   - devel
 sudo: false
 cache: packages
+dist: trusty	
+os: osx
