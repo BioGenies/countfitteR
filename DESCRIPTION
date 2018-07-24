@@ -20,7 +20,7 @@ Description: countfitteR is a web server based on shiny technology for selecting
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-VignetteBuilder: utils
+VignetteBuilder: utils, testthat
 Suggests: utils
 Date: 2018-07-10
 URL: https://github.com/michbur/countfitter
@@ -40,4 +40,4 @@ Imports:
     grid,
     gridExtra,
     dplyr,
-    pbapply
+    testthat
