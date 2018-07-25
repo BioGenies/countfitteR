@@ -1,5 +1,10 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
+language:
+r:
+  - oldrel
+  - release
+  - devel
 cache: packages
 matrix:
   include:
@@ -14,8 +19,3 @@ matrix:
       osx_image: xcode9
     - os: osx
       osx_image: xcode9.4
-
-r:
-  - oldrel
-  - release
-  - devel
