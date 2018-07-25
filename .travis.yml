@@ -1,33 +1,21 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
-sudo: false
 cache: packages
 matrix:
   include:
     - os: linux
       dist: trusty
-      language: r
-r:
-  - oldrel
-  - release
-  - devel
+      sudo: false
+    - os: linux
+      dist: trusty
+      sudo: true
     - os: osx
-    language: r
-r:
-  - oldrel
-  - release
-  - devel
     - os: osx
-    language: r
-r:
-  - oldrel
-  - release
-  - devel
       osx_image: xcode9
     - os: osx
-    language: r
+      osx_image: xcode9.4
+
 r:
   - oldrel
   - release
   - devel
-      osx_image: xcode9.4
