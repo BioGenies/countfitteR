@@ -1,11 +1,24 @@
-year <- sub("-.*", "", meta$Date)
-note <- sprintf("R package version %s", meta$Version)
+citHeader("To cite countfitteR in publications, please use:")
 
-bibentry(bibtype = "Manual",
-title = "{countfitteR}: a web server for the analysis of count data",
-         author = c(person("Jaroslaw", "Chilimoniuk"),
-                    person("Stefan", "Roediger"),
-                    person("Michal", "Burdukiewicz")),
-         year = year,
-         note = note,
-         url = "https://github.com/jarochi/countfitteR")
+if(!exists("meta") || is.null(meta)) meta <- packageDescription("countfitteR") 
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date) 
+vers <- paste("R package version", meta$Version)
+title <- paste0(meta[["Package"]], ": ", tolower(meta[["Title"]]))
+url <- paste0("https://cran.r-project.org/package=", meta[["Package"]])
+
+citEntry(entry = "Manual",
+  author = "Michal Burdukiewicz and Piotr Sobczyk and Chris Lauber",
+  title = title,
+  year = year, 
+  note = vers,
+  url = "https://CRAN.R-project.org/package=countfitteR",
+  textVersion = paste0("Chilimoniuk J, Roediger S and Burdukiewicz M (", 
+           year, 
+           "). ", 
+           title,
+           ". ",
+           vers, 
+           ". ", 
+           url,
+           ".")
+)
