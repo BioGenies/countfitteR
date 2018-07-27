@@ -7,7 +7,7 @@ title <- paste0(meta[["Package"]], ": ", tolower(meta[["Title"]]))
 url <- paste0("https://cran.r-project.org/package=", meta[["Package"]])
 
 citEntry(entry = "Manual",
-  author = "Michal Burdukiewicz and Piotr Sobczyk and Chris Lauber",
+  author = "Jaroslaw Chilimoniuk and Stefan Roediger and Michal Burdukiewicz",
   title = title,
   year = year, 
   note = vers,
