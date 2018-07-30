@@ -10,6 +10,9 @@
 \alias{}}
 \alias{countfitteR_gui-package}
 \title{countfitteR Graphical User Interface}
+\usage{
+countfitteR_gui()
+}
 \description{
 Launches graphical user interface that analyses given count data and
 chooses the best performing distribution model
@@ -23,4 +26,5 @@ Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }
 \keyword{Poisson}
 \keyword{count}
+\keyword{overdispersion}
 \keyword{zero-inflated}
