@@ -6,6 +6,7 @@ library(rmarkdown)
 library(pscl)
 library(ggplot2)
 library(MASS)
+library(tools)
 
 # load("./countfitteR/data/laf.RData")
 

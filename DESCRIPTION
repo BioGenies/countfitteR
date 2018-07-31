@@ -40,4 +40,5 @@ Imports:
     grid,
     gridExtra,
     dplyr,
-    testthat
+    testthat,
+    tools
