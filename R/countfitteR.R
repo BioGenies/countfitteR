@@ -41,7 +41,7 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c("x", "value", "n", "mode
 #'
 #' @section Warning : Any ad-blocking software may cause malfunctions.
 #'
-#' @keywords count Poisson zero-inflated overdispersion
+#' @keywords count Poisson zero-inflated
 #'
 #' @export countfitteR_gui
 #'
@@ -50,6 +50,8 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c("x", "value", "n", "mode
 #' @importFrom utils tail
 #' @importFrom ggplot2 ggplot geom_bar facet_grid geom_point scale_color_discrete
 #' @importFrom shiny runApp
+#' @importFrom tools md5sum
+
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 #' @docType package
 #' @name countfitteR-package
@@ -58,6 +60,7 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c("x", "value", "n", "mode
 #'  countfitteR_gui()
 #'  }
 
+library(shiny)
 countfitteR_gui <- function(){
   shiny::runApp(system.file("countfitteR", package = "countfitteR"))
   # runApp("./inst/countfitteR/")
