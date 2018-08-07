@@ -3,7 +3,7 @@
 \docType{data}
 \name{foci_count_FITC}
 \alias{foci_count_FITC}
-\title{example data extracted from Aklidus system. Files with only FITC fluorescent dye were merged.}
+\title{example data extracted from Aklidus system. Counts with only FITC fluorescent dye were merged.}
 \usage{
 foci_count_FITC
 }
