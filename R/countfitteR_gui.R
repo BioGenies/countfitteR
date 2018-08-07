@@ -17,19 +17,15 @@
 #' @importFrom ggplot2 ggplot geom_bar facet_grid geom_point scale_color_discrete
 #' @importFrom shiny runApp
 #' @importFrom tools md5sum
-
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
-#' @docType package
-#' @name countfitteR-package
-#' @aliases countfitteR
-#'  @examples \dontrun{ 
-#'  countfitteR_gui()
-#'  }
+#' @examples 
+#' \dontrun{ 
+#' library(shiny)
+#' countfitteR_gui()
+#' }
 
-library(shiny)
 countfitteR_gui <- function(){
   shiny::runApp(system.file("countfitteR", package = "countfitteR"))
   # runApp("./inst/countfitteR/")
-  }
-
+}
 NULL
