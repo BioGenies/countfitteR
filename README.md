@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/jarochi/countfitteR.png)](https://travis-ci.org/jarochi/countfitteR)
+
 # countfitteR
 
 countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution to the dataset supplied by an user.
