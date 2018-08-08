@@ -7,8 +7,10 @@ library(pscl)
 library(ggplot2)
 library(MASS)
 library(tools)
+library(countfitteR)
 
 # load("./countfitteR/data/laf.RData")
+source("ggtheme.R")
 
 example_counts <- system.file("extdata", "example_counts.csv", package = "countfitteR")
 
@@ -89,20 +91,22 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_distr_plot"]] <- renderPlot({
-      countfitteR:::plot_occs(occs())
+      countfitteR:::plot_occs(occs()) + cf_theme
     })
 
     output[["input_data_distr_plot_ui"]] <- renderUI({
-        plotOutput("input_data_distr_plot", height = 260 + 70 * length(processed_counts()))
+        plotOutput("input_data_distr_plot", height = 260 + 70 * length(processed_counts())) 
     })
 
     output[["input_data_distr_plot_db"]] <- downloadHandler("distr_barplot.svg", content = function(file) {
-        ggsave(file, countfitteR:::plot_occs(occs()), device = svg, height = 260 + 70 * length(processed_counts()), width = 297,
+        ggsave(file, countfitteR:::plot_occs(occs()) + cf_theme, device = svg, 
+               height = 260 + 70 * length(processed_counts()), width = 297,
             units = "mm")
     })
     # mean values ----------------------------
     output[["fit_plot"]] <- renderPlot({
-        countfitteR:::plot_fitlist(fits())
+        countfitteR:::plot_fitlist(fits()) + 
+        cf_theme
       # print(fits())
     })
 
@@ -111,7 +115,7 @@ shinyServer(function(input, output) {
     })
 
     output[["fit_plot_db"]] <- downloadHandler("fit_CI.svg", content = function(file) {
-        ggsave(file, countfitteR:::plot_fitlist(fits()), device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitlist(fits()) + cf_theme, device = svg, height = 297, width = 297, units = "mm")
     })
 
     output[["fit_tab"]] <- DT::renderDataTable({
@@ -128,11 +132,11 @@ shinyServer(function(input, output) {
 
     # compare distrs ----------------------------
     output[["cmp_plot"]] <- renderPlot({
-      countfitteR:::plot_fitcmp(compared_fits())
+      countfitteR:::plot_fitcmp(compared_fits()) + cf_theme
     })
 
     output[["cmp_plot_db"]] <- downloadHandler("cmp.svg", content = function(file) {
-        ggsave(file, countfitteR:::plot_fitcmp(compared_fits()), device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitcmp(compared_fits()) + cf_theme, device = svg, height = 297, width = 297, units = "mm")
     })
 
     output[["cmp_sep_tab"]] <- DT::renderDataTable({

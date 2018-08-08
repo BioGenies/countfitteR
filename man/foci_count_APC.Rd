@@ -8,6 +8,6 @@
 foci_count_APC
 }
 \description{
-Data of six bad replicates exported from \code{foci_count_APC}
+Data of six bad replicates exported from \code{foci_count_APC}.
 }
 \keyword{datasets}

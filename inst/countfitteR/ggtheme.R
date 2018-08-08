@@ -1,10 +1,6 @@
-library(ggplot2)
-library(grid)
-library(gridExtra)
-
 size_mod <- 1
 
-my_theme <- ggplot2::theme(
+cf_theme <- ggplot2::theme(
   axis.text = element_text(size=13 + size_mod),
   axis.title.x = element_text(size=14 + size_mod, vjust = -1),
   axis.title.y = element_text(size=14 + size_mod, vjust = 1),
