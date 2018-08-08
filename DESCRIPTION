@@ -40,4 +40,5 @@ Imports:
     DT,
     rmarkdown,
     testthat,
-    tools
+    tools,
+    gridExtra
