@@ -15,7 +15,7 @@ Authors@R: c(person("Michal", "Burdukiewicz",
            comment = c(ORCID = "0000-0001-5467-018X"),
            role = c("ctb"))
            )
-Maintainer: The package maintainer <michalburdukiewicz@gmail.com>
+Maintainer: Jaroslaw Chilimoniuk <jaroslaw.chilimoniuk@gmail.com>
 Description: countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution to the dataset supplied by an user.
 License: GPL-3
 Encoding: UTF-8
