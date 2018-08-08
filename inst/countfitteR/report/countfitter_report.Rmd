@@ -27,10 +27,11 @@ Report generated on `r Sys.time()`.
 Detected input file: `r ifelse(is.null(input[["input_file"]][["name"]]), "none", input[["input_file"]][["name"]])`.  
 <!-- md5sum("/home/jarek/countfitteR/inst/extdata/example_counts.csv") -->
 `r datapath <- input[["input_file"]]`
-`r plik <- as.character(md5sum(as.character(datapath["datapath"])))`
+`r example_f <- md5sum("../../../data/foci_count_FITC_short.rda")`
+`r example_f <- example_f[[1]]`
+`r input_f <- as.character(md5sum(as.character(datapath["datapath"])))`
 
-md5sum of input file: `r ifelse(is.null(input[["input_file"]][["name"]]), "a670b890c279a6b04e84d64482439541", plik)`.
-
+md5sum of input file: `r ifelse(is.null(input[["input_file"]][["name"]]), example_f, input_f)`.
 ## Settings
 
 Confidence level: `r input[["conf_level"]]`.  

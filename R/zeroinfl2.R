@@ -1,3 +1,4 @@
+library(pscl)
 # Slightly changed code from \code{pscl} package.
 
 
