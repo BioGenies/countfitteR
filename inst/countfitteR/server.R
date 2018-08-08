@@ -13,7 +13,7 @@ library(countfitteR)
 source("ggtheme.R")
 data("foci_count_FITC")
 
-example_counts <- abcd[, 1:16] 
+example_counts <- foci_count_FITC[, 1:16] 
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
