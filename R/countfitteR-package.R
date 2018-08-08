@@ -16,12 +16,11 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c("x", "value", "n", "mode
 #' glm glm.fit lag logLik mad make.link median model.frame model.matrix model.response 
 #' model.weights na.omit na.pass optim pnorm poisson predict printCoefmat quantile residuals 
 #' sd terms update
+#' @importFrom gridExtra combine
 #' @importFrom utils tail
-#' @importFrom ggplot2 ggplot aes geom_bar facet_grid geom_point scale_color_discrete 
+#' @importFrom ggplot2 ggplot aes geom_bar facet_grid geom_point scale_color_discrete
 #' @importFrom shiny runApp
 #' @importFrom MASS glm.nb
-#' @importFrom shiny runApp
-#' @importFrom tools md5sum
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 #' @docType package
 #' @name countfitteR-package
