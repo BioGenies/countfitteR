@@ -3,11 +3,11 @@
 \docType{data}
 \name{foci_count_APC}
 \alias{foci_count_APC}
-\title{example data extracted from Aklides system. Counts with only APC fluorescent dye were merged.}
+\title{foci counts with APC dye}
 \usage{
 foci_count_APC
 }
 \description{
-Data of six bad replicates exported from \code{foci_count_APC}
+example data extracted from Aklides system. Counts with only APC fluorescent dye were merged.
 }
 \keyword{datasets}
