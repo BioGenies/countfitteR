@@ -3,12 +3,12 @@
 \docType{data}
 \name{foci_count}
 \alias{foci_count}
-\title{foci count}
+\title{example data extracted from Aklides system and merged into one file. Counts in this file will not fit properly, 
+due to the fact that we integrated into the file counts with two different fluorescent dyes used.}
 \usage{
 foci_count_merged
 }
 \description{
-example data extracted from Aklides system and merged into one file. Counts in this file will not fit properly, 
-due to the fact that we integrated into the file counts with two different fluorescent dyes used.
+Data of six bad replicates exported from \code{foci_count_merged}.
 }
 \keyword{datasets}
