@@ -3,7 +3,7 @@
 \docType{data}
 \name{foci_count_APC}
 \alias{foci_count_APC}
-\title{example data extracted from Aklidus system. Counts with only APC fluorescent dye were merged.}
+\title{example data extracted from Aklides system. Counts with only APC fluorescent dye were merged.}
 \usage{
 foci_count_APC
 }

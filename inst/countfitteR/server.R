@@ -10,7 +10,10 @@ library(tools)
 
 # load("./countfitteR/data/laf.RData")
 
-example_counts <- system.file("extdata", "example_counts.csv", package = "countfitteR")
+example_counts <- system.file("extdata", "exm_dat.csv", package = "countfitteR")
+# example <- system.file("extdata", "example.csv", package = "countfitteR")
+# data("foci_count_APC")
+# example <- foci_count_APC
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
@@ -23,6 +26,7 @@ shinyServer(function(input, output) {
         # if there is no data, example is loaded
         if (is.null(input[["input_file"]])) {
             dat <- read.csv(example_counts, check.names = FALSE)
+            # dat <- example
         } else {
             dat <- switch(input[["csv_type"]], csv1 = read.csv(input[["input_file"]][["datapath"]], header = input[["header"]],
                 check.names = FALSE), csv2 = read.csv2(input[["input_file"]][["datapath"]], header = input[["header"]],
@@ -68,6 +72,8 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_summary"]] <- DT::renderDataTable({
+      # browser()
+      
         summ <- countfitteR:::summary_counts(processed_counts())
         formatRound(my_DT(summ), c(2, 4, 5), digits = 4)
     })
