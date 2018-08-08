@@ -16,6 +16,7 @@ chooses the best performing distribution model
 
 \examples{
 \dontrun{ 
+library(shiny)
 countfitteR_gui()
 }
 }
