@@ -41,4 +41,5 @@ Imports:
     rmarkdown,
     testthat,
     tools,
-    gridExtra
+    gridExtra,
+    knitr
