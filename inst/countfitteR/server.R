@@ -13,8 +13,6 @@ library(countfitteR)
 source("ggtheme.R")
 data("foci_count_FITC_short")
 
-# example_counts <- foci_count_FITC[, 1:16] 
-
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
 my_DT <- function(x) datatable(x, escape = FALSE, extensions = "Buttons", filter = "top", rownames = FALSE)
