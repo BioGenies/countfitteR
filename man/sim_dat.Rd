@@ -8,11 +8,30 @@
 sim_dat
 }
 \description{
-Data was created using the \code{dplyr} and \code{pbapply} package
+Data created from simulation of NB Poiss
 }
-\seealso{
-\code{\link[dplyr]{dplyr}}
-
-\code{\link[pbapply]{pbapply}}
+\examples{
+# code used to generate the data
+# be warned: the simulations will take some time
+\dontrun{
+library(dplyr)
+set.seed(15390)
+sim_dat <- do.call(rbind, lapply(10^(-3L:2), function(single_theta)
+  do.call(rbind, lapply(1L:10/2, function(single_lambda) 
+    do.call(rbind, lapply(1L:100, function(single_rep) {
+      
+      foci <- lapply(1L:10, function(dummy) rnbinom(600, size = single_theta, mu = single_lambda))
+      names(foci) <- paste0("C", 1L:10)
+      
+      fit_counts(foci, separate = TRUE, model = "all") \%>\%
+        summary_fitlist \%>\% 
+        mutate(between = single_lambda < upper & single_lambda > lower) \%>\%
+        group_by(model) \%>\% 
+        summarize(prop = mean(between)) \%>\%
+        mutate(replicate = single_rep, lambda = single_lambda, theta = single_theta)
+    }))
+  ))
+))
+}
 }
 \keyword{datasets}

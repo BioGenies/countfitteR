@@ -9,6 +9,6 @@ due to the fact that we integrated into the file counts with two different fluor
 foci_count_merged
 }
 \description{
-Data of six bad replicates exported from \code{foci_count_merged}
+Data of six bad replicates exported from \code{foci_count_merged}.
 }
 \keyword{datasets}

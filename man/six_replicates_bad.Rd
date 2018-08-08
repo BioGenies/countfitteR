@@ -8,6 +8,6 @@
 six_replicates_bad
 }
 \description{
-Data of six bad replicates exported from \code{example_counts}
+Data of six bad replicates exported from \code{example_counts}.
 }
 \keyword{datasets}

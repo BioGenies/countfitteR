@@ -8,6 +8,6 @@
 example_counts
 }
 \description{
-Data was created using the healthy list data (not provided in package)
+Data was created using the healthy list data (not provided in package).
 }
 \keyword{datasets}
