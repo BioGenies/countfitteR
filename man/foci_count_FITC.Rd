@@ -3,11 +3,11 @@
 \docType{data}
 \name{foci_count_FITC}
 \alias{foci_count_FITC}
-\title{example data extracted from Aklides system. Counts with only FITC fluorescent dye were merged.}
+\title{foci counts with FITC dye}
 \usage{
 foci_count_FITC
 }
 \description{
-Data of six bad replicates exported from \code{foci_count_FITC}
+example data extracted from Aklides system. Counts with only FITC fluorescent dye were merged.
 }
 \keyword{datasets}

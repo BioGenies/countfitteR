@@ -44,6 +44,15 @@ NULL
 #' @keywords datasets
 NULL
 
+#' @name foci_count_FITC_short
+#' @title shorter version of the foci_count_FITC. Used as an example in shiny app, 
+#' when the user will not load his own count data.
+#' @description Data of six bad replicates exported from \code{foci_count_FITC}
+#' @docType data
+#' @usage foci_count_FITC_short
+#' @keywords datasets
+NULL
+
 #' @name foci_count
 #' @title example data extracted from Aklides system and merged into one file. Counts in this file will not fit properly, 
 #' due to the fact that we integrated into the file counts with two different fluorescent dyes used. 
