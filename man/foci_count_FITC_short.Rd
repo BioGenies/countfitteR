@@ -3,12 +3,12 @@
 \docType{data}
 \name{foci_count_FITC_short}
 \alias{foci_count_FITC_short}
-\title{shorter version of the foci_count_FITC. Used as an example in shiny app, 
-when the user will not load his own count data.}
+\title{short version \code{foci_counts_FITC}}
 \usage{
 foci_count_FITC_short
 }
 \description{
-Data of six bad replicates exported from \code{foci_count_FITC}
+shorter version of the \code{foci_count_FITC}. Used as an example in shiny app, 
+when the user will not load his own count data.
 }
 \keyword{datasets}
