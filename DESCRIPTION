@@ -1,6 +1,6 @@
 Package: countfitteR
 Type: Package
-Title: Software that predicts the most appropriate count distribution
+Title: countfitteR: Comprehensive Automatized Evaluation of Distribution Models for Count Data
 Version: 1.0
 Authors@R: c(person("Michal", "Burdukiewicz", 
            email = "michalburdukiewicz@gmail.com", 
@@ -16,7 +16,7 @@ Authors@R: c(person("Michal", "Burdukiewicz",
            role = c("ctb"))
            )
 Maintainer: The package maintainer <michalburdukiewicz@gmail.com>
-Description: countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution to the dataset supplied by an user.
+Description: countfitteR provides functionality for a comprehensive automatized evaluation of distribution models of count data. The package contains a command line user interface and a web server for selecting the most appropriate count distribution to the dataset supplied by an user.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
