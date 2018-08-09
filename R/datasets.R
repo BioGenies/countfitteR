@@ -29,34 +29,34 @@
 NULL
 
 #' @name foci_count_APC
-#' @title example data extracted from Aklides system. Counts with only APC fluorescent dye were merged.
-#' @description Data of six bad replicates exported from \code{foci_count_APC}
+#' @title foci counts with APC dye
+#' @description example data extracted from Aklides system. Counts with only APC fluorescent dye were merged.
 #' @docType data
 #' @usage foci_count_APC
 #' @keywords datasets
 NULL
 
 #' @name foci_count_FITC
-#' @title example data extracted from Aklides system. Counts with only FITC fluorescent dye were merged.
-#' @description Data of six bad replicates exported from \code{foci_count_FITC}
+#' @title foci counts with FITC dye
+#' @description example data extracted from Aklides system. Counts with only FITC fluorescent dye were merged.
 #' @docType data
 #' @usage foci_count_FITC
 #' @keywords datasets
 NULL
 
 #' @name foci_count_FITC_short
-#' @title shorter version of the foci_count_FITC. Used as an example in shiny app, 
+#' @title short version \code{foci_counts_FITC}
+#' @description shorter version of the \code{foci_count_FITC}. Used as an example in shiny app, 
 #' when the user will not load his own count data.
-#' @description Data of six bad replicates exported from \code{foci_count_FITC}
 #' @docType data
 #' @usage foci_count_FITC_short
 #' @keywords datasets
 NULL
 
 #' @name foci_count
-#' @title example data extracted from Aklides system and merged into one file. Counts in this file will not fit properly, 
+#' @title foci count 
+#' @description example data extracted from Aklides system and merged into one file. Counts in this file will not fit properly, 
 #' due to the fact that we integrated into the file counts with two different fluorescent dyes used. 
-#' @description Data of six bad replicates exported from \code{foci_count_merged}.
 #' @docType data
 #' @usage foci_count_merged
 #' @keywords datasets

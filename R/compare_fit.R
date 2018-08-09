@@ -81,8 +81,7 @@ plot_fitcmp <- function(fitcmp) {
     ggplot2::geom_bar(stat = "identity", fill = NA, color = "black") +
     ggplot2::facet_grid(model ~ count) +
     ggplot2::geom_point(ggplot2::aes(x = x, y = n, color = "red")) +
-    ggplot2::scale_color_discrete(guide = FALSE) +
-    my_theme
+    ggplot2::scale_color_discrete(guide = FALSE) 
 }
 
 fast_tabulate <- function(x) {
