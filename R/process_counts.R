@@ -37,5 +37,4 @@ plot_occs <- function(occs)
   ggplot2::geom_text(vjust = -0.25) +
   ggplot2::scale_y_continuous("Frequency", limits = c(0, max(occs[["n"]]*1.2))) +
   ggplot2::scale_x_continuous("Count") +
-  ggplot2::facet_wrap(~ count, ncol = 1) +
-  my_theme
+  ggplot2::facet_wrap(~ count, ncol = 1)
