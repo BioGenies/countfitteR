@@ -19,8 +19,8 @@ vignette: >
 
 # Introduction
 
-**countfitteR** is a shiny app designed to perform analysis of count data 
-experiments. This vignette covers important features and data sets of the app. 
+**countfitteR** is a R package and shiny app designed to perform analysis of count data. 
+This vignette covers important features and data sets of the app. 
 We extended our automatized imaging platform [@rodiger_highly_2013, 
 @willitzki_new_2012] for a multiparametric analysis of cell damage (DNA double 
 strand breaks) [@reddig_dna_2018, @rodiger_quantification_2018]. 
