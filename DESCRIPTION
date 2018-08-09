@@ -39,7 +39,6 @@ Imports:
     pscl,
     DT,
     rmarkdown,
-    testthat,
     tools,
     gridExtra,
     knitr
