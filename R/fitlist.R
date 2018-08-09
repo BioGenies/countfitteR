@@ -51,7 +51,7 @@ plot_fitlist <- function(fitlist) {
     ggplot2::facet_wrap(~ count) +
     ggplot2::scale_x_discrete("Model") +
     ggplot2::scale_y_continuous(expression(lambda)) +
-    ggplot2::scale_color_discrete("The lowest BIC") 
+    ggplot2::scale_color_discrete("The lowest BIC")
 }
 
 
