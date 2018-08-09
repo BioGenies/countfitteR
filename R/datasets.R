@@ -44,12 +44,12 @@ NULL
 #' @keywords datasets
 NULL
 
-#' @name foci_count_FITC_short
-#' @title short version \code{foci_counts_FITC}
+#' @name example_counts
+#' @title short version of the \code{foci_counts_FITC}
 #' @description shorter version of the \code{foci_count_FITC}. Used as an example in shiny app, 
 #' when the user will not load his own count data.
 #' @docType data
-#' @usage foci_count_FITC_short
+#' @usage example_counts
 #' @keywords datasets
 NULL
 

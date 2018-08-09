@@ -35,6 +35,9 @@ library(countfitteR)
 
 # Assign the csv file to filename
 # df <- read.csv(system.file("example_counts.csv", package = "countfitteR"))
+# foci_count
+# foci_count_APC
+# foci_count_FITC
 ```
 
 

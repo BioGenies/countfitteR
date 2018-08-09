@@ -11,7 +11,7 @@ library(countfitteR)
 
 # load("./countfitteR/data/laf.RData")
 source("ggtheme.R")
-data("foci_count_FITC_short")
+data("example_counts")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
