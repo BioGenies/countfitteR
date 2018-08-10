@@ -2,7 +2,7 @@
 
 
 # code in this file comes from the pscl package and was only slightly changed
-# some error messages
+# to alter some error messages
 
 zeroinfl2 <- function(formula, data, subset, na.action, weights, offset,
                       dist = c("poisson", "negbin", "geometric"),
