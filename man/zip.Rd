@@ -15,7 +15,9 @@ rZIP(n, lambda, p)
 
 \item{lambda}{vector of (non-negative) means.}
 
-\item{p}{probability of zero}
+\item{p}{probability of zeros.}
+
+\item{n}{number of random values to return.}
 }
 \description{
 Density and random generation for the zero inflated Poisson distribution.
