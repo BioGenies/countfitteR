@@ -5,7 +5,7 @@
 #' @description  Density and random generation for the zero inflated Poisson distribution.
 #' @param x vector of (non-negative integer) quantiles.
 #' @param lambda vector of (non-negative) means.
-#' @param p probability of zeros.
+#' @param p probability of excess zeros.
 #' @param n number of random values to return.
 #' @examples
 #' rZIP(15, 1.9, 0.9)

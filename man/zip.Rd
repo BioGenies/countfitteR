@@ -15,7 +15,7 @@ rZIP(n, lambda, p)
 
 \item{lambda}{vector of (non-negative) means.}
 
-\item{p}{probability of zeros.}
+\item{p}{probability of excess zeros.}
 
 \item{n}{number of random values to return.}
 }
