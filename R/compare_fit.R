@@ -10,7 +10,7 @@ get_density_fun <- function(single_fit) {
            zip = function(x) dZIP(x, lambda = single_fit[["coefficients"]][["lambda"]],
                                   p = 1 - single_fit[["coefficients"]][["r"]]),
            zinb = function(x) dZINB(x, size = single_fit[["coefficients"]][["theta"]],
-                                    lambda = single_fit[["coefficients"]][["lambda"]],
+                                    mu = single_fit[["coefficients"]][["lambda"]],
                                     p = 1 - single_fit[["coefficients"]][["r"]])
     )
   }

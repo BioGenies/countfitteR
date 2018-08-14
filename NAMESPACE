@@ -2,9 +2,11 @@
 
 export(compare_fit)
 export(countfitteR_gui)
+export(dZINB)
 export(dZIP)
 export(fit_counts)
 export(plot_fitcmp)
+export(rZINB)
 export(rZIP)
 export(summary_fitlist)
 importFrom(MASS,glm.nb)

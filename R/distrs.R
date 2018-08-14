@@ -33,11 +33,31 @@ rZIP <- function(n, lambda, p) {
 }
 
 
-rZINB <- function(n, size, lambda, p) {
-  stats::rnbinom(n, size = size, mu = lambda) * stats::rbinom(n, 1, p)
+#' @title Zero-inflated negative binomial distrbution
+#'
+#' @name zinb
+#' @rdname zinb
+#' @description  Density and random generation for the zero-inflated negative binomial 
+#' distribution.
+#' @param x vector of (non-negative integer) quantiles.
+#' @param size target for number of successful trials, or dispersion parameter (the shape 
+#' parameter of the gamma mixing distribution). Must be strictly positive, need not be integer..
+#' @param p probability of excess zeros.
+#' @param n number of random values to return.
+#' @param mu mean.
+#' @examples
+#' rZINB(15, 1.9, 0.9, 0.8)
+#' @seealso Negative binomial distribution: \code{\link[stats]{NegBinomial}}.
+NULL
+
+#' @rdname zinb
+#' @export
+rZINB <- function(n, size, mu, p) {
+  stats::rnbinom(n, size = size, mu = mu) * stats::rbinom(n, 1, p)
 }
 
-
-dZINB <- function(x, size, lambda, p) {
-  (1 - p) * (x == 0) + p * stats::dnbinom(x, size = size, mu = lambda)
+#' @rdname zinb
+#' @export
+dZINB <- function(x, size, mu, p) {
+  (1 - p) * (x == 0) + p * stats::dnbinom(x, size = size, mu = mu)
 }
