@@ -8,10 +8,10 @@ get_density_fun <- function(single_fit) {
            nb = function(x) dnbinom(x, size = single_fit[["coefficients"]][["theta"]],
                                     mu = single_fit[["coefficients"]][["lambda"]]),
            zip = function(x) dZIP(x, lambda = single_fit[["coefficients"]][["lambda"]],
-                                  p = 1 - single_fit[["coefficients"]][["r"]]),
+                                  r = 1 - single_fit[["coefficients"]][["r"]]),
            zinb = function(x) dZINB(x, size = single_fit[["coefficients"]][["theta"]],
                                     mu = single_fit[["coefficients"]][["lambda"]],
-                                    p = 1 - single_fit[["coefficients"]][["r"]])
+                                    r = 1 - single_fit[["coefficients"]][["r"]])
     )
   }
 }

@@ -2,20 +2,21 @@
 % Please edit documentation in R/distrs.R
 \name{zip}
 \alias{zip}
+\alias{ZIP}
 \alias{dZIP}
 \alias{rZIP}
 \title{Zero-inflated Poisson distrbution}
 \usage{
-dZIP(x, lambda, p)
+dZIP(x, lambda, r)
 
-rZIP(n, lambda, p)
+rZIP(n, lambda, r)
 }
 \arguments{
 \item{x}{vector of (non-negative integer) quantiles.}
 
 \item{lambda}{vector of (non-negative) means.}
 
-\item{p}{probability of excess zeros.}
+\item{r}{probability of excess zeros.}
 
 \item{n}{number of random values to return.}
 }

@@ -2,13 +2,14 @@
 % Please edit documentation in R/distrs.R
 \name{zinb}
 \alias{zinb}
+\alias{ZINB}
 \alias{rZINB}
 \alias{dZINB}
 \title{Zero-inflated negative binomial distrbution}
 \usage{
-rZINB(n, size, mu, p)
+rZINB(n, size, mu, r)
 
-dZINB(x, size, mu, p)
+dZINB(x, size, mu, r)
 }
 \arguments{
 \item{n}{number of random values to return.}
@@ -18,7 +19,7 @@ parameter of the gamma mixing distribution). Must be strictly positive, need not
 
 \item{mu}{mean.}
 
-\item{p}{probability of excess zeros.}
+\item{r}{probability of excess zeros.}
 
 \item{x}{vector of (non-negative integer) quantiles.}
 }
