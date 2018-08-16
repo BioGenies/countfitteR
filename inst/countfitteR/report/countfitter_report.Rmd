@@ -16,6 +16,7 @@ opts_chunk$set(echo=FALSE, results='asis', fig.align='center', fig.width=14, war
 # TO DO add warning = FALSE later
 library(xtable)
 
+source("ggtheme.R")
 print_table <- function(x)
   print(xtable(x), type = "html", sanitize.colnames.function = function(x) x, digits = 4,
         include.rownames = FALSE)
@@ -43,7 +44,7 @@ Models selected: `r paste0(countfitteR:::nice_model_names[input[["chosen_models"
 ```{r}
 if(input[["mean_value_rep"]]) {
   cat("\n",readLines("../readmes/mean_value/1.md"), sep = "    \n")
-  plot(countfitteR:::plot_fitlist(fits()))
+  plot(countfitteR:::plot_fitlist(fits()) + cf_theme)
   dat <- summarized_fits()[, c("count", "lambda", "lower", "upper", "BIC", "model")]
   cat("\n",readLines("../readmes/mean_value/2.md"), sep = "    \n")
   print_table(dat)
@@ -68,7 +69,7 @@ if(input[["decision_rep"]]) {
 ```{r}
 if(input[["cmp_distr_rep"]]) {
   cat("\n", readLines("../readmes/cmp_distr/1.md"), sep = "    \n")
-  plot(countfitteR:::plot_fitcmp(compared_fits()))
+  plot(countfitteR:::plot_fitcmp(compared_fits()) + cf_theme)
   cat("\n")
   print_table(compared_fits())
 }

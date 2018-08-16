@@ -10,7 +10,7 @@ library(tools)
 library(countfitteR)
 
 # load("./countfitteR/data/laf.RData")
-source("ggtheme.R")
+source("./report/ggtheme.R")
 data("example_counts")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
