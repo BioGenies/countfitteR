@@ -1,6 +1,6 @@
 ## About  
 
-The source code of countfitter is avaible on [GitHub](https://github.com/jarochi/countfitteR).
+The countfitteR web server relies on function from the [countfitteR](https://github.com/jarochi/countfitteR) package for **R**.
 
 ### Authors
 
