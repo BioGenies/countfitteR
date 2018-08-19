@@ -8,7 +8,7 @@
 #' to the model. If \code{FALSE}, all counts are fitted to the same models having
 #' the count name as the independent variable.
 #' @param model single \code{character}: \code{"pois"}, \code{"nb"},
-#' \code{"zinb"}, \code{"zip"}, \code{"all"}. If \code{"all"}.
+#' \code{"zinb"}, \code{"zip"}, \code{"all"}. If \code{"all"}, all possible model are fitted.
 #' @param level Confidence level, default is 0.95.
 #' @param ... Dots parameters are ignored.
 #' @return List of fitted models. Names are names of original counts, an underline

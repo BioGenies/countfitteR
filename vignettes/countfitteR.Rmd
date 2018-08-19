@@ -34,10 +34,11 @@ alteration of the cell phenotype.
 library(countfitteR)
 
 # Assign the csv file to filename
-# df <- read.csv(system.file("example_counts.csv", package = "countfitteR"))
-# foci_count
-# foci_count_APC
-# foci_count_FITC
+data("example_counts")
+
+processed_counts <- process_counts(example_counts)
+
+fit_counts(processed_counts, model = "all")
 ```
 
 
