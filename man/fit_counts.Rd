@@ -7,22 +7,24 @@
 fit_counts(counts_list, separate = TRUE, model, level = 0.95, ...)
 }
 \arguments{
-\item{counts_list}{Table with count data. Each count should be in separate column, rows should represent
+\item{counts_list}{A \code{list} of count data. Each count should be in 
+separate column, rows should represent
 values of that counts.}
 
-\item{separate}{\code{logical}. If \code{TRUE}, each count is separately fitted
-to the model. If \code{FALSE}, all counts are fitted to the same models having
-the count name as the independent variable.}
+\item{separate}{\code{logical}. If \code{TRUE}, each count is separately 
+fitted to the model. If \code{FALSE}, all counts are fitted to the same models 
+having the count name as the independent variable.}
 
 \item{model}{single \code{character}: \code{"pois"}, \code{"nb"},
-\code{"zinb"}, \code{"zip"}, \code{"all"}. If \code{"all"}, all possible model are fitted.}
+\code{"zinb"}, \code{"zip"}, \code{"all"}. If \code{"all"}, all possible model 
+are fitted.}
 
 \item{level}{Confidence level, default is 0.95.}
 
 \item{...}{Dots parameters are ignored.}
 }
 \value{
-List of fitted models. Names are names of original counts, an underline
+The list of fitted models. Names are names of original counts, an underline
 and a name of model used.
 confint is a \code{matrix} with the number of rows equal to the number of
 parameters. Rownames are names of parameters. The columns contain respectively

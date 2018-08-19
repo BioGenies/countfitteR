@@ -7,19 +7,24 @@
 compare_fit(count_list, fitlist = fit_counts(count_list, model = "all"))
 }
 \arguments{
-\item{count_list}{Table with count data. Each count should be in separate column, rows should represent
+\item{count_list}{A \code{list} of counts. Each count should be in separate 
+column, rows should represent
 values of that counts.}
 
-\item{fitlist}{Uses fit_count function to calculate value for each unique observation using different
+\item{fitlist}{Uses fit_count function to calculate value for each unique 
+observation using different
 distribution models.}
 }
 \value{
-Data table with distribution values for each unique count. Count is the name
-of the original count, model is the name of distribution model, x is unique count value, n is the
-frequency of unique counts, value is result of calculations made by chosen distribution model.
+A \code{data.frame} with distribution values for each unique count. 
+Count is the name of the original count, model is the name of distribution 
+model, x is unique count value, n is the frequency of unique counts, value 
+is result of calculations made by chosen 
+distribution model.
 }
 \description{
-Compare empirical distribution of counts with the distribution defined by the model
+Compare empirical distribution of counts with the distribution 
+defined by the model
 fitted to counts.
 }
 \examples{

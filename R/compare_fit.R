@@ -26,18 +26,23 @@ compare_fit_single <- function(fitlist) {
 #' @title Compare distributions
 #'
 #' @name compare_fit
-#' @description  Compare empirical distribution of counts with the distribution defined by the model
+#' @description  Compare empirical distribution of counts with the distribution 
+#' defined by the model
 #' fitted to counts.
-#' @param count_list Table with count data. Each count should be in separate column, rows should represent
+#' @param count_list A \code{list} of counts. Each count should be in separate 
+#' column, rows should represent
 #' values of that counts.
-#' @param fitlist Uses fit_count function to calculate value for each unique observation using different
+#' @param fitlist Uses fit_count function to calculate value for each unique 
+#' observation using different
 #' distribution models.
 #' @examples
 #' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
 #' compare_fit(df, fitlist = fit_counts(df, model = "all"))
-#' @return Data table with distribution values for each unique count. Count is the name
-#' of the original count, model is the name of distribution model, x is unique count value, n is the
-#' frequency of unique counts, value is result of calculations made by chosen distribution model.
+#' @return A \code{data.frame} with distribution values for each unique count. 
+#' Count is the name of the original count, model is the name of distribution 
+#' model, x is unique count value, n is the frequency of unique counts, value 
+#' is result of calculations made by chosen 
+#' distribution model.
 #' @export
 #
 
