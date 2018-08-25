@@ -1,10 +1,12 @@
 #' @title Process counts
 #'
-#' @description Counts data in table-like format ommiting NAs.
+#' @description Converts data in a table-like formats into lists of counts.
 #' @param x \code{data.frame} or \code{matrix}. 
 #' @examples
 #' data(example_counts)
 #' process_counts(example_counts)
+#' @details \code{process_counts} does not consider \code{NA}s and \code{NaN}s effectively 
+#' ommiting them (as the \code{\link[base]{is.na}} function).
 #' @return A \code{list} of counts.
 #' @export
 process_counts <- function(x) {
