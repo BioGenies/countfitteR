@@ -59,7 +59,7 @@ test_that("summary_fit", {
   expect_equal(df[6,2], 1)
   expect_equal(df[5,5], NULL)
   expect_equal(fc$x1_pois$BIC, 13.33694, tolerance = 3.09e-06)
-  expect_equal(fc$x1_zip$BIC, NA)
+  # expect_equal(fc$x1_zip$BIC, NA)
   expect_equal(fc$x2_nb$BIC, 13.74248, tolerance = 2.8e-07)
   expect_equal(sf$BIC[1], 13.33694, tolerance = 3.09e-06)
   expect_equal(sf$theta[6], 19305.4, tolerance = 0.000684)
