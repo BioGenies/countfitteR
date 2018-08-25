@@ -27,11 +27,9 @@ compare_fit_single <- function(fitlist) {
 #'
 #' @name compare_fit
 #' @description  Compare empirical distribution of counts with the distribution 
-#' defined by the model
-#' fitted to counts.
+#' defined by the model fitted to counts.
 #' @param count_list A \code{list} of counts. Each count should be in separate 
-#' column, rows should represent
-#' values of that counts.
+#' column, rows should represent values of these counts.
 #' @param fitlist Uses fit_count function to calculate value for each unique 
 #' observation using different
 #' distribution models.

@@ -13,7 +13,11 @@ process_counts(x)
 A \code{list} of counts.
 }
 \description{
-Counts data in table-like format ommiting NAs.
+Converts data in a table-like formats into lists of counts.
+}
+\details{
+\code{process_counts} does not consider \code{NA}s and \code{NaN}s effectively 
+ommiting them (as the \code{\link[base]{is.na}} function).
 }
 \examples{
 data(example_counts)

@@ -8,8 +8,7 @@ compare_fit(count_list, fitlist = fit_counts(count_list, model = "all"))
 }
 \arguments{
 \item{count_list}{A \code{list} of counts. Each count should be in separate 
-column, rows should represent
-values of that counts.}
+column, rows should represent values of these counts.}
 
 \item{fitlist}{Uses fit_count function to calculate value for each unique 
 observation using different
@@ -24,8 +23,7 @@ distribution model.
 }
 \description{
 Compare empirical distribution of counts with the distribution 
-defined by the model
-fitted to counts.
+defined by the model fitted to counts.
 }
 \examples{
 df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))

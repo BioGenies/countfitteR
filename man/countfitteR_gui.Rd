@@ -8,9 +8,9 @@ countfitteR_gui()
 }
 \description{
 Launches graphical user interface that analyses given count data and
-chooses the best performing distribution model
+chooses the best performing distribution model.
 }
-\section{Warning }{
+\section{Warning}{
  Any ad-blocking software may cause malfunctions.
 }
 
