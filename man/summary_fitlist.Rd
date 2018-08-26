@@ -11,15 +11,20 @@ summary_fitlist(fitlist)
 it creates distribution model}
 }
 \value{
-Data frame with summarised results of all distribution models. Count is name of the original count.
-λ(lambda) - Poisson parameter (average number of foci per cell), lower and upper confidence intervals,
-BIC - Bayesian information criterion, θ(theta) - dispersion parameter, r - zero inflation (fraction of
-cells treated by system as having no foci regardless of their real state), model is the name of distribution model.
+Data frame with summarised results of all distribution models. 
+\itemize{
+ \item{Count}{the name of the original count.}
+ \item{lambda}{\eqn{\lambda}{lambda} - Poisson mean, lower and upper confidence intervals.}
+ \item{BIC}{Bayesian information criterion}
+ \item{theta}{\eqn{\theta}{theta} - dispersion parameter}
+ \item{r}{probability of excess zeros.}
+}
 }
 \description{
 Counts are fitted to model(s) using the count name as the explanatory variable.
 Estimates are presented in the table below along with the BIC values of their models.
-Estimated coefficients of models (λ for all distributions, θ for NB and ZINB, r for ZIP and ZINB).
+Estimated coefficients of models (\code{lambda} for all distributions, \code{theta} for NB and ZINB, 
+\code{r} for ZIP and ZINB).
 }
 \examples{
 df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
