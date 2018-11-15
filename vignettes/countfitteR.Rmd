@@ -34,9 +34,9 @@ alteration of the cell phenotype.
 library(countfitteR)
 
 # Assign the csv file to filename
-data("example_counts")
+data("case_study")
 
-processed_counts <- process_counts(example_counts)
+processed_counts <- process_counts(case_study)
 
 fit_counts(processed_counts, model = "all")
 ```

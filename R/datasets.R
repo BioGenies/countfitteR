@@ -28,36 +28,36 @@
 #' }
 NULL
 
-#' @name foci_count_APC
-#' @title foci counts with APC dye
+#' @name case_study_APC
+#' @title Case study for APC dye
 #' @description example data extracted from Aklides system. Counts with only APC fluorescent dye were merged.
 #' @docType data
-#' @usage foci_count_APC
+#' @usage case_study_APC
 #' @keywords datasets
 NULL
 
-#' @name foci_count_FITC
-#' @title foci counts with FITC dye
+#' @name case_study_FITC
+#' @title Case study for FITC dye
 #' @description example data extracted from Aklides system. Counts with only FITC fluorescent dye were merged.
 #' @docType data
-#' @usage foci_count_FITC
+#' @usage case_study_FITC
 #' @keywords datasets
 NULL
 
-#' @name example_counts
-#' @title short version of the \code{foci_counts_FITC}
-#' @description shorter version of the \code{foci_count_FITC}. Used as an example in shiny app, 
+#' @name case_study
+#' @title Short version of the \code{case_study_FITC}
+#' @description shorter version of the \code{case_study_FITC}. Used as an example in shiny app, 
 #' when the user will not load his own count data.
 #' @docType data
-#' @usage example_counts
+#' @usage case_study
 #' @keywords datasets
 NULL
 
-#' @name foci_count
-#' @title foci count 
+#' @name case_study_all
+#' @title Case study with two fluorescent dyes
 #' @description example data extracted from Aklides system and merged into one file. Counts in this file will not fit properly, 
 #' due to the fact that we integrated into the file counts with two different fluorescent dyes used. 
 #' @docType data
-#' @usage foci_count_merged
+#' @usage case_study_all
 #' @keywords datasets
 NULL

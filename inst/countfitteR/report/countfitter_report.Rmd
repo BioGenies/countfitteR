@@ -28,7 +28,7 @@ Report generated on `r Sys.time()`.
 Detected input file: `r ifelse(is.null(input[["input_file"]][["name"]]), "none", input[["input_file"]][["name"]])`.  
 <!-- md5sum("/home/jarek/countfitteR/inst/extdata/example_counts.csv") -->
 `r datapath <- input[["input_file"]]`
-`r example_f <- md5sum("../../../data/foci_count_FITC_short.rda")`
+`r example_f <- md5sum("../../../data/case_study.rda")`
 `r example_f <- example_f[[1]]`
 `r input_f <- as.character(md5sum(as.character(datapath["datapath"])))`
 

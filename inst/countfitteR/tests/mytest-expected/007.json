@@ -2,9 +2,7 @@
   "input": {
     "chosen_models": [
       "pois",
-      "nb",
-      "zip",
-      "zinb"
+      "zip"
     ],
     "cmp_distr_rep": true,
     "cmp_sep_tab_cell_clicked": {
@@ -406,403 +404,7 @@
       393,
       394,
       395,
-      396,
-      397,
-      398,
-      399,
-      400,
-      401,
-      402,
-      403,
-      404,
-      405,
-      406,
-      407,
-      408,
-      409,
-      410,
-      411,
-      412,
-      413,
-      414,
-      415,
-      416,
-      417,
-      418,
-      419,
-      420,
-      421,
-      422,
-      423,
-      424,
-      425,
-      426,
-      427,
-      428,
-      429,
-      430,
-      431,
-      432,
-      433,
-      434,
-      435,
-      436,
-      437,
-      438,
-      439,
-      440,
-      441,
-      442,
-      443,
-      444,
-      445,
-      446,
-      447,
-      448,
-      449,
-      450,
-      451,
-      452,
-      453,
-      454,
-      455,
-      456,
-      457,
-      458,
-      459,
-      460,
-      461,
-      462,
-      463,
-      464,
-      465,
-      466,
-      467,
-      468,
-      469,
-      470,
-      471,
-      472,
-      473,
-      474,
-      475,
-      476,
-      477,
-      478,
-      479,
-      480,
-      481,
-      482,
-      483,
-      484,
-      485,
-      486,
-      487,
-      488,
-      489,
-      490,
-      491,
-      492,
-      493,
-      494,
-      495,
-      496,
-      497,
-      498,
-      499,
-      500,
-      501,
-      502,
-      503,
-      504,
-      505,
-      506,
-      507,
-      508,
-      509,
-      510,
-      511,
-      512,
-      513,
-      514,
-      515,
-      516,
-      517,
-      518,
-      519,
-      520,
-      521,
-      522,
-      523,
-      524,
-      525,
-      526,
-      527,
-      528,
-      529,
-      530,
-      531,
-      532,
-      533,
-      534,
-      535,
-      536,
-      537,
-      538,
-      539,
-      540,
-      541,
-      542,
-      543,
-      544,
-      545,
-      546,
-      547,
-      548,
-      549,
-      550,
-      551,
-      552,
-      553,
-      554,
-      555,
-      556,
-      557,
-      558,
-      559,
-      560,
-      561,
-      562,
-      563,
-      564,
-      565,
-      566,
-      567,
-      568,
-      569,
-      570,
-      571,
-      572,
-      573,
-      574,
-      575,
-      576,
-      577,
-      578,
-      579,
-      580,
-      581,
-      582,
-      583,
-      584,
-      585,
-      586,
-      587,
-      588,
-      589,
-      590,
-      591,
-      592,
-      593,
-      594,
-      595,
-      596,
-      597,
-      598,
-      599,
-      600,
-      601,
-      602,
-      603,
-      604,
-      605,
-      606,
-      607,
-      608,
-      609,
-      610,
-      611,
-      612,
-      613,
-      614,
-      615,
-      616,
-      617,
-      618,
-      619,
-      620,
-      621,
-      622,
-      623,
-      624,
-      625,
-      626,
-      627,
-      628,
-      629,
-      630,
-      631,
-      632,
-      633,
-      634,
-      635,
-      636,
-      637,
-      638,
-      639,
-      640,
-      641,
-      642,
-      643,
-      644,
-      645,
-      646,
-      647,
-      648,
-      649,
-      650,
-      651,
-      652,
-      653,
-      654,
-      655,
-      656,
-      657,
-      658,
-      659,
-      660,
-      661,
-      662,
-      663,
-      664,
-      665,
-      666,
-      667,
-      668,
-      669,
-      670,
-      671,
-      672,
-      673,
-      674,
-      675,
-      676,
-      677,
-      678,
-      679,
-      680,
-      681,
-      682,
-      683,
-      684,
-      685,
-      686,
-      687,
-      688,
-      689,
-      690,
-      691,
-      692,
-      693,
-      694,
-      695,
-      696,
-      697,
-      698,
-      699,
-      700,
-      701,
-      702,
-      703,
-      704,
-      705,
-      706,
-      707,
-      708,
-      709,
-      710,
-      711,
-      712,
-      713,
-      714,
-      715,
-      716,
-      717,
-      718,
-      719,
-      720,
-      721,
-      722,
-      723,
-      724,
-      725,
-      726,
-      727,
-      728,
-      729,
-      730,
-      731,
-      732,
-      733,
-      734,
-      735,
-      736,
-      737,
-      738,
-      739,
-      740,
-      741,
-      742,
-      743,
-      744,
-      745,
-      746,
-      747,
-      748,
-      749,
-      750,
-      751,
-      752,
-      753,
-      754,
-      755,
-      756,
-      757,
-      758,
-      759,
-      760,
-      761,
-      762,
-      763,
-      764,
-      765,
-      766,
-      767,
-      768,
-      769,
-      770,
-      771,
-      772,
-      773,
-      774,
-      775,
-      776,
-      777,
-      778,
-      779,
-      780,
-      781,
-      782,
-      783,
-      784,
-      785,
-      786,
-      787,
-      788,
-      789,
-      790,
-      791,
-      792
+      396
     ],
     "cmp_sep_tab_rows_current": [
       1,
@@ -918,8 +520,8 @@
       ""
     ],
     "coef_tab_state": null,
-    "conf_level": 0.95,
-    "csv_type": "csv1",
+    "conf_level": 0.9,
+    "csv_type": "csv2",
     "decision_rep": true,
     "fit_tab_cell_clicked": {
 
@@ -1013,7 +615,7 @@
       ""
     ],
     "fit_tab_state": null,
-    "header": true,
+    "header": false,
     "hot_counts": {
       "data": [
         [
@@ -5733,2004 +5335,1018 @@
     "input_file": null,
     "mean_value_rep": true,
     "navbar": "Compare distributions",
-    "sep_exp": true
+    "sep_exp": false
   },
   "output": {
     "cmp_plot": {
-      "src": "[image data sha1: 9998cd577f545e31548340034c3bc5d026176c31]",
+      "src": "[image data sha1: 5be337156e8883a8619f362b91574b6f363256e1]",
       "width": 962,
       "height": 400,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_DMSO_B_10_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 43.7722602739726,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 2,
-          "row": 1,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_DMSO_B_10_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 43.7722602739726,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 3,
-          "row": 1,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_DMSO_B_10_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 43.7722602739726,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 4,
-          "row": 1,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_DMSO_B_10_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 43.7722602739726,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 5,
-          "row": 2,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_100_ETP_11_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 64.777397260274,
-            "top": 49.2517123287671
-          }
-        },
-        {
-          "panel": 6,
-          "row": 2,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_100_ETP_11_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 64.777397260274,
-            "top": 49.2517123287671
-          }
-        },
-        {
-          "panel": 7,
-          "row": 2,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_100_ETP_11_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 64.777397260274,
-            "top": 49.2517123287671
-          }
-        },
-        {
-          "panel": 8,
-          "row": 2,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_100_ETP_11_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 64.777397260274,
-            "top": 49.2517123287671
-          }
-        },
-        {
-          "panel": 9,
-          "row": 3,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_100_ETP_12_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 85.7825342465753,
-            "top": 70.2568493150685
-          }
-        },
-        {
-          "panel": 10,
-          "row": 3,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_100_ETP_12_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 85.7825342465753,
-            "top": 70.2568493150685
-          }
-        },
-        {
-          "panel": 11,
-          "row": 3,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_100_ETP_12_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 85.7825342465753,
-            "top": 70.2568493150685
-          }
-        },
-        {
-          "panel": 12,
-          "row": 3,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_100_ETP_12_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 85.7825342465753,
-            "top": 70.2568493150685
-          }
-        },
-        {
-          "panel": 13,
-          "row": 4,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_Med_C_13_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 106.787671232877,
-            "top": 91.2619863013699
-          }
-        },
-        {
-          "panel": 14,
-          "row": 4,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_Med_C_13_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 106.787671232877,
-            "top": 91.2619863013699
-          }
-        },
-        {
-          "panel": 15,
-          "row": 4,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_Med_C_13_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 106.787671232877,
-            "top": 91.2619863013699
-          }
-        },
-        {
-          "panel": 16,
-          "row": 4,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_Med_C_13_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 106.787671232877,
-            "top": 91.2619863013699
-          }
-        },
-        {
-          "panel": 17,
-          "row": 5,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_Med_C_14_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 127.792808219178,
-            "top": 112.267123287671
-          }
-        },
-        {
-          "panel": 18,
-          "row": 5,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_Med_C_14_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 127.792808219178,
-            "top": 112.267123287671
-          }
-        },
-        {
-          "panel": 19,
-          "row": 5,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_Med_C_14_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 127.792808219178,
-            "top": 112.267123287671
-          }
-        },
-        {
-          "panel": 20,
-          "row": 5,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_Med_C_14_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 127.792808219178,
-            "top": 112.267123287671
-          }
-        },
-        {
-          "panel": 21,
-          "row": 6,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_DMSo_C_15_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 148.797945205479,
-            "top": 133.272260273973
-          }
-        },
-        {
-          "panel": 22,
-          "row": 6,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_DMSo_C_15_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 148.797945205479,
-            "top": 133.272260273973
-          }
-        },
-        {
-          "panel": 23,
-          "row": 6,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_DMSo_C_15_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 148.797945205479,
-            "top": 133.272260273973
-          }
-        },
-        {
-          "panel": 24,
-          "row": 6,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_DMSo_C_15_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 148.797945205479,
-            "top": 133.272260273973
-          }
-        },
-        {
-          "panel": 25,
-          "row": 7,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_DMSO_C_16_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 169.803082191781,
-            "top": 154.277397260274
-          }
-        },
-        {
-          "panel": 26,
-          "row": 7,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_DMSO_C_16_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 169.803082191781,
-            "top": 154.277397260274
-          }
-        },
-        {
-          "panel": 27,
-          "row": 7,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_DMSO_C_16_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 169.803082191781,
-            "top": 154.277397260274
-          }
-        },
-        {
-          "panel": 28,
-          "row": 7,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_DMSO_C_16_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 169.803082191781,
-            "top": 154.277397260274
-          }
-        },
-        {
-          "panel": 29,
-          "row": 8,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_100_ETP_17_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 190.808219178082,
-            "top": 175.282534246575
-          }
-        },
-        {
-          "panel": 30,
-          "row": 8,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_100_ETP_17_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 190.808219178082,
-            "top": 175.282534246575
-          }
-        },
-        {
-          "panel": 31,
-          "row": 8,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_100_ETP_17_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 190.808219178082,
-            "top": 175.282534246575
-          }
-        },
-        {
-          "panel": 32,
-          "row": 8,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_100_ETP_17_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 190.808219178082,
-            "top": 175.282534246575
-          }
-        },
-        {
-          "panel": 33,
-          "row": 9,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_100_ETP_18_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 211.813356164384,
-            "top": 196.287671232877
-          }
-        },
-        {
-          "panel": 34,
-          "row": 9,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_100_ETP_18_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 211.813356164384,
-            "top": 196.287671232877
-          }
-        },
-        {
-          "panel": 35,
-          "row": 9,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_100_ETP_18_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 211.813356164384,
-            "top": 196.287671232877
-          }
-        },
-        {
-          "panel": 36,
-          "row": 9,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_100_ETP_18_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 211.813356164384,
-            "top": 196.287671232877
-          }
-        },
-        {
-          "panel": 37,
-          "row": 10,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_Med_D_19_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 232.818493150685,
-            "top": 217.292808219178
-          }
-        },
-        {
-          "panel": 38,
-          "row": 10,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_Med_D_19_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 232.818493150685,
-            "top": 217.292808219178
-          }
-        },
-        {
-          "panel": 39,
-          "row": 10,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_Med_D_19_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 232.818493150685,
-            "top": 217.292808219178
-          }
-        },
-        {
-          "panel": 40,
-          "row": 10,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_Med_D_19_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 232.818493150685,
-            "top": 217.292808219178
-          }
-        },
-        {
-          "panel": 41,
-          "row": 11,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_Med_A_1_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 253.823630136986,
-            "top": 238.297945205479
-          }
-        },
-        {
-          "panel": 42,
-          "row": 11,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_Med_A_1_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 253.823630136986,
-            "top": 238.297945205479
-          }
-        },
-        {
-          "panel": 43,
-          "row": 11,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_Med_A_1_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 253.823630136986,
-            "top": 238.297945205479
-          }
-        },
-        {
-          "panel": 44,
-          "row": 11,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_Med_A_1_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 253.823630136986,
-            "top": 238.297945205479
-          }
-        },
-        {
-          "panel": 45,
-          "row": 12,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_Med_D_20_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 274.828767123288,
-            "top": 259.303082191781
-          }
-        },
-        {
-          "panel": 46,
-          "row": 12,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_Med_D_20_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 274.828767123288,
-            "top": 259.303082191781
-          }
-        },
-        {
-          "panel": 47,
-          "row": 12,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_Med_D_20_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 274.828767123288,
-            "top": 259.303082191781
-          }
-        },
-        {
-          "panel": 48,
-          "row": 12,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_Med_D_20_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 274.828767123288,
-            "top": 259.303082191781
-          }
-        },
-        {
-          "panel": 49,
-          "row": 13,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_DMSo_D_21_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 295.833904109589,
-            "top": 280.308219178082
-          }
-        },
-        {
-          "panel": 50,
-          "row": 13,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_DMSo_D_21_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 295.833904109589,
-            "top": 280.308219178082
-          }
-        },
-        {
-          "panel": 51,
-          "row": 13,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_DMSo_D_21_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 295.833904109589,
-            "top": 280.308219178082
-          }
-        },
-        {
-          "panel": 52,
-          "row": 13,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_DMSo_D_21_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 295.833904109589,
-            "top": 280.308219178082
-          }
-        },
-        {
-          "panel": 53,
-          "row": 14,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_DMSO_D_22_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 316.83904109589,
-            "top": 301.313356164384
-          }
-        },
-        {
-          "panel": 54,
-          "row": 14,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_DMSO_D_22_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 316.83904109589,
-            "top": 301.313356164384
-          }
-        },
-        {
-          "panel": 55,
-          "row": 14,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_DMSO_D_22_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 316.83904109589,
-            "top": 301.313356164384
-          }
-        },
-        {
-          "panel": 56,
-          "row": 14,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_DMSO_D_22_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 316.83904109589,
-            "top": 301.313356164384
-          }
-        },
-        {
-          "panel": 57,
-          "row": 15,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_100_ETP_23_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 337.844178082192,
-            "top": 322.318493150685
-          }
-        },
-        {
-          "panel": 58,
-          "row": 15,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_100_ETP_23_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 337.844178082192,
-            "top": 322.318493150685
-          }
-        },
-        {
-          "panel": 59,
-          "row": 15,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_100_ETP_23_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 337.844178082192,
-            "top": 322.318493150685
-          }
-        },
-        {
-          "panel": 60,
-          "row": 15,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_100_ETP_23_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 337.844178082192,
-            "top": 322.318493150685
-          }
-        },
-        {
-          "panel": 61,
-          "row": 16,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "NB",
-            "panelvar2": "L3_AF_100_ETP_24_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 261.691780821918,
-            "bottom": 358.849315068493,
-            "top": 343.323630136986
-          }
-        },
-        {
-          "panel": 62,
-          "row": 16,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "Poisson",
-            "panelvar2": "L3_AF_100_ETP_24_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 267.171232876712,
-            "right": 485.712328767123,
-            "bottom": 358.849315068493,
-            "top": 343.323630136986
-          }
-        },
-        {
-          "panel": 63,
-          "row": 16,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "ZINB",
-            "panelvar2": "L3_AF_100_ETP_24_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 491.191780821918,
-            "right": 709.732876712329,
-            "bottom": 358.849315068493,
-            "top": 343.323630136986
-          }
-        },
-        {
-          "panel": 64,
-          "row": 16,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "ZIP",
-            "panelvar2": "L3_AF_100_ETP_24_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -5.45,
-            "top": 114.45
-          },
-          "mapping": {
-            "x": "x",
-            "y": "value",
-            "panelvar1": "model",
-            "panelvar2": "count"
-          },
-          "range": {
-            "left": 715.212328767123,
-            "right": 933.753424657534,
-            "bottom": 358.849315068493,
-            "top": 343.323630136986
-          }
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_DMSO_B_10_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 43.7722602739726,
+              "top": 28.2465753424657
+            }
+          },
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_DMSO_B_10_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 43.7722602739726,
+              "top": 28.2465753424657
+            }
+          },
+          {
+            "panel": 3,
+            "row": 2,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_100_ETP_11_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 64.777397260274,
+              "top": 49.2517123287671
+            }
+          },
+          {
+            "panel": 4,
+            "row": 2,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_100_ETP_11_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 64.777397260274,
+              "top": 49.2517123287671
+            }
+          },
+          {
+            "panel": 5,
+            "row": 3,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_100_ETP_12_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 85.7825342465753,
+              "top": 70.2568493150685
+            }
+          },
+          {
+            "panel": 6,
+            "row": 3,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_100_ETP_12_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 85.7825342465753,
+              "top": 70.2568493150685
+            }
+          },
+          {
+            "panel": 7,
+            "row": 4,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_Med_C_13_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 106.787671232877,
+              "top": 91.2619863013699
+            }
+          },
+          {
+            "panel": 8,
+            "row": 4,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_Med_C_13_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 106.787671232877,
+              "top": 91.2619863013699
+            }
+          },
+          {
+            "panel": 9,
+            "row": 5,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_Med_C_14_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 127.792808219178,
+              "top": 112.267123287671
+            }
+          },
+          {
+            "panel": 10,
+            "row": 5,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_Med_C_14_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 127.792808219178,
+              "top": 112.267123287671
+            }
+          },
+          {
+            "panel": 11,
+            "row": 6,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_DMSo_C_15_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 148.797945205479,
+              "top": 133.272260273973
+            }
+          },
+          {
+            "panel": 12,
+            "row": 6,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_DMSo_C_15_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 148.797945205479,
+              "top": 133.272260273973
+            }
+          },
+          {
+            "panel": 13,
+            "row": 7,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_DMSO_C_16_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 169.803082191781,
+              "top": 154.277397260274
+            }
+          },
+          {
+            "panel": 14,
+            "row": 7,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_DMSO_C_16_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 169.803082191781,
+              "top": 154.277397260274
+            }
+          },
+          {
+            "panel": 15,
+            "row": 8,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_100_ETP_17_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 190.808219178082,
+              "top": 175.282534246575
+            }
+          },
+          {
+            "panel": 16,
+            "row": 8,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_100_ETP_17_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 190.808219178082,
+              "top": 175.282534246575
+            }
+          },
+          {
+            "panel": 17,
+            "row": 9,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_100_ETP_18_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 211.813356164384,
+              "top": 196.287671232877
+            }
+          },
+          {
+            "panel": 18,
+            "row": 9,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_100_ETP_18_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 211.813356164384,
+              "top": 196.287671232877
+            }
+          },
+          {
+            "panel": 19,
+            "row": 10,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_Med_D_19_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 232.818493150685,
+              "top": 217.292808219178
+            }
+          },
+          {
+            "panel": 20,
+            "row": 10,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_Med_D_19_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 232.818493150685,
+              "top": 217.292808219178
+            }
+          },
+          {
+            "panel": 21,
+            "row": 11,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_Med_A_1_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 253.823630136986,
+              "top": 238.297945205479
+            }
+          },
+          {
+            "panel": 22,
+            "row": 11,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_Med_A_1_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 253.823630136986,
+              "top": 238.297945205479
+            }
+          },
+          {
+            "panel": 23,
+            "row": 12,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_Med_D_20_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 274.828767123288,
+              "top": 259.303082191781
+            }
+          },
+          {
+            "panel": 24,
+            "row": 12,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_Med_D_20_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 274.828767123288,
+              "top": 259.303082191781
+            }
+          },
+          {
+            "panel": 25,
+            "row": 13,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_DMSo_D_21_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 295.833904109589,
+              "top": 280.308219178082
+            }
+          },
+          {
+            "panel": 26,
+            "row": 13,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_DMSo_D_21_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 295.833904109589,
+              "top": 280.308219178082
+            }
+          },
+          {
+            "panel": 27,
+            "row": 14,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_DMSO_D_22_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 316.83904109589,
+              "top": 301.313356164384
+            }
+          },
+          {
+            "panel": 28,
+            "row": 14,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_DMSO_D_22_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 316.83904109589,
+              "top": 301.313356164384
+            }
+          },
+          {
+            "panel": 29,
+            "row": 15,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_100_ETP_23_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 337.844178082192,
+              "top": 322.318493150685
+            }
+          },
+          {
+            "panel": 30,
+            "row": 15,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_100_ETP_23_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 337.844178082192,
+              "top": 322.318493150685
+            }
+          },
+          {
+            "panel": 31,
+            "row": 16,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "Poisson",
+              "panelvar2": "L3_AF_100_ETP_24_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 485.712328767123,
+              "bottom": 358.849315068493,
+              "top": 343.323630136986
+            }
+          },
+          {
+            "panel": 32,
+            "row": 16,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "ZIP",
+              "panelvar2": "L3_AF_100_ETP_24_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -5.45,
+              "top": 114.45
+            },
+            "mapping": {
+              "x": "x",
+              "y": "value",
+              "panelvar1": "model",
+              "panelvar2": "count"
+            },
+            "range": {
+              "left": 491.191780821918,
+              "right": 933.753424657534,
+              "bottom": 358.849315068493,
+              "top": 343.323630136986
+            }
+          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
         }
-      ]
+      }
     },
     "cmp_sep_tab": {
       "x": {
         "filter": "top",
-        "filterHTML": "<tr>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;L3_AF_DMSO_B_10_FITC&quot;,&quot;L3_AF_100_ETP_11_FITC&quot;,&quot;L3_AF_100_ETP_12_FITC&quot;,&quot;L3_AF_Med_C_13_FITC&quot;,&quot;L3_AF_Med_C_14_FITC&quot;,&quot;L3_AF_DMSo_C_15_FITC&quot;,&quot;L3_AF_DMSO_C_16_FITC&quot;,&quot;L3_AF_100_ETP_17_FITC&quot;,&quot;L3_AF_100_ETP_18_FITC&quot;,&quot;L3_AF_Med_D_19_FITC&quot;,&quot;L3_AF_Med_A_1_FITC&quot;,&quot;L3_AF_Med_D_20_FITC&quot;,&quot;L3_AF_DMSo_D_21_FITC&quot;,&quot;L3_AF_DMSO_D_22_FITC&quot;,&quot;L3_AF_100_ETP_23_FITC&quot;,&quot;L3_AF_100_ETP_24_FITC&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;NB&quot;,&quot;Poisson&quot;,&quot;ZINB&quot;,&quot;ZIP&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"42\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"109\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"109\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>",
+        "filterHTML": "<tr>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;L3_AF_DMSO_B_10_FITC&quot;,&quot;L3_AF_100_ETP_11_FITC&quot;,&quot;L3_AF_100_ETP_12_FITC&quot;,&quot;L3_AF_Med_C_13_FITC&quot;,&quot;L3_AF_Med_C_14_FITC&quot;,&quot;L3_AF_DMSo_C_15_FITC&quot;,&quot;L3_AF_DMSO_C_16_FITC&quot;,&quot;L3_AF_100_ETP_17_FITC&quot;,&quot;L3_AF_100_ETP_18_FITC&quot;,&quot;L3_AF_Med_D_19_FITC&quot;,&quot;L3_AF_Med_A_1_FITC&quot;,&quot;L3_AF_Med_D_20_FITC&quot;,&quot;L3_AF_DMSo_D_21_FITC&quot;,&quot;L3_AF_DMSO_D_22_FITC&quot;,&quot;L3_AF_100_ETP_23_FITC&quot;,&quot;L3_AF_100_ETP_24_FITC&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"factor\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"width: 100%; display: none;\">\n      <select multiple=\"multiple\" style=\"width: 100%;\" data-options=\"[&quot;Poisson&quot;,&quot;ZIP&quot;]\"><\/select>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"42\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"109\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none; position: absolute; width: 200px;\">\n      <div data-min=\"0\" data-max=\"108.999998773367\" data-scale=\"15\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>",
         "extensions": [
           "Buttons"
         ],
@@ -8057,520 +6673,526 @@
       "src": "[image data sha1: f0401ba3833a3a6e9b584efb9db035f4d19c4b84]",
       "width": 962,
       "height": 400,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_11_FITC"
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_11_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 267.383561643836,
+              "bottom": 79.9128767123288,
+              "top": 28.2465753424657
+            }
           },
-          "log": {
-            "x": null,
-            "y": null
+          {
+            "panel": 2,
+            "row": 1,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_12_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 272.86301369863,
+              "right": 497.095890410959,
+              "bottom": 79.9128767123288,
+              "top": 28.2465753424657
+            }
           },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
+          {
+            "panel": 3,
+            "row": 1,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_17_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 502.575342465753,
+              "right": 726.808219178082,
+              "bottom": 79.9128767123288,
+              "top": 28.2465753424657
+            }
           },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
+          {
+            "panel": 4,
+            "row": 1,
+            "col": 4,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_18_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 732.287671232877,
+              "right": 956.520547945205,
+              "bottom": 79.9128767123288,
+              "top": 28.2465753424657
+            }
           },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 267.383561643836,
-            "bottom": 79.9128767123288,
-            "top": 28.2465753424657
+          {
+            "panel": 5,
+            "row": 2,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_23_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 267.383561643836,
+              "bottom": 159.825753424658,
+              "top": 108.159452054795
+            }
+          },
+          {
+            "panel": 6,
+            "row": 2,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_24_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 272.86301369863,
+              "right": 497.095890410959,
+              "bottom": 159.825753424658,
+              "top": 108.159452054795
+            }
+          },
+          {
+            "panel": 7,
+            "row": 2,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSO_B_10_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 502.575342465753,
+              "right": 726.808219178082,
+              "bottom": 159.825753424658,
+              "top": 108.159452054795
+            }
+          },
+          {
+            "panel": 8,
+            "row": 2,
+            "col": 4,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSo_C_15_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 732.287671232877,
+              "right": 956.520547945205,
+              "bottom": 159.825753424658,
+              "top": 108.159452054795
+            }
+          },
+          {
+            "panel": 9,
+            "row": 3,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSO_C_16_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 267.383561643836,
+              "bottom": 239.738630136986,
+              "top": 188.072328767123
+            }
+          },
+          {
+            "panel": 10,
+            "row": 3,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSo_D_21_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 272.86301369863,
+              "right": 497.095890410959,
+              "bottom": 239.738630136986,
+              "top": 188.072328767123
+            }
+          },
+          {
+            "panel": 11,
+            "row": 3,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSO_D_22_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 502.575342465753,
+              "right": 726.808219178082,
+              "bottom": 239.738630136986,
+              "top": 188.072328767123
+            }
+          },
+          {
+            "panel": 12,
+            "row": 3,
+            "col": 4,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_A_1_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 732.287671232877,
+              "right": 956.520547945205,
+              "bottom": 239.738630136986,
+              "top": 188.072328767123
+            }
+          },
+          {
+            "panel": 13,
+            "row": 4,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_C_13_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 43.1506849315068,
+              "right": 267.383561643836,
+              "bottom": 319.651506849315,
+              "top": 267.985205479452
+            }
+          },
+          {
+            "panel": 14,
+            "row": 4,
+            "col": 2,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_C_14_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 272.86301369863,
+              "right": 497.095890410959,
+              "bottom": 319.651506849315,
+              "top": 267.985205479452
+            }
+          },
+          {
+            "panel": 15,
+            "row": 4,
+            "col": 3,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_D_19_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 502.575342465753,
+              "right": 726.808219178082,
+              "bottom": 319.651506849315,
+              "top": 267.985205479452
+            }
+          },
+          {
+            "panel": 16,
+            "row": 4,
+            "col": 4,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_D_20_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": 0.4,
+              "right": 4.6,
+              "bottom": -0.658591602705024,
+              "top": 13.8304236568055
+            },
+            "mapping": {
+              "x": "model",
+              "y": "lambda",
+              "ymax": "upper",
+              "ymin": "lower",
+              "colour": "lowest_BIC",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 732.287671232877,
+              "right": 956.520547945205,
+              "bottom": 319.651506849315,
+              "top": 267.985205479452
+            }
           }
-        },
-        {
-          "panel": 2,
-          "row": 1,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_12_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 272.86301369863,
-            "right": 497.095890410959,
-            "bottom": 79.9128767123288,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 3,
-          "row": 1,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_17_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 502.575342465753,
-            "right": 726.808219178082,
-            "bottom": 79.9128767123288,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 4,
-          "row": 1,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_18_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 732.287671232877,
-            "right": 956.520547945205,
-            "bottom": 79.9128767123288,
-            "top": 28.2465753424657
-          }
-        },
-        {
-          "panel": 5,
-          "row": 2,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_23_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 267.383561643836,
-            "bottom": 159.825753424658,
-            "top": 108.159452054795
-          }
-        },
-        {
-          "panel": 6,
-          "row": 2,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_24_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 272.86301369863,
-            "right": 497.095890410959,
-            "bottom": 159.825753424658,
-            "top": 108.159452054795
-          }
-        },
-        {
-          "panel": 7,
-          "row": 2,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSO_B_10_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 502.575342465753,
-            "right": 726.808219178082,
-            "bottom": 159.825753424658,
-            "top": 108.159452054795
-          }
-        },
-        {
-          "panel": 8,
-          "row": 2,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSo_C_15_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 732.287671232877,
-            "right": 956.520547945205,
-            "bottom": 159.825753424658,
-            "top": 108.159452054795
-          }
-        },
-        {
-          "panel": 9,
-          "row": 3,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSO_C_16_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 267.383561643836,
-            "bottom": 239.738630136986,
-            "top": 188.072328767123
-          }
-        },
-        {
-          "panel": 10,
-          "row": 3,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSo_D_21_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 272.86301369863,
-            "right": 497.095890410959,
-            "bottom": 239.738630136986,
-            "top": 188.072328767123
-          }
-        },
-        {
-          "panel": 11,
-          "row": 3,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSO_D_22_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 502.575342465753,
-            "right": 726.808219178082,
-            "bottom": 239.738630136986,
-            "top": 188.072328767123
-          }
-        },
-        {
-          "panel": 12,
-          "row": 3,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_A_1_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 732.287671232877,
-            "right": 956.520547945205,
-            "bottom": 239.738630136986,
-            "top": 188.072328767123
-          }
-        },
-        {
-          "panel": 13,
-          "row": 4,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_C_13_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 43.1506849315068,
-            "right": 267.383561643836,
-            "bottom": 319.651506849315,
-            "top": 267.985205479452
-          }
-        },
-        {
-          "panel": 14,
-          "row": 4,
-          "col": 2,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_C_14_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 272.86301369863,
-            "right": 497.095890410959,
-            "bottom": 319.651506849315,
-            "top": 267.985205479452
-          }
-        },
-        {
-          "panel": 15,
-          "row": 4,
-          "col": 3,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_D_19_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 502.575342465753,
-            "right": 726.808219178082,
-            "bottom": 319.651506849315,
-            "top": 267.985205479452
-          }
-        },
-        {
-          "panel": 16,
-          "row": 4,
-          "col": 4,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_D_20_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": 0.4,
-            "right": 4.6,
-            "bottom": -0.658591602705024,
-            "top": 13.8304236568055
-          },
-          "mapping": {
-            "x": "model",
-            "y": "lambda",
-            "ymax": "upper",
-            "ymin": "lower",
-            "colour": "lowest_BIC",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 732.287671232877,
-            "right": 956.520547945205,
-            "bottom": 319.651506849315,
-            "top": 267.985205479452
-          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 400
         }
-      ]
+      }
     },
     "fit_tab": {
       "x": {
@@ -11254,488 +9876,494 @@
       "src": "[image data sha1: 5a26a888282a97ada6d05a162f71cfda0db6ccde]",
       "width": 962,
       "height": 1380,
-      "coordmap": [
-        {
-          "panel": 1,
-          "row": 1,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSO_B_10_FITC"
+      "coordmap": {
+        "panels": [
+          {
+            "panel": 1,
+            "row": 1,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSO_B_10_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 83.6780821917808,
+              "top": 28.2465753424658
+            }
           },
-          "log": {
-            "x": null,
-            "y": null
+          {
+            "panel": 2,
+            "row": 2,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_11_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 167.356164383562,
+              "top": 111.924657534247
+            }
           },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
+          {
+            "panel": 3,
+            "row": 3,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_12_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 251.034246575342,
+              "top": 195.602739726027
+            }
           },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
+          {
+            "panel": 4,
+            "row": 4,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_C_13_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 334.712328767123,
+              "top": 279.280821917808
+            }
           },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 83.6780821917808,
-            "top": 28.2465753424658
+          {
+            "panel": 5,
+            "row": 5,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_C_14_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 418.390410958904,
+              "top": 362.958904109589
+            }
+          },
+          {
+            "panel": 6,
+            "row": 6,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSo_C_15_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 502.068493150685,
+              "top": 446.63698630137
+            }
+          },
+          {
+            "panel": 7,
+            "row": 7,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSO_C_16_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 585.746575342466,
+              "top": 530.315068493151
+            }
+          },
+          {
+            "panel": 8,
+            "row": 8,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_17_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 669.424657534247,
+              "top": 613.993150684931
+            }
+          },
+          {
+            "panel": 9,
+            "row": 9,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_18_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 753.102739726027,
+              "top": 697.671232876712
+            }
+          },
+          {
+            "panel": 10,
+            "row": 10,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_D_19_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 836.780821917808,
+              "top": 781.349315068493
+            }
+          },
+          {
+            "panel": 11,
+            "row": 11,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_A_1_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 920.458904109589,
+              "top": 865.027397260274
+            }
+          },
+          {
+            "panel": 12,
+            "row": 12,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_Med_D_20_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 1004.13698630137,
+              "top": 948.705479452055
+            }
+          },
+          {
+            "panel": 13,
+            "row": 13,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSo_D_21_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 1087.81506849315,
+              "top": 1032.38356164384
+            }
+          },
+          {
+            "panel": 14,
+            "row": 14,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_DMSO_D_22_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 1171.49315068493,
+              "top": 1116.06164383562
+            }
+          },
+          {
+            "panel": 15,
+            "row": 15,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_23_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 1255.17123287671,
+              "top": 1199.7397260274
+            }
+          },
+          {
+            "panel": 16,
+            "row": 16,
+            "col": 1,
+            "panel_vars": {
+              "panelvar1": "L3_AF_100_ETP_24_FITC"
+            },
+            "log": {
+              "x": null,
+              "y": null
+            },
+            "domain": {
+              "left": -2.595,
+              "right": 44.595,
+              "bottom": -6.54,
+              "top": 137.34
+            },
+            "mapping": {
+              "x": "x",
+              "y": "n",
+              "label": "n",
+              "panelvar1": "count"
+            },
+            "range": {
+              "left": 51.1506849315068,
+              "right": 956.520547945205,
+              "bottom": 1338.84931506849,
+              "top": 1283.41780821918
+            }
           }
-        },
-        {
-          "panel": 2,
-          "row": 2,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_11_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 167.356164383562,
-            "top": 111.924657534247
-          }
-        },
-        {
-          "panel": 3,
-          "row": 3,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_12_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 251.034246575342,
-            "top": 195.602739726027
-          }
-        },
-        {
-          "panel": 4,
-          "row": 4,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_C_13_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 334.712328767123,
-            "top": 279.280821917808
-          }
-        },
-        {
-          "panel": 5,
-          "row": 5,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_C_14_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 418.390410958904,
-            "top": 362.958904109589
-          }
-        },
-        {
-          "panel": 6,
-          "row": 6,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSo_C_15_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 502.068493150685,
-            "top": 446.63698630137
-          }
-        },
-        {
-          "panel": 7,
-          "row": 7,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSO_C_16_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 585.746575342466,
-            "top": 530.315068493151
-          }
-        },
-        {
-          "panel": 8,
-          "row": 8,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_17_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 669.424657534247,
-            "top": 613.993150684931
-          }
-        },
-        {
-          "panel": 9,
-          "row": 9,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_18_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 753.102739726027,
-            "top": 697.671232876712
-          }
-        },
-        {
-          "panel": 10,
-          "row": 10,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_D_19_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 836.780821917808,
-            "top": 781.349315068493
-          }
-        },
-        {
-          "panel": 11,
-          "row": 11,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_A_1_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 920.458904109589,
-            "top": 865.027397260274
-          }
-        },
-        {
-          "panel": 12,
-          "row": 12,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_Med_D_20_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 1004.13698630137,
-            "top": 948.705479452055
-          }
-        },
-        {
-          "panel": 13,
-          "row": 13,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSo_D_21_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 1087.81506849315,
-            "top": 1032.38356164384
-          }
-        },
-        {
-          "panel": 14,
-          "row": 14,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_DMSO_D_22_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 1171.49315068493,
-            "top": 1116.06164383562
-          }
-        },
-        {
-          "panel": 15,
-          "row": 15,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_23_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 1255.17123287671,
-            "top": 1199.7397260274
-          }
-        },
-        {
-          "panel": 16,
-          "row": 16,
-          "col": 1,
-          "panel_vars": {
-            "panelvar1": "L3_AF_100_ETP_24_FITC"
-          },
-          "log": {
-            "x": null,
-            "y": null
-          },
-          "domain": {
-            "left": -2.595,
-            "right": 44.595,
-            "bottom": -6.54,
-            "top": 137.34
-          },
-          "mapping": {
-            "x": "x",
-            "y": "n",
-            "label": "n",
-            "panelvar1": "count"
-          },
-          "range": {
-            "left": 51.1506849315068,
-            "right": 956.520547945205,
-            "bottom": 1338.84931506849,
-            "top": 1283.41780821918
-          }
+        ],
+        "dims": {
+          "width": 962,
+          "height": 1380
         }
-      ]
+      }
     },
     "input_data_distr_plot_ui": {
       "html": "<div id=\"input_data_distr_plot\" class=\"shiny-plot-output\" style=\"width: 100% ; height: 1380px\"><\/div>",

@@ -16,10 +16,10 @@ A \code{list} of counts.
 Converts data in a table-like formats into lists of counts.
 }
 \details{
-\code{process_counts} does not consider \code{NA}s and \code{NaN}s effectively 
+\code{case_study} does not consider \code{NA}s and \code{NaN}s effectively 
 ommiting them (as the \code{\link[base]{is.na}} function).
 }
 \examples{
-data(example_counts)
-process_counts(example_counts)
+data(case_study)
+process_counts(case_study)
 }

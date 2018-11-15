@@ -11,7 +11,7 @@ library(countfitteR)
 
 # load("./countfitteR/data/laf.RData")
 source("./report/ggtheme.R")
-data("example_counts")
+data("case_study")
 
 options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "print")))
 
@@ -21,9 +21,9 @@ my_DT <- function(x) datatable(x, escape = FALSE, extensions = "Buttons", filter
 shinyServer(function(input, output) {
 
     raw_counts <- reactive({
-        # if there is no data, example is loaded
+        # if there is no data, case study is loaded
         if (is.null(input[["input_file"]])) {
-            dat <- example_counts
+            dat <- case_study
         } else {
             dat <- switch(input[["csv_type"]], csv1 = read.csv(input[["input_file"]][["datapath"]], header = input[["header"]],
                 check.names = FALSE), csv2 = read.csv2(input[["input_file"]][["datapath"]], header = input[["header"]],
