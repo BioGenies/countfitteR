@@ -2,18 +2,18 @@ Package: countfitteR
 Type: Package
 Title: countfitteR: Comprehensive Automatized Evaluation of Distribution Models for Count Data
 Version: 1.0
-Authors@R: c(person("Michal", "Burdukiewicz", 
+Authors@R: c(person("Jaroslaw", "Chilimoniuk", 
+           email = "jaroslaw.chilimoniuk@gmail.com", 
+           comment = c(ORCID = "0000-0001-5467-018X"),
+           role = c("cre", "ctb")),
+           person("Michal", "Burdukiewicz", 
            email = "michalburdukiewicz@gmail.com", 
            comment = c(ORCID = "0000-0001-8926-582X"),
-           role = c("cre", "aut")),
+           role = c("aut")),
            person("Stefan", "Roediger", 
            email = "stefan.roedigier@b-tu.de", 
            comment = c(ORCID = "0000-0002-1441-6512"),
-           role = ("ctb")),
-           person("Jaroslaw", "Chilimoniuk", 
-           email = "jaroslaw.chilimoniuk@gmail.com", 
-           comment = c(ORCID = "0000-0001-5467-018X"),
-           role = c("ctb"))
+           role = ("ctb"))
            )
 Maintainer: Jaroslaw Chilimoniuk <jaroslaw.chilimoniuk@gmail.com>
 Description: countfitteR provides functionality for a comprehensive automatized evaluation of distribution models of count data. The package contains a command line user interface and a web server for selecting the most appropriate count distribution to the dataset supplied by an user.
@@ -32,7 +32,7 @@ Suggests:
     DT,
     rmarkdown,
     knitr
-Date: 2018-08-20
+Date: 2019-01-18
 URL: https://github.com/jarochi/countfitteR
 BugReports: https://github.com/jarochi/countfitteR/issues
 RoxygenNote: 6.1.1
