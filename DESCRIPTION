@@ -1,6 +1,6 @@
 Package: countfitteR
 Type: Package
-Title: countfitteR: Comprehensive Automatized Evaluation of Distribution Models for Count Data
+Title: Comprehensive Automatized Evaluation of Distribution Models for Count Data
 Version: 1.0
 Authors@R: c(person("Jaroslaw", "Chilimoniuk", 
            email = "jaroslaw.chilimoniuk@gmail.com", 
