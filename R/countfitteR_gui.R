@@ -8,10 +8,12 @@
 #' @export countfitteR_gui
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 #' @examples 
-#' \donttest{
 #' if(interactive()){ 
 #' countfitteR_gui()
 #' }}
+#' \donttest{
+#' countfitteR_gui()
+#' }
 
 countfitteR_gui <- function(){
   shiny::runApp(system.file("countfitteR", package = "countfitteR"))
