@@ -4,12 +4,17 @@
 
 # countfitteR
 
-countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution to the dataset supplied by an user.
+countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution in provided data sets.
 
 ## Installation
 
-*countfitteR* is net yet available on [CRAN](http://cran.us.r-project.org/). However, you 
-can install the latest development version of the code using the following code:
+*countfitteR* is available on [CRAN](https://cran.r-project.org/package=countfitteR). 
+
+```R
+install.packages("countfitteR")
+```
+
+Hovewer, you can also install the developmental version of countfitteR directly from GitHub
 
 ```R
 source("https://install-github.me/jarochi/countfitteR")
@@ -20,8 +25,7 @@ source("https://install-github.me/jarochi/countfitteR")
 To run countfitteR type the following command into an R console.
 
 ```R
-library(countfitteR)
-require(shiny); countfitteR::countfitteR_gui()
+countfitteR::countfitteR_gui()
 ```
 
 ## How to cite
