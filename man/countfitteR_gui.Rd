@@ -14,11 +14,6 @@ chooses the best performing distribution model.
  Any ad-blocking software may cause malfunctions.
 }
 
-\examples{
-\dontrun{ 
-countfitteR_gui()
-}
-}
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }

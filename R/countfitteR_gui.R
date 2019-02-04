@@ -8,7 +8,10 @@
 #' @export countfitteR_gui
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 #' @examples 
-#' \dontrun{ 
+#' if(interactive()){ 
+#' countfitteR_gui()
+#' }}
+#' \donttest{
 #' countfitteR_gui()
 #' }
 
