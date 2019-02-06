@@ -26,7 +26,6 @@ Suggests:
     utils,
     testthat,
     shinythemes,
-    rhandsontable,
     gridExtra,
     pscl,
     DT,
