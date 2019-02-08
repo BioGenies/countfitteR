@@ -1,7 +1,7 @@
 Package: countfitteR
 Type: Package
 Title: Comprehensive Automatized Evaluation of Distribution Models for Count Data
-Version: 1.0
+Version: 1.1
 Authors@R: c(person("Jaroslaw", "Chilimoniuk", 
            email = "jaroslaw.chilimoniuk@gmail.com", 
            comment = c(ORCID = "0000-0001-5467-018X"),
@@ -26,7 +26,6 @@ Suggests:
     utils,
     testthat,
     shinythemes,
-    rhandsontable,
     gridExtra,
     DT,
     rmarkdown,

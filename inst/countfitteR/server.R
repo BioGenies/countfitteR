@@ -1,7 +1,6 @@
 library(shiny)
 library(DT)
 library(reshape2)
-library(rhandsontable)
 library(rmarkdown)
 library(pscl)
 library(ggplot2)
@@ -39,8 +38,8 @@ shinyServer(function(input, output) {
         dat
     })
 
-    output[["hot_counts"]] = rhandsontable::renderRHandsontable({
-      rhandsontable::rhandsontable(raw_counts(), readOnly = FALSE, selectCallback = TRUE)
+    output[["hot_counts"]] = DT::renderDataTable({
+      DT::datatable(raw_counts())
     })
 
     processed_counts <- reactive({

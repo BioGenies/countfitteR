@@ -1,6 +1,5 @@
 library(shiny)
 library(shinythemes)
-library(rhandsontable)
 
 
 shinyUI(navbarPage(title = "countfitteR",
@@ -21,7 +20,7 @@ shinyUI(navbarPage(title = "countfitteR",
                    navbarMenu("Count data",
                               tabPanel("Edit input data",
                                        includeMarkdown("readmes/count_data/1.md"),
-                                       rHandsontableOutput("hot_counts")
+                                       DT::dataTableOutput("hot_counts")
                               ),
                               tabPanel("Summary",
                                        includeMarkdown("readmes/count_data/2.md"),
