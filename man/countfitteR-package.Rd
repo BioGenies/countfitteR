@@ -16,6 +16,14 @@ and ease up the integration, we slightly modified the \code{\link[pscl]{zeroinfl
 function by Achim Zeileis.
 }
 
+\examples{
+set.seed(15390)
+library(countfitteR)
+df <- data.frame(pois = rpois(25, 0.3), 
+                 binom = rbinom(25, 1, 0.8))
+
+cmp <- compare_fit(df, fitlist = fit_counts(df, model = "all"))
+}
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }

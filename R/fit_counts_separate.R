@@ -33,18 +33,18 @@ fit_nb_separate <- function(x, level, ...) {
 }
 
 fit_zip_separate <- function(x, level, ...) {
-  fit <- zeroinfl2(x ~ 1, dist = "poisson", ...)
+  fit <- zeroinfl(x ~ 1, dist = "poisson", ...)
   summ <- summary(fit)
 
   list(fit = fit,
        coefficients = c(lambda = unname(exp(summ[["coefficients"]][["count"]][, "Estimate"])),
                         r = unname(invlogit(summ[["coefficients"]][["zero"]][, "Estimate"]))),
-       confint = transform_zi_confint(suppressMessages(confint(fit, level =  level)))
+       confint = transform_zi_confint(confint(fit, level =  level))
   )
 }
 
 fit_zinb_separate <- function(x, level, ...) {
-  fit <- zeroinfl2(x ~ 1, dist = "negbin", ...)
+  fit <- zeroinfl(x ~ 1, dist = "negbin", ...)
   summ <- summary(fit)
 
   coefs <- unname(exp(summ[["coefficients"]][["count"]][, "Estimate"]))
@@ -53,7 +53,7 @@ fit_zinb_separate <- function(x, level, ...) {
        coefficients = c(lambda = coefs[1],
                         theta = coefs[2],
                         r = unname(invlogit(summ[["coefficients"]][["zero"]][, "Estimate"]))),
-       confint = transform_zi_confint(suppressMessages(confint(fit, level =  level)))
+       confint = transform_zi_confint(confint(fit, level = level))
   )
 }
 

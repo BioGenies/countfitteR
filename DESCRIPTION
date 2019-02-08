@@ -28,7 +28,6 @@ Suggests:
     shinythemes,
     rhandsontable,
     gridExtra,
-    pscl,
     DT,
     rmarkdown,
     knitr
@@ -41,4 +40,5 @@ Imports:
     MASS,
     shiny,
     stats,
+    pscl,
     tools
