@@ -85,7 +85,7 @@ plot_fitcmp <- function(fitcmp) {
     ggplot2::facet_grid(count ~ model) +
     ggplot2::geom_point(ggplot2::aes(x = x, y = n, color = "red")) +
     ggplot2::scale_color_discrete(guide = FALSE) +
-    gglpot2::theme_bw()
+    ggplot2::theme_bw()
 }
 
 fast_tabulate <- function(x) {
