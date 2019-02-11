@@ -17,7 +17,7 @@ Converts data in a table-like formats into lists of counts.
 }
 \details{
 \code{case_study} does not consider \code{NA}s and \code{NaN}s effectively 
-ommiting them (as the \code{\link[base]{is.na}} function).
+ommiting them (as per the \code{\link[base]{is.na}} function).
 }
 \examples{
 data(case_study)

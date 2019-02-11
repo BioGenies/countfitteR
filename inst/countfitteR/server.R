@@ -2,10 +2,8 @@ library(shiny)
 library(DT)
 library(reshape2)
 library(rmarkdown)
-library(pscl)
 library(ggplot2)
 library(MASS)
-library(tools)
 library(countfitteR)
 
 # load("./countfitteR/data/laf.RData")
@@ -33,13 +31,13 @@ shinyServer(function(input, output) {
         }
 
         if (!is.null(input[["hot_counts"]]))
-            dat <- hot_to_r(input[["hot_counts"]])
+            dat <- input[["hot_counts"]]
 
         dat
     })
 
     output[["hot_counts"]] = DT::renderDataTable({
-      DT::datatable(raw_counts())
+      DT::datatable(raw_counts(), editable = TRUE)
     })
 
     processed_counts <- reactive({

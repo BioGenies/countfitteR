@@ -1,7 +1,6 @@
 library(shiny)
 library(shinythemes)
 
-
 shinyUI(navbarPage(title = "countfitteR",
                    #theme = shinytheme("cerulean"),
                    theme = "www/shiny_paper.css",
