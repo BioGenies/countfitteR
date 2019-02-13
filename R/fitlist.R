@@ -28,7 +28,7 @@ get_count_names <- function(fitlist) {
 #' @export
 
 summary_fitlist <- function(fitlist) {
-  CIs <- t(sapply(fitlist, function(single_fit) single_fit[["confint"]]["lambda", ]))
+  CIs <- do.call(rbind, lapply(fitlist, function(single_fit) single_fit[["confint"]]["lambda", ]))
   data.frame(count = get_count_names(fitlist),
              lambda = unlist(lapply(fitlist, function(single_fit) single_fit[["coefficients"]][["lambda"]])),
              CIs,
@@ -36,7 +36,8 @@ summary_fitlist <- function(fitlist) {
              theta = unlist(lapply(fitlist, function(single_fit) single_fit[["coefficients"]]["theta"])),
              r = unlist(lapply(fitlist, function(single_fit) single_fit[["coefficients"]]["r"])),
              #model = vapply(fitlist, function(single_fit) single_fit[["model"]], "a"),
-             model = nice_model_names[vapply(fitlist, function(single_fit) single_fit[["model"]], "a")])
+             model = nice_model_names[vapply(fitlist, function(single_fit) single_fit[["model"]], "a")], 
+             row.names = NULL)
 }
 
 
