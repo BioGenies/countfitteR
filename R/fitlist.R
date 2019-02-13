@@ -28,7 +28,15 @@ get_count_names <- function(fitlist) {
 #' @export
 
 summary_fitlist <- function(fitlist) {
-  CIs <- do.call(rbind, lapply(fitlist, function(single_fit) single_fit[["confint"]]["lambda", ]))
+
+  CIs <- do.call(rbind, lapply(fitlist, function(single_fit) {
+    if(is.null(single_fit)) {
+      c(lamba = NA, lower = NA, upper = NA)
+    } else {
+      single_fit[["confint"]]["lambda", ]
+    }
+  }))
+  
   data.frame(count = get_count_names(fitlist),
              lambda = unlist(lapply(fitlist, function(single_fit) single_fit[["coefficients"]][["lambda"]])),
              CIs,
@@ -43,13 +51,13 @@ summary_fitlist <- function(fitlist) {
 
 plot_fitlist <- function(fitlist) {
   summ <- summary_fitlist(fitlist)
-
+  
   plot_dat <- do.call(rbind, lapply(levels(summ[["count"]]), function(single_count) {
     single_count_dat <- summ[summ[["count"]] == single_count, ]
     data.frame(single_count_dat,
                lowest_BIC = ifelse(1L:nrow(single_count_dat) == which.min(single_count_dat[["BIC"]]), TRUE, FALSE))
   }))
-
+  
   ggplot2::ggplot(plot_dat, ggplot2::aes(x = model, y = lambda, ymax = upper, ymin = lower, color = lowest_BIC)) +
     ggplot2::geom_point() +
     ggplot2::geom_errorbar(width = 0.5) +

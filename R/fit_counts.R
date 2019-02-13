@@ -24,11 +24,19 @@
 #' @export
 
 fit_counts <- function(counts_list, separate = TRUE, model, level = 0.95, ...) {
-  # add proper name checker
-  checked_model <- model
 
-  if(length(checked_model) == 1 && checked_model == "all")
-    checked_model <- c("pois", "zip", "nb", "zinb")
+  all_models <- c("pois", "zip", "nb", "zinb")
+  
+  checked_model <- if(length(model) == 1 && model == "all") {
+    c("pois", "zip", "nb", "zinb")
+  } else {
+    identified_models <- agrep(model, all_models, ignore.case = TRUE)
+    if(length(identified_models) == 0) {
+      stop('No existing model identified. Please use "all", "pois", "zip", "nb" or "zinb".')
+    } else {
+      checked_model <- all_models[identified_models]
+    }
+  }
 
   if(separate) {
     fit_data <- counts_list

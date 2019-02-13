@@ -40,7 +40,7 @@ fit_nb_whole <- function(x, level, ...) {
 
 
 fit_zip_whole <- function(x, level, ...) {
-  fit <- zeroinfl2(value ~ count_name - 1, data = x, dist = "poisson", ...)
+  fit <- zeroinfl(value ~ count_name - 1, data = x, dist = "poisson", ...)
   summ <- summary(fit)
 
   lambdas <- unname(exp(summ[["coefficients"]][["count"]][, "Estimate"]))
@@ -61,7 +61,7 @@ fit_zip_whole <- function(x, level, ...) {
 
 
 fit_zinb_whole <- function(x, level, ...) {
-  fit <- zeroinfl2(value ~ count_name - 1, data = x, dist = "negbin", ...)
+  fit <- zeroinfl(value ~ count_name - 1, data = x, dist = "negbin", ...)
   summ <- summary(fit)
 
   lambdas <- unname(exp(summ[["coefficients"]][["count"]][-nrow(summ[["coefficients"]][["count"]]), "Estimate"]))
