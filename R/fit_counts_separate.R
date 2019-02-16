@@ -2,7 +2,7 @@
 fit_pois_separate <- function(x, level, ...) {
   fit <- stats::glm(x ~ 1, family = poisson(link = "log"), ...)
 
-  confint_raw <- exp(suppressMessages(confint(fit, level =  level)))
+  confint_raw <- exp(confint.default(fit, level =  level))
   confint <- matrix(confint_raw, ncol = 2, dimnames = list("lambda", c("lower", "upper")))
 
   summ <- summary(fit)
@@ -21,7 +21,7 @@ fit_nb_separate <- function(x, level, ...) {
   fit <- MASS::glm.nb(x ~ 1, ...)
   summ <- summary(fit)
 
-  confint_raw <- suppressMessages(confint(fit, level =  level))
+  confint_raw <- confint.default(fit, level =  level)
   confint <- matrix(exp(confint_raw), ncol = 2, dimnames = list("lambda", c("lower", "upper")))
 
 
@@ -39,7 +39,7 @@ fit_zip_separate <- function(x, level, ...) {
   list(fit = fit,
        coefficients = c(lambda = unname(exp(summ[["coefficients"]][["count"]][, "Estimate"])),
                         r = unname(invlogit(summ[["coefficients"]][["zero"]][, "Estimate"]))),
-       confint = transform_zi_confint(confint(fit, level =  level))
+       confint = transform_zi_confint(confint.default(fit, level =  level))
   )
 }
 
@@ -53,7 +53,7 @@ fit_zinb_separate <- function(x, level, ...) {
        coefficients = c(lambda = coefs[1],
                         theta = coefs[2],
                         r = unname(invlogit(summ[["coefficients"]][["zero"]][, "Estimate"]))),
-       confint = transform_zi_confint(confint(fit, level = level))
+       confint = transform_zi_confint(confint.default(fit, level = level))
   )
 }
 
