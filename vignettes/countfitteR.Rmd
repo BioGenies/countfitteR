@@ -29,7 +29,7 @@ alteration of the cell phenotype.
 
 # Data sets
 
-```{r eval=TRUE, echo=TRUE}
+```{r eval=TRUE, echo=TRUE, warning=FALSE}
 # Load countfitteR package
 library(countfitteR)
 
