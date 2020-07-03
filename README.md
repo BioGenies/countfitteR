@@ -1,10 +1,11 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Build Status](https://api.travis-ci.org/jarochi/countfitteR.png)](https://travis-ci.org/jarochi/countfitteR)
+![check](https://github.com/jarochi/countfitteR/workflows/check/badge.svg)
 
 # countfitteR
 
-countfitteR is a web server based on shiny technology for selecting the most appropriate count distribution in provided data sets.
+countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets.
 
 ## Installation
 
