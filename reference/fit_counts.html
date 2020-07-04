@@ -163,35 +163,35 @@ lower and upper confidence intervals.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(poisson = <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>25</span>, <span class='fl'>0.3</span>), binomial = <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='fl'>25</span>, <span class='fl'>1</span>, <span class='fl'>0.8</span>))
-<span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='st'>"pois"</span>) </div><div class='output co'>#&gt; $poissonpois
-#&gt; $poissonpois$coefficients
+<span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='st'>"pois"</span>) </div><div class='output co'>#&gt; $poisson_pois
+#&gt; $poisson_pois$coefficients
 #&gt; lambda 
 #&gt;   0.16 
 #&gt; 
-#&gt; $poissonpois$confint
+#&gt; $poisson_pois$confint
 #&gt;             lower     upper
 #&gt; lambda 0.06005086 0.4263053
 #&gt; 
-#&gt; $poissonpois$BIC
+#&gt; $poisson_pois$BIC
 #&gt; [1] 25.87953
 #&gt; 
-#&gt; $poissonpois$model
+#&gt; $poisson_pois$model
 #&gt; [1] "pois"
 #&gt; 
 #&gt; 
-#&gt; $binomialpois
-#&gt; $binomialpois$coefficients
+#&gt; $binomial_pois
+#&gt; $binomial_pois$coefficients
 #&gt; lambda 
 #&gt;   0.84 
 #&gt; 
-#&gt; $binomialpois$confint
+#&gt; $binomial_pois$confint
 #&gt;            lower    upper
 #&gt; lambda 0.5476893 1.288322
 #&gt; 
-#&gt; $binomialpois$BIC
+#&gt; $binomial_pois$BIC
 #&gt; [1] 52.54172
 #&gt; 
-#&gt; $binomialpois$model
+#&gt; $binomial_pois$model
 #&gt; [1] "pois"
 #&gt; 
 #&gt; </div></pre>
