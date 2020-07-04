@@ -10,9 +10,9 @@ test_that("fit_counts", {
   expect_equal(df[6,1], 2)
   expect_equal(df[6,2], 1)
   expect_equal(df[5,5], NULL)
-  expect_equal(fc$x1pois$BIC, 13.33694, tolerance = 3.09e-06)
-  expect_equal(fc$x1pois$model, "pois")
-  expect_equal(fc$x2pois$BIC, 11.95064, tolerance = 2.55e-06)
+  expect_equal(fc$x1_pois$BIC, 13.33694, tolerance = 3.09e-06)
+  expect_equal(fc$x1_pois$model, "pois")
+  expect_equal(fc$x2_pois$BIC, 11.95064, tolerance = 2.55e-06)
 })
 
 test_that("compare_fit", {
