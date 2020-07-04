@@ -26,16 +26,13 @@
 fit_counts <- function(counts_list, separate = TRUE, model, level = 0.95, ...) {
 
   all_models <- c("pois", "zip", "nb", "zinb")
-  
-  checked_model <- if(length(model) == 1 && model == "all") {
+  if(any(!(model %in% c(all_models, "all")))) {
+    stop('No existing model identified. Please use "all", "pois", "zip", "nb" or "zinb".')
+  }
+  checked_model <- if("all" %in% model) {
     c("pois", "zip", "nb", "zinb")
   } else {
-    identified_models <- agrep(model, all_models, ignore.case = TRUE)
-    if(length(identified_models) == 0) {
-      stop('No existing model identified. Please use "all", "pois", "zip", "nb" or "zinb".')
-    } else {
-      checked_model <- all_models[identified_models]
-    }
+      model
   }
 
   if(separate) {
