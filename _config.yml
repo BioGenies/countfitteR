@@ -1,0 +1,14 @@
+theme: jekyll-theme-cayman
+title: Some title
+description: some description
+source: jarochi/countfitteR
+
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
