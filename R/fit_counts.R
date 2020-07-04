@@ -55,7 +55,7 @@ fit_counts <- function(counts_list, separate = TRUE, model, level = 0.95, ...) {
       paste0(names(counts_list), "_", single_name), rep("a", length(counts_list))))
   } else {
     all_fits <- fit_function(fit_data, model = checked_model, level = level, ...)
-    names(all_fits) <- paste0(names(counts_list), checked_model)
+    names(all_fits) <- paste0(names(counts_list), "_", checked_model)
   }
 
   all_fits
