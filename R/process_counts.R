@@ -6,7 +6,7 @@
 #' data(case_study)
 #' process_counts(case_study)
 #' @details \code{case_study} does not consider \code{NA}s and \code{NaN}s effectively 
-#' ommiting them (as per the \code{\link[base]{is.na}} function).
+#' omitting them (as per the \code{\link[base]{is.na}} function).
 #' @return A \code{list} of counts.
 #' @export
 process_counts <- function(x) {
