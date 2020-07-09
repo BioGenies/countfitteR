@@ -1,7 +1,10 @@
+  <!-- badges: start -->
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Build Status](https://api.travis-ci.org/jarochi/countfitteR.png)](https://travis-ci.org/jarochi/countfitteR)
 ![check](https://github.com/jarochi/countfitteR/workflows/check/badge.svg)
+[![R build status](https://github.com/jarochi/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/jarochi/countfitteR/actions)
+  <!-- badges: end -->
 
 # countfitteR
 
@@ -15,7 +18,7 @@ countfitteR is a web server based on Shiny technology for selecting the most app
 install.packages("countfitteR")
 ```
 
-Hovewer, you can also install the developmental version of countfitteR directly from GitHub
+However, you can also install the developmental version of countfitteR directly from GitHub
 
 ```R
 source("https://install-github.me/jarochi/countfitteR")

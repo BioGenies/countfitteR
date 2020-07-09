@@ -12,7 +12,7 @@ header-includes:
 bibliography: "countfitteR.bib"
 classoption: a4paper
 vignette: >
-  %\VignetteIndexEntry{countfittR package - an overview}
+  %\VignetteIndexEntry{countfitteR package - an overview}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
