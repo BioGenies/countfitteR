@@ -4,8 +4,9 @@ author: "Michał Burdukiewicz, Stefan Rödiger, Jarosław Chilimoniuk"
 date: ""
 output:
 html_document:
-css: report.css
-toc: true
+  css: report.css
+  toc: true
+  toc_float: true
 ---
 
 # countfitteR
@@ -26,13 +27,13 @@ print_table <- function(x)
 Report generated on `r Sys.time()`.
 
 Detected input file: `r ifelse(is.null(input[["input_file"]][["name"]]), "none", input[["input_file"]][["name"]])`.  
-<!-- md5sum("/home/jarek/countfitteR/inst/extdata/example_counts.csv") -->
-`r datapath <- input[["input_file"]]`
-`r example_f <- md5sum("../../../data/case_study.rda")`
-`r example_f <- example_f[[1]]`
-`r input_f <- as.character(md5sum(as.character(datapath["datapath"])))`
 
-md5sum of the input file: `r ifelse(is.null(input[["input_file"]][["name"]]), example_f, input_f)`.
+```{r echo=FALSE, results='asis'}
+
+
+cat("md5sum of the input file:",  ifelse(is.null(input[["input_file"]][["name"]]), "none", md5sum(input[["input_file"]][["datapath"]])))
+```
+
 
 ## Settings
 
