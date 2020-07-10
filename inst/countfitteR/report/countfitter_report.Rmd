@@ -80,5 +80,5 @@ if(input[["cmp_distr_rep"]]) {
 # R Session
 
 ```{r,results='markup'}
-sessionInfo()
+pander::pander(sessionInfo())
 ```
