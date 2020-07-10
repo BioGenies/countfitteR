@@ -34,17 +34,15 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/biongram/countfitteR](https://github.com/biongram/countfitteR)
+Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex
-@misc{countfitteR_2018,
-	author = {Chilimoniuk, Jaros\l{}aw, Gosiewska, Alicja and S\l{}owik, Jadwiga and R\"odiger, Stefan and Burdukiewicz, Micha\l{}},
-	month = may,
-	note = R package,
-    title = {{countfitteR}: a web server for the analysis of count data},
-	url = {https://github.com/biongram/countfitteR},
-	urldate = {2018-07-11},
-	year = {2018}
+@Manual{,
+  author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz},
+  title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
+  year = {2020},
+  note = {R package version 1.2},
+  url = {https://CRAN.R-project.org/package=countfitteR},
 }
 ```
