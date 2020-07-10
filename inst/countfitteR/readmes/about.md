@@ -8,4 +8,9 @@ The countfitteR web server relies on function from the [countfitteR](https://git
 
 [Stefan Rödiger](https://www.researchgate.net/profile/Stefan_Roediger)
 
-[Jarosław Chilimoniuk](https://www.researchgate.net/profile/Jaroslaw_Chilimoniuk)  
+[Jarosław Chilimoniuk](https://www.researchgate.net/profile/Jaroslaw_Chilimoniuk)
+
+[Alicja Gosiewska](https://www.researchgate.net/profile/Alicja_Gosiewska)
+
+[Jadwiga Słowik](https://github.com/slowikj)
+  

@@ -1,6 +1,7 @@
   <!-- badges: start -->
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
+![pkgdown](https://github.com/biongram/countfitteR/workflows/pkgdown/badge.svg)
 ![check](https://github.com/jarochi/countfitteR/workflows/check/badge.svg)
 [![R build status](https://github.com/jarochi/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/jarochi/countfitteR/actions)
   <!-- badges: end -->
@@ -20,7 +21,7 @@ install.packages("countfitteR")
 However, you can also install the developmental version of countfitteR directly from GitHub
 
 ```R
-source("https://install-github.me/jarochi/countfitteR")
+devtools::install_github("biongram/countfitteR")
 ```
 
 ## Run countfitteR
@@ -33,16 +34,16 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Jarosław Chilimoniuk, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/jarochi/countfitteR](https://github.com/jarochi/countfitteR)
+Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz (2018) countfitteR: a web server for the analysis of count data. [https://github.com/biongram/countfitteR](https://github.com/biongram/countfitteR)
 
 
 ```tex
 @misc{countfitteR_2018,
-	author = {Chilimoniuk, Jaros\l{}aw and R\"odiger, Stefan and Burdukiewicz, Micha\l{}},
+	author = {Chilimoniuk, Jaros\l{}aw, Gosiewska, Alicja and S\l{}owik, Jadwiga and R\"odiger, Stefan and Burdukiewicz, Micha\l{}},
 	month = may,
 	note = R package,
     title = {{countfitteR}: a web server for the analysis of count data},
-	url = {https://github.com/jarochi/countfitteR},
+	url = {https://github.com/biongram/countfitteR},
 	urldate = {2018-07-11},
 	year = {2018}
 }

@@ -7,12 +7,12 @@ title <- paste0(meta[["Package"]], ": ", tolower(meta[["Title"]]))
 url <- paste0("https://cran.r-project.org/package=", meta[["Package"]])
 
 citEntry(entry = "Manual",
-  author = "Jaroslaw Chilimoniuk and Stefan Roediger and Michal Burdukiewicz",
+  author = "Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz",
   title = title,
   year = year, 
   note = vers,
   url = "https://CRAN.R-project.org/package=countfitteR",
-  textVersion = paste0("Chilimoniuk J, Roediger S and Burdukiewicz M (", 
+  textVersion = paste0("Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (", 
            year, 
            "). ", 
            title,
