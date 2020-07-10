@@ -9,7 +9,9 @@ output:
     toc_depth: 4
 header-includes:
     - \usepackage[font={small}]{caption}
-# bibliography: "countfitteR.bib"
+bibliography: countfitteR.bib
+# bibliography: bib.json
+# nocite: '@*'
 classoption: a4paper
 vignette: >
   %\VignetteIndexEntry{countfitteR package - an overview}
@@ -44,3 +46,4 @@ fit_counts(processed_counts, model = "all")
 
 
 # References
+
