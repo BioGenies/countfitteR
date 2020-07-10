@@ -4,7 +4,7 @@ author: "Michał Burdukiewicz, Stefan Rödiger, Jarosław Chilimoniuk"
 date: ""
 output:
 html_document:
-  css: report.css
+  theme: united
   toc: true
   toc_float: true
 ---
