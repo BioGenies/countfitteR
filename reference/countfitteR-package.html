@@ -131,17 +131,14 @@ count data.</p>
 <p>countfitteR is a wrapper around existing count models in R. To standardize error messages 
 and ease up the integration, we slightly modified the <code><a href='https://rdrr.io/pkg/pscl/man/zeroinfl.html'>zeroinfl</a></code> 
 function by Achim Zeileis.</p>
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
-
-    <p>Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>15390</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/biongram/countfitteR'>countfitteR</a></span>)
-<span class='kw'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(pois = <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>25</span>, <span class='fl'>0.3</span>), 
-                 binom = <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='fl'>25</span>, <span class='fl'>1</span>, <span class='fl'>0.8</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>countfitteR</span>)
+<span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>pois</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>25</span>, <span class='fl'>0.3</span>),
+                 <span class='kw'>binom</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='fl'>25</span>, <span class='fl'>1</span>, <span class='fl'>0.8</span>))
 
-<span class='kw'>cmp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/compare_fit.html'>compare_fit</a></span>(<span class='kw'>df</span>, fitlist = <span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='st'>"all"</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div></pre>
+<span class='no'>cmp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='compare_fit.html'>compare_fit</a></span>(<span class='no'>df</span>, <span class='kw'>fitlist</span> <span class='kw'>=</span> <span class='fu'><a href='fit_counts.html'>fit_counts</a></span>(<span class='no'>df</span>, <span class='kw'>model</span> <span class='kw'>=</span> <span class='st'>"all"</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -157,7 +154,7 @@ function by Achim Zeileis.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
