@@ -1,6 +1,6 @@
 ---
 title: "countfitteR package - an overview"
-author: "Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz"
+author: "Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Romano Weiss, Stefan Rödiger, Michał Burdukiewicz"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
