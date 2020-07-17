@@ -38,12 +38,16 @@ shinyServer(function(input, output) {
     })
     
     valid_data <- reactiveVal(value=NULL, label="valid_data")
+    table_data <- reactiveVal(value=NULL, label="table_data")
     observeEvent(init_data, {
       valid_data(init_data())
     })
+    observeEvent(init_data, {
+      table_data(init_data())
+    })
     
     output[["hot_counts"]] <- DT::renderDataTable({
-      DT::datatable(valid_data(), editable = TRUE)
+      DT::datatable(table_data(), editable = TRUE)
     })
   
     observeEvent(input$hot_counts_cell_edit, {
@@ -52,7 +56,7 @@ shinyServer(function(input, output) {
       value <- abs(as.integer(input$hot_counts_cell_edit$value))
 
       if(is.na(value)) {
-        replaceData(dataTableProxy("hot_counts"), valid_data())
+        table_data(valid_data())
         showModal(modalDialog(title="validation error", "invalid cell value"))
       } else {
         modified_counts <- isolate(valid_data())
