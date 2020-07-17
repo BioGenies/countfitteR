@@ -14,32 +14,59 @@ options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "pr
 
 my_DT <- function(x) datatable(x, escape = FALSE, extensions = "Buttons", filter = "top", rownames = FALSE)
 
-
 shinyServer(function(input, output) {
-
-    raw_counts <- reactive({
-        # if there is no data, case study is loaded
-        if (is.null(input[["input_file"]])) {
-            dat <- case_study
-        } else {
-            dat <- switch(input[["csv_type"]], csv1 = read.csv(input[["input_file"]][["datapath"]], header = input[["header"]],
-                check.names = FALSE), csv2 = read.csv2(input[["input_file"]][["datapath"]], header = input[["header"]],
-                check.names = FALSE))
-            if (!input[["header"]])
-                colnames(dat) <- paste0("C", 1L:ncol(dat))
-
-        }
-
-        if (!is.null(input[["hot_counts"]]))
-            dat <- input[["hot_counts"]]
-
-        dat
+    init_data <- reactive({
+      # if there is no data, case study is loaded
+      if (is.null(input[["input_file"]])) {
+        dat <- case_study
+      } else {
+        dat <- switch(input[["csv_type"]],
+                      csv1 = read.csv(input[["input_file"]][["datapath"]],
+                                      header = input[["header"]],
+                                      check.names = FALSE),
+                      csv2 = read.csv2(input[["input_file"]][["datapath"]],
+                                       header = input[["header"]],
+                                       check.names = FALSE))
+        if (!input[["header"]])
+          colnames(dat) <- paste0("C", 1L:ncol(dat))
+      }
+      
+      if (!is.null(input[["hot_counts"]]))
+        dat <- input[["hot_counts"]]
+      
+      dat
     })
-
-    output[["hot_counts"]] = DT::renderDataTable({
+    
+    valid_data <- reactiveVal(value=NULL, label="valid_data")
+    raw_counts <- reactiveVal(value=NULL, label="raw_counts")
+    observeEvent(init_data, {
+      valid_data(init_data())
+      raw_counts(init_data())
+    })
+    
+    output[["hot_counts"]] <- DT::renderDataTable({
+      print("rerender hot counts")
       DT::datatable(raw_counts(), editable = TRUE)
     })
+  
+    observeEvent(input$hot_counts_cell_edit, {
+      print("cell edit")
+      row <- input$hot_counts_cell_edit$row
+      col <- input$hot_counts_cell_edit$col
+      value <- input$hot_counts_cell_edit$value
 
+      if(value == 5) {
+        raw_counts(valid_data())
+        replaceData(dataTableProxy("hot_counts"), valid_data())
+        showModal(modalDialog(title="validation error", "invalid cell value"))
+      } else {
+        modified_counts <- isolate(raw_counts())
+        modified_counts[row, col] <- as.integer(value)
+        valid_data(modified_counts)
+        raw_counts(valid_data())
+      }
+    })
+    
     processed_counts <- reactive({
       countfitteR:::process_counts(raw_counts())
     })
