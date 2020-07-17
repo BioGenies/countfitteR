@@ -53,15 +53,23 @@ shinyServer(function(input, output) {
     observeEvent(input$hot_counts_cell_edit, {
       row <- input$hot_counts_cell_edit$row
       col <- input$hot_counts_cell_edit$col
-      value <- abs(as.integer(input$hot_counts_cell_edit$value))
+      value <- input$hot_counts_cell_edit$value
+      formatted_value <- abs(as.integer(value))
 
-      if(is.na(value)) {
+      if(is.na(formatted_value)) {
         table_data(valid_data())
+        replaceData(dataTableProxy("hot_counts"), valid_data())
         showModal(modalDialog(title="validation error", "invalid cell value"))
       } else {
         modified_counts <- isolate(valid_data())
         modified_counts[row, col] <- as.integer(value)
         valid_data(modified_counts)
+        
+        if(value != formatted_value) {
+          table_data(valid_data())
+          showModal(modalDialog(title="formatter",
+                                paste0("the value ", value, " has been changed to ", formatted_value)))
+        }
       }
     })
     
@@ -84,7 +92,6 @@ shinyServer(function(input, output) {
     summarized_fits <- reactive({
       countfitteR:::summary_fitlist(fits())
     })
-
 
     output[["input_data"]] <- DT::renderDataTable({
         my_DT(raw_counts())
