@@ -130,11 +130,16 @@ shinyServer(function(input, output) {
 
     # compare distrs ----------------------------
     output[["cmp_plot"]] <- renderPlot({
-      countfitteR:::plot_fitcmp(compared_fits()) + cf_theme
+      countfitteR::plot_fitcmp(compared_fits()) + cf_theme
+    })
+    
+    output[["cmp_plot_ui"]] <- renderUI({
+      plotOutput("cmp_plot", height = 260 + 70 * length(processed_counts())) 
     })
 
     output[["cmp_plot_db"]] <- downloadHandler("cmp.svg", content = function(file) {
-        ggsave(file, countfitteR:::plot_fitcmp(compared_fits()) + cf_theme, device = svg, height = 297, width = 297, units = "mm")
+        ggsave(file, countfitteR:::plot_fitcmp(compared_fits()) + cf_theme, device = svg, 
+               height = 297, width = 297, units = "mm")
     })
 
     output[["cmp_sep_tab"]] <- DT::renderDataTable({

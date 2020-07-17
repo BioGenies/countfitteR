@@ -52,7 +52,7 @@ shinyUI(navbarPage(title = "countfitteR",
                    tabPanel("Compare distributions",
                             includeMarkdown("readmes/cmp_distr/1.md"),
                             fluidRow(column(3, downloadButton("cmp_plot_db", "Save chart (.svg)"))),
-                            plotOutput("cmp_plot"),
+                            uiOutput("cmp_plot_ui"),
                             DT::dataTableOutput("cmp_sep_tab")
                    ),
                    tabPanel("Save report",
