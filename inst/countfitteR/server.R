@@ -43,12 +43,10 @@ shinyServer(function(input, output) {
     })
     
     output[["hot_counts"]] <- DT::renderDataTable({
-      print("render hot counts")
       DT::datatable(valid_data(), editable = TRUE)
     })
   
     observeEvent(input$hot_counts_cell_edit, {
-      print("cell edit")
       row <- input$hot_counts_cell_edit$row
       col <- input$hot_counts_cell_edit$col
       value <- abs(as.integer(input$hot_counts_cell_edit$value))
