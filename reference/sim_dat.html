@@ -120,29 +120,29 @@
     <p>Data created from simulation of NB Poiss</p>
     </div>
 
-    <pre class="usage"><span class='no'>sim_dat</span></pre>
+    <pre class="usage"><span class='kw'>sim_dat</span></pre>
 
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># code used to generate the data</span>
 <span class='co'># be warned: the simulations will take some time</span>
-<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>dplyr</span>)
+<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://dplyr.tidyverse.org'>dplyr</a></span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>15390</span>)
-<span class='no'>sim_dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='no'>rbind</span>, <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>10</span>^(-<span class='fl'>3L</span>:<span class='fl'>2</span>), <span class='kw'>function</span>(<span class='no'>single_theta</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='no'>rbind</span>, <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>1L</span>:<span class='fl'>10</span>/<span class='fl'>2</span>, <span class='kw'>function</span>(<span class='no'>single_lambda</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='no'>rbind</span>, <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>1L</span>:<span class='fl'>100</span>, <span class='kw'>function</span>(<span class='no'>single_rep</span>) {
-
-      <span class='no'>foci</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>1L</span>:<span class='fl'>10</span>, <span class='kw'>function</span>(<span class='no'>dummy</span>) <span class='fu'><a href='https://rdrr.io/r/stats/NegBinomial.html'>rnbinom</a></span>(<span class='fl'>600</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='no'>single_theta</span>, <span class='kw'>mu</span> <span class='kw'>=</span> <span class='no'>single_lambda</span>))
-      <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>foci</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>"C"</span>, <span class='fl'>1L</span>:<span class='fl'>10</span>)
-
-      <span class='fu'><a href='fit_counts.html'>fit_counts</a></span>(<span class='no'>foci</span>, <span class='kw'>separate</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>model</span> <span class='kw'>=</span> <span class='st'>"all"</span>) <span class='kw'>%&gt;%</span>
-        <span class='no'>summary_fitlist</span> <span class='kw'>%&gt;%</span>
-        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>between</span> <span class='kw'>=</span> <span class='no'>single_lambda</span> <span class='kw'>&lt;</span> <span class='no'>upper</span> <span class='kw'>&amp;</span> <span class='no'>single_lambda</span> <span class='kw'>&gt;</span> <span class='no'>lower</span>) <span class='kw'>%&gt;%</span>
-        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>model</span>) <span class='kw'>%&gt;%</span>
-        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span>(<span class='kw'>prop</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>between</span>)) <span class='kw'>%&gt;%</span>
-        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(<span class='kw'>replicate</span> <span class='kw'>=</span> <span class='no'>single_rep</span>, <span class='kw'>lambda</span> <span class='kw'>=</span> <span class='no'>single_lambda</span>, <span class='kw'>theta</span> <span class='kw'>=</span> <span class='no'>single_theta</span>)
+<span class='kw'>sim_dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='kw'>rbind</span>, <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>10</span><span class='op'>^</span>(<span class='op'>-</span><span class='fl'>3L</span><span class='op'>:</span><span class='fl'>2</span>), <span class='fu'>function</span>(<span class='kw'>single_theta</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='kw'>rbind</span>, <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>1L</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>/</span><span class='fl'>2</span>, <span class='fu'>function</span>(<span class='kw'>single_lambda</span>) 
+    <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='kw'>rbind</span>, <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>1L</span><span class='op'>:</span><span class='fl'>100</span>, <span class='fu'>function</span>(<span class='kw'>single_rep</span>) {
+      
+      <span class='kw'>foci</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fl'>1L</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fu'>function</span>(<span class='kw'>dummy</span>) <span class='fu'><a href='https://rdrr.io/r/stats/NegBinomial.html'>rnbinom</a></span>(<span class='fl'>600</span>, size = <span class='kw'>single_theta</span>, mu = <span class='kw'>single_lambda</span>))
+      <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>foci</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>"C"</span>, <span class='fl'>1L</span><span class='op'>:</span><span class='fl'>10</span>)
+      
+      <span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/fit_counts.html'>fit_counts</a></span>(<span class='kw'>foci</span>, separate = <span class='fl'>TRUE</span>, model = <span class='st'>"all"</span>) <span class='op'>%&gt;%</span>
+        <span class='kw'>summary_fitlist</span> <span class='op'>%&gt;%</span> 
+        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(between = <span class='kw'>single_lambda</span> <span class='op'>&lt;</span> <span class='kw'>upper</span> <span class='op'>&amp;</span> <span class='kw'>single_lambda</span> <span class='op'>&gt;</span> <span class='kw'>lower</span>) <span class='op'>%&gt;%</span>
+        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='kw'>model</span>) <span class='op'>%&gt;%</span> 
+        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span>(prop = <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='kw'>between</span>)) <span class='op'>%&gt;%</span>
+        <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span>(replicate = <span class='kw'>single_rep</span>, lambda = <span class='kw'>single_lambda</span>, theta = <span class='kw'>single_theta</span>)
     }))
   ))
 ))
@@ -162,7 +162,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

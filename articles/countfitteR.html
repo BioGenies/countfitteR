@@ -67,13 +67,13 @@
 
       
 
-      </header><div class="row">
+      </header><script src="countfitteR_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>countfitteR package - an overview</h1>
                         <h4 class="author">Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Romano Weiss, Stefan Rödiger, Michał Burdukiewicz</h4>
             
-            <h4 class="date">2020-07-16</h4>
+            <h4 class="date">2020-07-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/biongram/countfitteR/blob/master/vignettes/countfitteR.Rmd"><code>vignettes/countfitteR.Rmd</code></a></small>
       <div class="hidden name"><code>countfitteR.Rmd</code></div>
@@ -85,20 +85,22 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
-<p><strong>countfitteR</strong> is a R package and shiny app designed to perform analysis of count data. This vignette covers important features and data sets of the app. We extended our automatized imaging platform <span class="citation">(Rödiger et al. 2013, <span class="citation">@willitzki_new_2012</span>)</span> for a multiparametric analysis of cell damage (DNA double strand breaks) <span class="citation">(Reddig et al. 2018, <span class="citation">@rodiger_quantification_2018</span>)</span>. Digital image analysis of the DSB biomarkers gamma H2AX was used to describe the alteration of the cell phenotype.</p>
+<p><strong>countfitteR</strong> is a R package and shiny app designed to perform analysis of count data. This vignette covers important features and data sets of the app. We extended our automatized imaging platform <span class="citation">(Rödiger et al. 2013, @willitzki_new_2012)</span> for a multiparametric analysis of cell damage (DNA double strand breaks) <span class="citation">(Reddig et al. 2018, @rodiger_quantification_2018)</span>. Digital image analysis of the DSB biomarkers gamma H2AX was used to describe the alteration of the cell phenotype.</p>
 </div>
 <div id="data-sets" class="section level1">
 <h1 class="hasAnchor">
 <a href="#data-sets" class="anchor"></a>Data sets</h1>
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="co"># Load countfitteR package</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">countfitteR</span>)
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># Load countfitteR package</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/biongram/countfitteR">countfitteR</a></span>)
 
 <span class="co"># Assign the csv file to filename</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span>(<span class="st">"case_study"</span>)
 
-<span class="no">processed_counts</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/process_counts.html">process_counts</a></span>(<span class="no">case_study</span>)
+<span class="kw">processed_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/process_counts.html">process_counts</a></span>(<span class="kw">case_study</span>)
 
-<span class="fu"><a href="../reference/fit_counts.html">fit_counts</a></span>(<span class="no">processed_counts</span>, <span class="kw">model</span> <span class="kw">=</span> <span class="st">"all"</span>)</pre></body></html></div>
+<span class="fu"><a href="../reference/fit_counts.html">fit_counts</a></span>(<span class="kw">processed_counts</span>, model = <span class="st">"all"</span>)
+</pre></div>
 <pre><code>## $L3_AF_DMSO_B_10_FITC_pois
 ## $L3_AF_DMSO_B_10_FITC_pois$coefficients
 ##       lambda 
@@ -653,7 +655,7 @@
 ## $L3_AF_100_ETP_12_FITC_nb
 ## $L3_AF_100_ETP_12_FITC_nb$coefficients
 ##       lambda        theta 
-##     3.215686 42652.988061 
+##     3.215686 42652.988367 
 ## 
 ## $L3_AF_100_ETP_12_FITC_nb$confint
 ##           lower    upper
@@ -893,7 +895,7 @@
 ## $L3_AF_100_ETP_11_FITC_zinb
 ## $L3_AF_100_ETP_11_FITC_zinb$coefficients
 ##    lambda     theta         r 
-## 9.1831585 1.5462911 0.7473637 
+## 9.1831585 1.5462912 0.7473637 
 ## 
 ## $L3_AF_100_ETP_11_FITC_zinb$confint
 ##            lower      upper
@@ -1073,11 +1075,11 @@
 ## $L3_AF_DMSo_D_21_FITC_zinb
 ## $L3_AF_DMSo_D_21_FITC_zinb$coefficients
 ##       lambda        theta            r 
-## 3.920681e+00 1.441238e+05 9.899977e-01 
+## 3.920681e+00 1.442093e+05 9.899977e-01 
 ## 
 ## $L3_AF_DMSo_D_21_FITC_zinb$confint
 ##            lower      upper
-## lambda 1.4118920 10.8873355
+## lambda 1.4118920 10.8873354
 ## r      0.9985954  0.9323371
 ## 
 ## $L3_AF_DMSo_D_21_FITC_zinb$BIC
@@ -1171,7 +1173,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>
