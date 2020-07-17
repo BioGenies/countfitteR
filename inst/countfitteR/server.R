@@ -67,6 +67,7 @@ shinyServer(function(input, output) {
         
         if(value != formatted_value) {
           table_data(valid_data())
+          replaceData(dataTableProxy("hot_counts"), valid_data())
           showModal(modalDialog(title="formatter",
                                 paste0("the value ", value, " has been changed to ", formatted_value)))
         }
