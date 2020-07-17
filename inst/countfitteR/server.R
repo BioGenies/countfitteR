@@ -38,37 +38,33 @@ shinyServer(function(input, output) {
     })
     
     valid_data <- reactiveVal(value=NULL, label="valid_data")
-    raw_counts <- reactiveVal(value=NULL, label="raw_counts")
     observeEvent(init_data, {
       valid_data(init_data())
-      raw_counts(init_data())
     })
     
     output[["hot_counts"]] <- DT::renderDataTable({
-      print("rerender hot counts")
-      DT::datatable(raw_counts(), editable = TRUE)
+      print("render hot counts")
+      DT::datatable(valid_data(), editable = TRUE)
     })
   
     observeEvent(input$hot_counts_cell_edit, {
       print("cell edit")
       row <- input$hot_counts_cell_edit$row
       col <- input$hot_counts_cell_edit$col
-      value <- input$hot_counts_cell_edit$value
+      value <- abs(as.integer(input$hot_counts_cell_edit$value))
 
-      if(value == 5) {
-        raw_counts(valid_data())
+      if(is.na(value)) {
         replaceData(dataTableProxy("hot_counts"), valid_data())
         showModal(modalDialog(title="validation error", "invalid cell value"))
       } else {
-        modified_counts <- isolate(raw_counts())
+        modified_counts <- isolate(valid_data())
         modified_counts[row, col] <- as.integer(value)
         valid_data(modified_counts)
-        raw_counts(valid_data())
       }
     })
     
     processed_counts <- reactive({
-      countfitteR:::process_counts(raw_counts())
+      countfitteR:::process_counts(valid_data())
     })
 
     occs <- reactive({
