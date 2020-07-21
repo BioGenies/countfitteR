@@ -126,32 +126,34 @@ Estimated coefficients of models (<code>lambda</code> for all distributions, <co
 <code>r</code> for ZIP and ZINB).</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/summary_fitlist.html'>summary_fitlist</a></span>(<span class='kw'>fitlist</span>)</pre>
+    <pre class="usage"><span class='fu'>summary_fitlist</span>(<span class='kw'>fitlist</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>fitlist</th>
-      <td><p>List is created by fitlist = fit_counts(count_list, model = "all"). For each count
-it creates distribution model</p></td>
+      <td><p>a list of fits, as created by <code>fitlist</code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>Data frame with summarised results of all distribution models.</p><ul>
-<li><p>Countthe name of the original count.</p></li>
-<li><p>lambda\(\lambda\) - Poisson mean, lower and upper confidence intervals.</p></li>
-<li><p>BICBayesian information criterion</p></li>
-<li><p>theta\(\theta\) - dispersion parameter</p></li>
-<li><p>rprobability of excess zeros.</p></li>
+<li><p>Count: the name of the original count.</p></li>
+<li><p>lambda: \(\lambda\) - Poisson mean, lower and upper confidence intervals.</p></li>
+<li><p>BIC: Bayesian information criterion</p></li>
+<li><p>theta: \(\theta\) - dispersion parameter</p></li>
+<li><p>r: probability of excess zeros.</p></li>
 </ul>
 
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='fit_counts.html'>fit_counts</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(poisson = <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>25</span>, <span class='fl'>0.3</span>), binomial = <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='fl'>25</span>, <span class='fl'>1</span>, <span class='fl'>0.8</span>))
-<span class='kw'>fc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='st'>"all"</span>) </div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/countfitteR/man/summary_fitlist.html'>summary_fitlist</a></span>(<span class='kw'>fc</span>) </div><div class='output co'>#&gt;      count    lambda     lower     upper      BIC     theta            r
+<span class='kw'>fc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='st'>"all"</span>) </div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='input'><span class='fu'>summary_fitlist</span>(<span class='kw'>fc</span>) </div><div class='output co'>#&gt;      count    lambda     lower     upper      BIC     theta            r
 #&gt; 1  poisson 0.3600000 0.1873156 0.6918806 39.60860        NA           NA
 #&gt; 2 binomial 0.9200000 0.6113645 1.3844442 53.05443        NA           NA
 #&gt; 3  poisson 0.3600092 0.1873123 0.6919283 42.82758        NA 2.474199e-05
