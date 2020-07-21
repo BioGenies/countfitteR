@@ -7,7 +7,7 @@
 summary_fitlist(fitlist)
 }
 \arguments{
-\item{fitlist}{a list of fits, as created by \code{\link{fitlist}}.}
+\item{fitlist}{a list of fits, as created by \code{\link{fit_counts}}.}
 }
 \value{
 Data frame with summarised results of all distribution models. 

@@ -23,14 +23,14 @@ compare_fit_single <- function(fitlist) {
   )
 }
 
-#' @title Compare distributions
+#' @title Compare fits
 #'
 #' @name compare_fit
 #' @description  Compare empirical distribution of counts with the distribution 
 #' defined by the model fitted to counts.
 #' @param count_list A \code{list} of counts. Each count should be in separate 
 #' column, rows should represent values of these counts.
-#' @param fitlist a list of fits, as created by \code{\link{fitlist}}.
+#' @param fitlist a list of fits, as created by \code{\link{fit_counts}}.
 #' @examples
 #' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
 #' compare_fit(df, fitlist = fit_counts(df, model = "all"))
