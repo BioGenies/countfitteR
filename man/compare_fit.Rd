@@ -10,9 +10,7 @@ compare_fit(count_list, fitlist = fit_counts(count_list, model = "all"))
 \item{count_list}{A \code{list} of counts. Each count should be in separate 
 column, rows should represent values of these counts.}
 
-\item{fitlist}{Uses fit_count function to calculate value for each unique 
-observation using different
-distribution models.}
+\item{fitlist}{a list of fits, as created by \code{\link{fitlist}}.}
 }
 \value{
 A \code{data.frame} with distribution values for each unique count. 

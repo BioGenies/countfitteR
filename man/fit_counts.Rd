@@ -2,7 +2,7 @@
 % Please edit documentation in R/fit_counts.R
 \name{fit_counts}
 \alias{fit_counts}
-\title{Function that fits counts to distribution models.}
+\title{Fit counts to distributions}
 \usage{
 fit_counts(counts_list, separate = TRUE, model, level = 0.95, ...)
 }
@@ -31,7 +31,7 @@ parameters. Rownames are names of parameters. The columns contain respectively
 lower and upper confidence intervals.
 }
 \description{
-Function that fits counts to distribution models.
+Fit counts to distributions
 }
 \examples{
 df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))

@@ -1,5 +1,4 @@
-#' Function that fits counts to distribution models.
-#'
+#' Fit counts to distributions
 #'
 #' @name fit_counts
 #' @param counts_list A \code{list} of count data. Each count should be in 

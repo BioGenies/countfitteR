@@ -30,9 +30,7 @@ compare_fit_single <- function(fitlist) {
 #' defined by the model fitted to counts.
 #' @param count_list A \code{list} of counts. Each count should be in separate 
 #' column, rows should represent values of these counts.
-#' @param fitlist Uses fit_count function to calculate value for each unique 
-#' observation using different
-#' distribution models.
+#' @param fitlist a list of fits, as created by \code{\link{fitlist}}.
 #' @examples
 #' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
 #' compare_fit(df, fitlist = fit_counts(df, model = "all"))

@@ -11,16 +11,16 @@ get_count_names <- function(fitlist) {
 #' Estimates are presented in the table below along with the BIC values of their models.
 #' Estimated coefficients of models (\code{lambda} for all distributions, \code{theta} for NB and ZINB, 
 #' \code{r} for ZIP and ZINB).
-#' @param fitlist List is created by fitlist = fit_counts(count_list, model = "all"). For each count
-#' it creates distribution model
+#' @inheritParams compare_fit
 #' @return Data frame with summarised results of all distribution models. 
 #' \itemize{
-#'  \item{Count}{the name of the original count.}
-#'  \item{lambda}{\eqn{\lambda}{lambda} - Poisson mean, lower and upper confidence intervals.}
-#'  \item{BIC}{Bayesian information criterion}
-#'  \item{theta}{\eqn{\theta}{theta} - dispersion parameter}
-#'  \item{r}{probability of excess zeros.}
+#'  \item{Count: }{the name of the original count.}
+#'  \item{lambda: }{\eqn{\lambda} - Poisson mean, lower and upper confidence intervals.}
+#'  \item{BIC: }{Bayesian information criterion}
+#'  \item{theta: }{\eqn{\theta} - dispersion parameter}
+#'  \item{r: }{probability of excess zeros.}
 #' }
+#' @seealso \code{\link{fit_counts}}
 #' @examples
 #' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
 #' fc <- fit_counts(df, model = "all") 
