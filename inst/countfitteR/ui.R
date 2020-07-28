@@ -1,5 +1,6 @@
 library(shiny)
 library(shinythemes)
+source("./utils.R")
 
 shinyUI(navbarPage(title = "countfitteR",
                    #theme = shinytheme("cerulean"),
@@ -29,19 +30,18 @@ shinyUI(navbarPage(title = "countfitteR",
                                        includeMarkdown("readmes/count_data/3.md"),
                                        fluidRow(column(3, downloadButton("input_data_distr_plot_db",
                                                                          "Save chart (.svg)"))),
-                                       uiOutput("input_data_distr_plot_ui"),
+                                       withCustomSpinner(uiOutput("input_data_distr_plot_ui")),
                                        includeMarkdown("readmes/count_data/4.md"),
-                                       DT::dataTableOutput("input_data_distr_tab")
+                                       dataTableWithSpinner("input_data_distr_tab")
                               )
                    ),
                    navbarMenu("Fitted models",
                               tabPanel(HTML("Mean value (&lambda;) estimates"),
                                        includeMarkdown("readmes/mean_value/1.md"),
-                                       fluidRow(column(3, downloadButton("fit_plot_db", "Save chart (.svg)"))
-                                       ),
-                                       plotOutput("fit_plot"),
+                                       fluidRow(column(3, disabled(downloadButton("fit_plot_db", "Save chart (.svg)")))),
+                                       plotWithSpinner("fit_plot"),
                                        includeMarkdown("readmes/mean_value/2.md"),
-                                       DT::dataTableOutput("fit_tab")
+                                       dataTableWithSpinner("fit_tab")
                               ),
                               tabPanel("Coefficients",
                                        includeMarkdown("readmes/mean_value/3.md"),
@@ -52,8 +52,8 @@ shinyUI(navbarPage(title = "countfitteR",
                    tabPanel("Compare distributions",
                             includeMarkdown("readmes/cmp_distr/1.md"),
                             fluidRow(column(3, downloadButton("cmp_plot_db", "Save chart (.svg)"))),
-                            uiOutput("cmp_plot_ui"),
-                            DT::dataTableOutput("cmp_sep_tab")
+                            withCustomSpinner(uiOutput("cmp_plot_ui")),
+                            dataTableWithSpinner("cmp_sep_tab")
                    ),
                    tabPanel("Save report",
                             checkboxInput("mean_value_rep", "Mean value estimates",

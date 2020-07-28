@@ -99,8 +99,6 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_summary"]] <- DT::renderDataTable({
-      # browser()
-      
         summ <- countfitteR:::summary_counts(processed_counts())
         formatRound(my_DT(summ), c(2, 4, 5), digits = 4)
     })
@@ -126,7 +124,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_distr_plot_ui"]] <- renderUI({
-        plotOutput("input_data_distr_plot", height = 260 + 70 * length(processed_counts())) 
+        plotOutput("input_data_distr_plot", height = 260 + 70 * length(processed_counts()))
     })
 
     output[["input_data_distr_plot_db"]] <- downloadHandler("distr_barplot.svg", content = function(file) {
@@ -136,9 +134,7 @@ shinyServer(function(input, output) {
     })
     # mean values ----------------------------
     output[["fit_plot"]] <- renderPlot({
-        countfitteR:::plot_fitlist(fits()) + 
-        cf_theme
-      # print(fits())
+        countfitteR:::plot_fitlist(fits()) + cf_theme
     })
 
     output[["model_decision"]] <- renderUI({
