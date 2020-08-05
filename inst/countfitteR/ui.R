@@ -38,7 +38,7 @@ shinyUI(navbarPage(title = "countfitteR",
                    navbarMenu("Fitted models",
                               tabPanel(HTML("Mean value (&lambda;) estimates"),
                                        includeMarkdown("readmes/mean_value/1.md"),
-                                       fluidRow(column(3, disabled(downloadButton("fit_plot_db", "Save chart (.svg)")))),
+                                       fluidRow(column(3, downloadButton("fit_plot_db", "Save chart (.svg)"))),
                                        plotWithSpinner("fit_plot"),
                                        includeMarkdown("readmes/mean_value/2.md"),
                                        dataTableWithSpinner("fit_tab")
