@@ -49,6 +49,7 @@ Suggests:
     pander,
     rmarkdown,
     shinythemes,
+    shinycssloaders,
     spelling,
     testthat
 Date: 2020-07-07

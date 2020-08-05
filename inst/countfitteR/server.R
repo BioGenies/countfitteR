@@ -14,34 +14,68 @@ options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "pr
 
 my_DT <- function(x) datatable(x, escape = FALSE, extensions = "Buttons", filter = "top", rownames = FALSE)
 
-
 shinyServer(function(input, output) {
+    init_data <- reactive({
+      # if there is no data, case study is loaded
+      if (is.null(input[["input_file"]])) {
+        dat <- case_study
+      } else {
+        dat <- switch(input[["csv_type"]],
+                      csv1 = read.csv(input[["input_file"]][["datapath"]],
+                                      header = input[["header"]],
+                                      check.names = FALSE),
+                      csv2 = read.csv2(input[["input_file"]][["datapath"]],
+                                       header = input[["header"]],
+                                       check.names = FALSE))
+        if (!input[["header"]])
+          colnames(dat) <- paste0("C", 1L:ncol(dat))
+      }
+      
+      if (!is.null(input[["hot_counts"]]))
+        dat <- input[["hot_counts"]]
+      
+      dat
+    })
+    
+    valid_data <- reactiveVal(value=NULL, label="valid_data")
+    table_data <- reactiveVal(value=NULL, label="table_data")
+    observeEvent(init_data, {
+      valid_data(init_data())
+    })
+    observeEvent(init_data, {
+      table_data(init_data())
+    })
+    
+    output[["hot_counts"]] <- DT::renderDataTable({
+      DT::datatable(table_data(), editable = TRUE)
+    })
+  
+    observeEvent(input$hot_counts_cell_edit, {
+      row <- input$hot_counts_cell_edit$row
+      col <- input$hot_counts_cell_edit$col
+      value <- input$hot_counts_cell_edit$value
+      formatted_value <- abs(as.integer(value))
 
-    raw_counts <- reactive({
-        # if there is no data, case study is loaded
-        if (is.null(input[["input_file"]])) {
-            dat <- case_study
-        } else {
-            dat <- switch(input[["csv_type"]], csv1 = read.csv(input[["input_file"]][["datapath"]], header = input[["header"]],
-                check.names = FALSE), csv2 = read.csv2(input[["input_file"]][["datapath"]], header = input[["header"]],
-                check.names = FALSE))
-            if (!input[["header"]])
-                colnames(dat) <- paste0("C", 1L:ncol(dat))
-
+      if(is.na(formatted_value)) {
+        table_data(valid_data())
+        replaceData(dataTableProxy("hot_counts"), valid_data())
+        showModal(modalDialog(title="validation error", "invalid cell value"))
+      } else {
+        modified_counts <- isolate(valid_data())
+        modified_counts[row, col] <- as.integer(value)
+        valid_data(modified_counts)
+        
+        if(value != formatted_value) {
+          table_data(valid_data())
+          replaceData(dataTableProxy("hot_counts"), valid_data())
+          showModal(modalDialog(title="formatter",
+                                paste0("the value ", value, " has been changed to ", formatted_value)))
         }
-
-        if (!is.null(input[["hot_counts"]]))
-            dat <- input[["hot_counts"]]
-
-        dat
+      }
     })
-
-    output[["hot_counts"]] = DT::renderDataTable({
-      DT::datatable(raw_counts(), editable = TRUE)
-    })
-
+    
     processed_counts <- reactive({
-      countfitteR:::process_counts(raw_counts())
+      countfitteR:::process_counts(valid_data())
     })
 
     occs <- reactive({
@@ -60,14 +94,11 @@ shinyServer(function(input, output) {
       countfitteR:::summary_fitlist(fits())
     })
 
-
     output[["input_data"]] <- DT::renderDataTable({
         my_DT(raw_counts())
     })
 
     output[["input_data_summary"]] <- DT::renderDataTable({
-      # browser()
-      
         summ <- countfitteR:::summary_counts(processed_counts())
         formatRound(my_DT(summ), c(2, 4, 5), digits = 4)
     })
@@ -93,7 +124,7 @@ shinyServer(function(input, output) {
     })
 
     output[["input_data_distr_plot_ui"]] <- renderUI({
-        plotOutput("input_data_distr_plot", height = 260 + 70 * length(processed_counts())) 
+        plotOutput("input_data_distr_plot", height = 260 + 70 * length(processed_counts()))
     })
 
     output[["input_data_distr_plot_db"]] <- downloadHandler("distr_barplot.svg", content = function(file) {
@@ -103,9 +134,7 @@ shinyServer(function(input, output) {
     })
     # mean values ----------------------------
     output[["fit_plot"]] <- renderPlot({
-        countfitteR:::plot_fitlist(fits()) + 
-        cf_theme
-      # print(fits())
+        countfitteR:::plot_fitlist(fits()) + cf_theme
     })
 
     output[["model_decision"]] <- renderUI({
