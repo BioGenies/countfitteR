@@ -67,7 +67,19 @@ plot_fitlist <- function(fitlist) {
     ggplot2::scale_color_discrete("The lowest BIC")
 }
 
-
+#' @title Make a decision based on the BIC value
+#'
+#' @name decide
+#' @description Select the most appropriate distribution for the count data in the html-friendly format.
+#' @param summary_fit a result of the \code{\link{summary_fitlist}} function.
+#' @inheritParams fit_counts
+#' @seealso \code{\link{fit_counts}}
+#' @examples
+#' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))
+#' fc <- fit_counts(df, model = "all") 
+#' summ <- summary_fitlist(fc) 
+#' decide(summ, separate = FALSE)
+#' @export
 decide <- function(summary_fit, separate) {
   if (separate) {
     paste0(vapply(levels(summary_fit[["count"]]), function(single_count) {
