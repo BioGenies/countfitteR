@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fit counts to distributions — fit_counts • countfitteR</title>
+<title>Make a decision based on the BIC value — decide • countfitteR</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Fit counts to distributions — fit_counts" />
-<meta property="og:description" content="Fit counts to distributions" />
+<meta property="og:title" content="Make a decision based on the BIC value — decide" />
+<meta property="og:description" content="Select the most appropriate distribution for the count data in the html-friendly format." />
 
 
 
@@ -111,25 +111,23 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Fit counts to distributions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/biongram/countfitteR/blob/master/R/fit_counts.R'><code>R/fit_counts.R</code></a></small>
-    <div class="hidden name"><code>fit_counts.Rd</code></div>
+    <h1>Make a decision based on the BIC value</h1>
+    <small class="dont-index">Source: <a href='https://github.com/biongram/countfitteR/blob/master/R/fitlist.R'><code>R/fitlist.R</code></a></small>
+    <div class="hidden name"><code>decide.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Fit counts to distributions</p>
+    <p>Select the most appropriate distribution for the count data in the html-friendly format.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>fit_counts</span>(<span class='kw'>counts_list</span>, separate = <span class='fl'>TRUE</span>, <span class='kw'>model</span>, level = <span class='fl'>0.95</span>, <span class='kw'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>decide</span>(<span class='kw'>summary_fit</span>, <span class='kw'>separate</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>counts_list</th>
-      <td><p>A <code>list</code> of count data. Each count should be in 
-separate column, rows should represent
-values of that counts.</p></td>
+      <th>summary_fit</th>
+      <td><p>a result of the <code><a href='summary_fitlist.html'>summary_fitlist</a></code> function.</p></td>
     </tr>
     <tr>
       <th>separate</th>
@@ -137,64 +135,16 @@ values of that counts.</p></td>
 fitted to the model. If <code>FALSE</code>, all counts are fitted to the same models 
 having the count name as the independent variable.</p></td>
     </tr>
-    <tr>
-      <th>model</th>
-      <td><p>single <code>character</code>: <code>"pois"</code>, <code>"nb"</code>,
-<code>"zinb"</code>, <code>"zip"</code>, <code>"all"</code>. If <code>"all"</code>, all possible model 
-are fitted.</p></td>
-    </tr>
-    <tr>
-      <th>level</th>
-      <td><p>Confidence level, default is 0.95.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Dots parameters are ignored.</p></td>
-    </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>The list of fitted models. Names are names of original counts, an underline
-and a name of model used.
-confint is a <code>matrix</code> with the number of rows equal to the number of
-parameters. Rownames are names of parameters. The columns contain respectively
-lower and upper confidence intervals.</p>
+    <div class='dont-index'><p><code><a href='fit_counts.html'>fit_counts</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(poisson = <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>25</span>, <span class='fl'>0.3</span>), binomial = <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='fl'>25</span>, <span class='fl'>1</span>, <span class='fl'>0.8</span>))
-<span class='fu'>fit_counts</span>(<span class='kw'>df</span>, model = <span class='st'>"pois"</span>) </div><div class='output co'>#&gt; $poisson_pois
-#&gt; $poisson_pois$coefficients
-#&gt; lambda 
-#&gt;   0.56 
-#&gt; 
-#&gt; $poisson_pois$confint
-#&gt;            lower     upper
-#&gt; lambda 0.3316685 0.9455224
-#&gt; 
-#&gt; $poisson_pois$BIC
-#&gt; [1] 52.99897
-#&gt; 
-#&gt; $poisson_pois$model
-#&gt; [1] "pois"
-#&gt; 
-#&gt; 
-#&gt; $binomial_pois
-#&gt; $binomial_pois$coefficients
-#&gt; lambda 
-#&gt;   0.88 
-#&gt; 
-#&gt; $binomial_pois$confint
-#&gt;            lower    upper
-#&gt; lambda 0.5794376 1.336468
-#&gt; 
-#&gt; $binomial_pois$BIC
-#&gt; [1] 52.84354
-#&gt; 
-#&gt; $binomial_pois$model
-#&gt; [1] "pois"
-#&gt; 
-#&gt; </div></pre>
+<span class='kw'>fc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='st'>"all"</span>) </div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='output co'>#&gt; <span class='warning'>Warning: iteration limit reached</span></div><div class='input'><span class='kw'>summ</span> <span class='op'>&lt;-</span> <span class='fu'><a href='summary_fitlist.html'>summary_fitlist</a></span>(<span class='kw'>fc</span>) 
+<span class='fu'>decide</span>(<span class='kw'>summ</span>, separate = <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; [1] "The most appropriate model (model with the lowest BIC value): Poisson.&lt;br/&gt;The evidence that the model with the lowest BIC value\n                  is the most appropriate: substantial.&lt;br/&gt;"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
