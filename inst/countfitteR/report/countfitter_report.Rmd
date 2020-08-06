@@ -44,9 +44,8 @@ Models selected: `r paste0(countfitteR:::nice_model_names[input[["chosen_models"
 if(input[["mean_value_rep"]]) {
   cat("\n",readLines("../readmes/mean_value/1.md"), sep = "    \n")
   plot(countfitteR:::plot_fitlist(fits()) + cf_theme)
-  dat <- summarized_fits()[, c("count", "lambda", "lower", "upper", "BIC", "model")]
   cat("\n",readLines("../readmes/mean_value/2.md"), sep = "    \n")
-  datatable(dat)
+  fit_tab_dt()
   
 }
 ```
@@ -54,7 +53,7 @@ if(input[["mean_value_rep"]]) {
 ```{r}
 if(input[["coef_rep"]]) {
   cat("\n", readLines("../readmes/mean_value/3.md"), sep = "    \n")
-  datatable(summarized_fits()[, c("count", "lambda", "theta", "r", "model")])
+  coef_tab_dt()
 }
 ```
 
@@ -70,7 +69,7 @@ if(input[["cmp_distr_rep"]]) {
   cat("\n", readLines("../readmes/cmp_distr/1.md"), sep = "    \n")
   plot(countfitteR:::plot_fitcmp(compared_fits()) + cf_theme)
   cat("\n")
-  datatable(compared_fits())
+  cmp_sep_tab()
 }
 ```
 

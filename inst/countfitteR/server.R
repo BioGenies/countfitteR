@@ -146,16 +146,25 @@ shinyServer(function(input, output) {
     ggsave(file, countfitteR:::plot_fitlist(fits()) + cf_theme, device = svg, height = 297, width = 297, units = "mm")
   })
   
-  output[["fit_tab"]] <- DT::renderDataTable({
+  fit_tab_dt <- reactive({
     # my_DT(summary_fitlist(fits()))
     dat <- summarized_fits()[, c("count", "lambda", "lower", "upper", "BIC", "model")]
     formatRound(my_DT(dat), 2L:5, digits = 4)
   })
   
-  output[["coef_tab"]] <- DT::renderDataTable({
-    # my_DT(summary_fitlist(fits()))
+  output[["fit_tab"]] <- DT::renderDataTable({
+    fit_tab_dt()
+  })
+  
+  coef_tab_dt <- reactive({
     dat <- summarized_fits()[, c("count", "lambda", "theta", "r", "model")]
     formatRound(my_DT(dat), 2L:4, digits = 4)
+  })
+  
+  
+  
+  output[["coef_tab"]] <- DT::renderDataTable({
+    coef_tab_dt()
   })
   
   # compare distrs ----------------------------
@@ -172,9 +181,14 @@ shinyServer(function(input, output) {
            height = 297, width = 297, units = "mm")
   })
   
-  output[["cmp_sep_tab"]] <- DT::renderDataTable({
+  
+  cmp_sep_tab <- reactive({
     comp <- compared_fits()
     formatRound(my_DT(comp), c(2, 4, 5), digits = 4)
+  })
+  
+  output[["cmp_sep_tab"]] <- DT::renderDataTable({
+    cmp_sep_tab()
   })
   
   output[["countfitteR_report_download"]] <- downloadHandler(filename = "countfitter_report.html", content = function(file) {

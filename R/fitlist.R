@@ -72,7 +72,7 @@ decide <- function(summary_fit, separate) {
   if (separate) {
     paste0(vapply(levels(summary_fit[["count"]]), function(single_count) {
       dat <- summary_fit[summary_fit[["count"]] == single_count, ]
-      paste0("Count name:", single_count, "<br/>",
+      paste0("Count name: ", single_count, "<br/>",
              decide_single(dat[["BIC"]], dat[["model"]]))
     }, "a"), collapse = "<br/><br/>")
   } else {
@@ -94,7 +94,9 @@ decide_single <- function(BICs, model_names) {
 assess_difference <- function(BICs) {
   BIC_difference <- min(BICs[-which.min(BICs)] - min(BICs))
   id <- as.numeric(cut(BIC_difference, c(0, 3.2, 10, 100, max(BIC_difference))))
-  c("negligible", "substantial", "strong", "decisive")[id]
+  BIC_descriptions <- c("negligible", "substantial", "strong", "decisive")[id]
+  BIC_descriptions[is.na(BIC_descriptions)] <- "unknown (no convergence)"
+  BIC_descriptions
 }
 
 nice_model_names <- c(pois = "Poisson", nb = "NB", zip = "ZIP", zinb = "ZINB")
