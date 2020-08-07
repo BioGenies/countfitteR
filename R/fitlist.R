@@ -45,7 +45,8 @@ summary_fitlist <- function(fitlist) {
              r = unlist(lapply(fitlist, function(single_fit) single_fit[["coefficients"]]["r"])),
              #model = vapply(fitlist, function(single_fit) single_fit[["model"]], "a"),
              model = nice_model_names[vapply(fitlist, function(single_fit) single_fit[["model"]], "a")], 
-             row.names = NULL)
+             row.names = NULL,
+             stringsAsFactors = TRUE)
 }
 
 
