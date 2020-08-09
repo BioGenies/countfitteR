@@ -192,14 +192,22 @@ shinyServer(function(input, output) {
   })
   
   output[["countfitteR_report_download"]] <- downloadHandler(filename = "countfitter_report.html", content = function(file) {
-    src <- normalizePath("report/countfitter_report.Rmd")
+    src <- normalizePath(".")
     
     # temporarily switch to the temp dir, in case you do not have write
     # permission to the current working directory
     owd <- setwd(tempdir())
     on.exit(setwd(owd))
-    file.copy(src, "report/countfitter_report.Rmd")
-    out <- render("report/countfitter_report.Rmd", 
+    
+    dir.create("readmes")
+    file.copy(paste0(src, "/readmes"), getwd(), 
+              recursive = TRUE)
+    
+    dir.create("report")
+    file.copy(paste0(src, "/report"), getwd(), 
+              recursive = TRUE)
+    
+    out <- render("./report/countfitter_report.Rmd", 
                   output_format = "html_document", file, quiet = TRUE)
     file.rename(out, file)
   })
