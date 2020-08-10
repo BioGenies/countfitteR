@@ -2,8 +2,8 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
 ![pkgdown](https://github.com/biongram/countfitteR/workflows/pkgdown/badge.svg)
-![check](https://github.com/jarochi/countfitteR/workflows/check/badge.svg)
-[![R build status](https://github.com/jarochi/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/jarochi/countfitteR/actions)
+![check](https://github.com/biongram/countfitteR/workflows/check/badge.svg)
+[![R build status](https://github.com/biongram/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/jarochi/countfitteR/actions)
   <!-- badges: end -->
 
 # countfitteR
