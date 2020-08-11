@@ -2,8 +2,8 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
 ![pkgdown](https://github.com/biongram/countfitteR/workflows/pkgdown/badge.svg)
-![check](https://github.com/jarochi/countfitteR/workflows/check/badge.svg)
-[![R build status](https://github.com/jarochi/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/jarochi/countfitteR/actions)
+![check](https://github.com/biongram/countfitteR/workflows/check/badge.svg)
+[![R build status](https://github.com/biongram/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/biongram/countfitteR/actions)
   <!-- badges: end -->
 
 # countfitteR
@@ -34,12 +34,12 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
+Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex
 @Manual{,
-  author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and Stefan Roediger and Michal Burdukiewicz},
+  author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz},
   title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
   year = {2020},
   note = {R package version 1.2},
