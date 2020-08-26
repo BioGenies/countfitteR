@@ -34,12 +34,12 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
+Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex
 @Manual{,
-  author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz},
+  author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Roediger and Michal Burdukiewicz},
   title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
   year = {2020},
   note = {R package version 1.2},
