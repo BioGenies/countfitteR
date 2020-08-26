@@ -163,7 +163,8 @@ lower and upper confidence intervals.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(poisson = <span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>25</span>, <span class='fl'>0.3</span>), binomial = <span class='fu'><a href='https://rdrr.io/r/stats/Binomial.html'>rbinom</a></span>(<span class='fl'>25</span>, <span class='fl'>1</span>, <span class='fl'>0.8</span>))
-<span class='fu'>fit_counts</span>(<span class='kw'>df</span>, model = <span class='st'>"pois"</span>) </div><div class='output co'>#&gt; $poisson_pois
+<span class='fu'>fit_counts</span>(<span class='kw'>df</span>, model = <span class='st'>"pois"</span>) 
+</div><div class='output co'>#&gt; $poisson_pois
 #&gt; $poisson_pois$coefficients
 #&gt; lambda 
 #&gt;   0.56 

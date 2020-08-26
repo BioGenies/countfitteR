@@ -144,7 +144,8 @@ with the model with the lowest BIC.</p>
                  zip1 = <span class='fu'><a href='zip.html'>rZIP</a></span>(<span class='fl'>50</span>, <span class='fl'>2</span>, <span class='fl'>0.7</span>),
                  zip2 = <span class='fu'><a href='zip.html'>rZIP</a></span>(<span class='fl'>50</span>, <span class='fl'>5</span>, <span class='fl'>0.7</span>))
 <span class='kw'>fitlist_separate</span> <span class='op'>&lt;-</span> <span class='fu'><a href='fit_counts.html'>fit_counts</a></span>(<span class='kw'>df</span>, model = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"pois"</span>, <span class='st'>"zip"</span>)) 
-<span class='fu'>select_model</span>(<span class='kw'>fitlist_separate</span>)</div><div class='output co'>#&gt;      count chosen_model
+<span class='fu'>select_model</span>(<span class='kw'>fitlist_separate</span>)
+</div><div class='output co'>#&gt;      count chosen_model
 #&gt; 1 poisson1      Poisson
 #&gt; 2 poisson2      Poisson
 #&gt; 3     zip1          ZIP
