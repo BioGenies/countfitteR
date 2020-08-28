@@ -18,10 +18,6 @@ shinyUI(navbarPage(title = "countfitteR",
                             includeMarkdown("readmes/data_upload/2.md")
                    ),
                    navbarMenu("Count data",
-                              tabPanel("Edit input data",
-                                       includeMarkdown("readmes/count_data/1.md"),
-                                       DT::dataTableOutput("hot_counts")
-                              ),
                               tabPanel("Summary",
                                        includeMarkdown("readmes/count_data/2.md"),
                                        DT::dataTableOutput("input_data_summary")
