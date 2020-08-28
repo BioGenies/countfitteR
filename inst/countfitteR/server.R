@@ -39,6 +39,11 @@ shinyServer(function(input, output) {
     rv[["count_data"]]
   })
   
+  output[["ncol"]] <- renderText({
+    paste0("Number of columns in the supplied data: ", 
+           ncol(valid_data()), ".")
+  })
+  
   
   processed_counts <- reactive({
     countfitteR:::process_counts(valid_data())

@@ -10,7 +10,7 @@
 #' @return An input object.
 #' @export
 validate_counts <- function(x) {
-  res <- !any(apply(x, 2, function(i) any(i < 0, na.rm = TRUE)) & 
+  res <- any(apply(x, 2, function(i) any(i >= 0, na.rm = TRUE)) & 
         apply(x, 2, function(i) any(is.numeric(i), na.rm = TRUE)))
   
   if(!res)

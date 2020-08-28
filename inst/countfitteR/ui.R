@@ -15,6 +15,7 @@ shinyUI(navbarPage(title = "countfitteR",
                                                             c("Dec: dot (.), Sep: comma (;)" = "csv1",
                                                               "Dec: comma (,), Sep: semicolon (;)" = "csv2")))
                             ),
+                            textOutput("ncol"),
                             includeMarkdown("readmes/data_upload/2.md")
                    ),
                    navbarMenu("Count data",
