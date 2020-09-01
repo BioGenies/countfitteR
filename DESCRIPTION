@@ -62,5 +62,6 @@ Imports:
     shiny,
     stats,
     pscl,
-    tools
+    tools,
+    utils
 Language: en-US

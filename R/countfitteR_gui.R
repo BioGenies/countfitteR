@@ -8,6 +8,7 @@
 #' @export countfitteR_gui
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 #' @importFrom tools package_dependencies
+#' @importFrom utils available.packages
 #' @examples 
 #' if(interactive()) { 
 #'   countfitteR_gui()
