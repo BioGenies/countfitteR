@@ -8,7 +8,7 @@
 
 # countfitteR
 
-countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets.
+countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. The functions of countfitteR can also be accessed via the R console for coustomized analysis pipelines.
 
 ## Installation
 
@@ -34,7 +34,7 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
+Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.3. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex
@@ -42,7 +42,7 @@ Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdu
   author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Roediger and Michal Burdukiewicz},
   title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
   year = {2020},
-  note = {R package version 1.2},
+  note = {R package version 1.3},
   url = {https://CRAN.R-project.org/package=countfitteR},
 }
 ```

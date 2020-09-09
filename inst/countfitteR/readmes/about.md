@@ -26,7 +26,7 @@ Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). cou
   author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz},
   title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
   year = {2020},
-  note = {R package version 1.2},
+  note = {R package version 1.3},
   url = {https://CRAN.R-project.org/package=countfitteR},
 }
 ```

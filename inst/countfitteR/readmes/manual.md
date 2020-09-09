@@ -13,7 +13,7 @@ output:
 ## General tips
 
 ### Charts
-Each chart may be saved in the .svg format. A download button is always located at the top of a chart. 
+Each chart may be saved in the `.svg` format. A download button is always located at the top of a chart.
 
 ### Tables
 Tables may be downloaded in a specified format or printed using the buttons at the top of the table.
