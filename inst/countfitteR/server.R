@@ -15,64 +15,35 @@ options(DT.options = list(dom = "Brtip", buttons = c("copy", "csv", "excel", "pr
 my_DT <- function(x) datatable(x, escape = FALSE, extensions = "Buttons", filter = "top", rownames = FALSE)
 
 shinyServer(function(input, output) {
-  init_data <- reactive({
-    # if there is no data, case study is loaded
-    if (is.null(input[["input_file"]])) {
-      dat <- case_study
-    } else {
-      dat <- switch(input[["csv_type"]],
-                    csv1 = read.csv(input[["input_file"]][["datapath"]],
-                                    header = input[["header"]],
-                                    check.names = FALSE),
-                    csv2 = read.csv2(input[["input_file"]][["datapath"]],
-                                     header = input[["header"]],
-                                     check.names = FALSE))
+  
+  rv <- reactiveValues(count_data = case_study,
+                       input_file = FALSE)
+  
+  observeEvent(input[["input_file"]], {
+    if(!is.null(input[["input_file"]])) {
+      rv[["count_data"]] <- switch(input[["csv_type"]],
+                                   csv1 = read.csv(input[["input_file"]][["datapath"]],
+                                                   header = input[["header"]],
+                                                   check.names = FALSE),
+                                   csv2 = read.csv2(input[["input_file"]][["datapath"]],
+                                                    header = input[["header"]],
+                                                    check.names = FALSE))
       if (!input[["header"]])
-        colnames(dat) <- paste0("C", 1L:ncol(dat))
+        colnames(rv[["count_data"]]) <- paste0("C", 1L:ncol(rv[["count_data"]]))
     }
     
-    if (!is.null(input[["hot_counts"]]))
-      dat <- input[["hot_counts"]]
-    
-    dat
   })
   
-  valid_data <- reactiveVal(value=NULL, label="valid_data")
-  table_data <- reactiveVal(value=NULL, label="table_data")
-  observeEvent(init_data, {
-    valid_data(init_data())
-  })
-  observeEvent(init_data, {
-    table_data(init_data())
+  valid_data <- reactive({
+    validate_counts(rv[["count_data"]])
+    rv[["count_data"]]
   })
   
-  output[["hot_counts"]] <- DT::renderDataTable({
-    DT::datatable(table_data(), editable = TRUE)
+  output[["ncol"]] <- renderText({
+    paste0("Number of columns in the supplied data: ", 
+           ncol(valid_data()), ".")
   })
   
-  observeEvent(input$hot_counts_cell_edit, {
-    row <- input$hot_counts_cell_edit$row
-    col <- input$hot_counts_cell_edit$col
-    value <- input$hot_counts_cell_edit$value
-    formatted_value <- abs(as.integer(value))
-    
-    if(is.na(formatted_value)) {
-      table_data(valid_data())
-      replaceData(dataTableProxy("hot_counts"), valid_data())
-      showModal(modalDialog(title="validation error", "invalid cell value"))
-    } else {
-      modified_counts <- isolate(valid_data())
-      modified_counts[row, col] <- as.integer(value)
-      valid_data(modified_counts)
-      
-      if(value != formatted_value) {
-        table_data(valid_data())
-        replaceData(dataTableProxy("hot_counts"), valid_data())
-        showModal(modalDialog(title="formatter",
-                              paste0("the value ", value, " has been changed to ", formatted_value)))
-      }
-    }
-  })
   
   processed_counts <- reactive({
     countfitteR:::process_counts(valid_data())

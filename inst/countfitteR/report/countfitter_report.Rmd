@@ -31,7 +31,7 @@ Detected input file: `r ifelse(is.null(input[["input_file"]][["name"]]), "none",
 ```{r echo=FALSE, results='asis'}
 
 
-cat("md5sum of the input file:",  ifelse(is.null(input[["input_file"]][["name"]]), "none", md5sum(input[["input_file"]][["datapath"]])))
+cat("MD5 sum of the input file:",  ifelse(is.null(input[["input_file"]][["name"]]), "none", tools::md5sum(input[["input_file"]][["datapath"]])))
 ```
 
 Confidence level: `r input[["conf_level"]]`.  
