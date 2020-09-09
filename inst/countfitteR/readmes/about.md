@@ -18,7 +18,7 @@ The countfitteR web server relies on function from the [countfitteR](https://git
   
 ### How to cite
 
-Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.2. https://cran.r-project.org/package=countfitteR.
+Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.3. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex

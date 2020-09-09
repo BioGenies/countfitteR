@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
-<title></title>
+
+<title>manual.utf8</title>
 
 <script src="manual_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,46 +19,29 @@
 <script src="manual_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="manual_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="manual_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="manual_files/navigation-1.1/tabsets.js"></script>
+<link href="manual_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="manual_files/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="manual_files/highlight/default.css"
-      type="text/css" />
-<script src="manual_files/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
 
 
-
-</head>
-
-<body>
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
+<style type="text/css">
 h1 {
   font-size: 34px;
 }
@@ -80,33 +63,117 @@ h5 {
 h6 {
   font-size: 12px;
 }
-.tabbed-pane {
-  padding-top: 12px;
-}
-button.code-folding-btn:focus {
-  outline: none;
+.table th:not([align]) {
+  text-align: left;
 }
 </style>
 
 
-<div class="container-fluid main-container">
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
 
 <!-- tabsets -->
-<script src="manual_files/navigation-1.0/tabsets.js"></script>
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
 
 
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
 
 
 <div class="fluid-row" id="header">
+
 
 
 
@@ -132,12 +199,12 @@ $(document).ready(function () {
 </div>
 
 <div id="countfitter" class="section level1">
-<h1><strong>countfitter</strong></h1>
+<h1><strong>countfitteR</strong></h1>
 <div id="general-tips" class="section level2">
 <h2>General tips</h2>
 <div id="charts" class="section level3">
 <h3>Charts</h3>
-<p>Each chart may be saved in the .svg format. A download button is always located at the top of a chart.</p>
+<p>Each chart may be saved in the <code>.svg</code> format. A download button is always located at the top of a chart.</p>
 </div>
 <div id="tables" class="section level3">
 <h3>Tables</h3>
@@ -189,95 +256,91 @@ $(document).ready(function () {
 <li><span class="math inline">\(\theta\)</span> - dispersion parameter.</li>
 </ul>
 <p>Usually the NB distribution is parameterized using <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\theta\)</span>, but to make comparison clearer, we use <span class="math inline">\(\lambda\)</span> instead of <span class="math inline">\(\mu\)</span>. In this parameterization, NB and ZINB are treated as the mixture of Poisson and Gamma (<span class="math inline">\(\Gamma\)</span>) distributions.</p>
-<table style="width:47%;">
+<table>
 <colgroup>
-<col width="27%" />
-<col width="19%" />
+<col width="59%" />
+<col width="40%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Distribution <br> name</th>
-<th align="left">pmf</th>
+<th>Distribution <br> name</th>
+<th>pmf</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Poisson</td>
-<td align="left"><span class="math display">\[P\{X = k\} = \frac{\lambda^k \exp^{-\lambda}}{k!} \]</span></td>
+<td>Poisson</td>
+<td><span class="math display">\[P\{X = k\} = \frac{\lambda^k \exp^{-\lambda}}{k!} \]</span></td>
 </tr>
 <tr class="even">
-<td align="left">Zero-inflated Poisson</td>
-<td align="left"><span class="math display">\[P\{X = k\} = \begin{cases} r + ( 1- r) \exp^{-\lambda},\text{if } k = 0\\ r \frac{\lambda^k \exp^{-\lambda}}{k!},\text{if } k = 1, 2, \ldots \end{cases} \]</span></td>
+<td>Zero-inflated Poisson</td>
+<td><span class="math display">\[P\{X = k\} = \begin{cases} r + ( 1- r) \exp^{-\lambda},\text{if } k = 0\\ r \frac{\lambda^k \exp^{-\lambda}}{k!},\text{if } k = 1, 2, \ldots \end{cases} \]</span></td>
 </tr>
 <tr class="odd">
-<td align="left">Negative Binomial</td>
-<td align="left"><span class="math display">\[P\{X = k\} = \frac{\Gamma (\theta + k)}{\Gamma(\theta) k!}  \left(\left( \frac{\theta}{\theta + \lambda} \right)^\theta \left( \frac{\lambda}{\theta + \lambda} \right) \right)^k\]</span></td>
+<td>Negative Binomial</td>
+<td><span class="math display">\[P\{X = k\} = \frac{\Gamma (\theta + k)}{\Gamma(\theta) k!}  \left(\left( \frac{\theta}{\theta + \lambda} \right)^\theta \left( \frac{\lambda}{\theta + \lambda} \right) \right)^k\]</span></td>
 </tr>
 <tr class="even">
-<td align="left">Zero-inflated Negative Binomial</td>
-<td align="left"><span class="math display">\[P\{X = k\} = \begin{cases}r + (1 - r) \left( \frac{\theta}{\theta + \lambda} \right)^\theta,\text{if } k = 0\\(1 - r) \frac{\Gamma (\theta + k)}{\Gamma(\theta) k!}  \left(\left( \frac{\theta}{\theta + \lambda} \right)^\theta \left( \frac{\lambda}{\theta + \lambda} \right) \right)^k,\text{if } k = 1, 2, \ldots\end{cases}\]</span></td>
+<td>Zero-inflated Negative Binomial</td>
+<td><span class="math display">\[P\{X = k\} = \begin{cases}r + (1 - r) \left( \frac{\theta}{\theta + \lambda} \right)^\theta,\text{if } k = 0\\(1 - r) \frac{\Gamma (\theta + k)}{\Gamma(\theta) k!}  \left(\left( \frac{\theta}{\theta + \lambda} \right)^\theta \left( \frac{\lambda}{\theta + \lambda} \right) \right)^k,\text{if } k = 1, 2, \ldots\end{cases}\]</span></td>
 </tr>
 </tbody>
 </table>
 <p>Poisson and Negative Binomial distributions have the same expected value. In case of ZIP and ZINB, the expected value is smaller than the real average number of foci per cell.</p>
-<table style="width:47%;">
-<colgroup>
-<col width="27%" />
-<col width="19%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
-<th align="left">Distribution <br> name</th>
-<th align="left">Expected value</th>
+<th>Distribution <br> name</th>
+<th>Expected value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Poisson</td>
-<td align="left"><span class="math display">\[E(X) = \lambda \]</span></td>
+<td>Poisson</td>
+<td><span class="math display">\[E(X) = \lambda \]</span></td>
 </tr>
 <tr class="even">
-<td align="left">ZIP</td>
-<td align="left"><span class="math display">\[E(X) = (1 - r) \lambda \]</span></td>
+<td>ZIP</td>
+<td><span class="math display">\[E(X) = (1 - r) \lambda \]</span></td>
 </tr>
 <tr class="odd">
-<td align="left">NB</td>
-<td align="left"><span class="math display">\[E(X) = \lambda \]</span></td>
+<td>NB</td>
+<td><span class="math display">\[E(X) = \lambda \]</span></td>
 </tr>
 <tr class="even">
-<td align="left">ZINB</td>
-<td align="left"><span class="math display">\[E(X) = (1 - r)  \lambda \]</span> <!-- keep it here, because otherwise table parse oddly  --></td>
+<td>ZINB</td>
+<td><span class="math display">\[E(X) = (1 - r)  \lambda \]</span> <!-- keep it here, because otherwise table parse oddly  --></td>
 </tr>
 </tbody>
 </table>
 <p>Depending on the value of <span class="math inline">\(r\)</span> the variance of ZIP and ZINB may be smaller or bigger than the variance of Poisson distribution. In case of the NB distribution, the variance is always bigger than for the Poisson distribution, although the difference becomes negligible, when the <span class="math inline">\(\theta\)</span> is much bigger than <span class="math inline">\(\lambda^2\)</span>.</p>
-<table style="width:47%;">
+<table>
 <colgroup>
-<col width="27%" />
-<col width="19%" />
+<col width="59%" />
+<col width="40%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Distribution <br> name</th>
-<th align="left">Variance</th>
+<th>Distribution <br> name</th>
+<th>Variance</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Poisson</td>
-<td align="left"><span class="math display">\[\textrm{var}(X) = \lambda \]</span></td>
+<td>Poisson</td>
+<td><span class="math display">\[\textrm{var}(X) = \lambda \]</span></td>
 </tr>
 <tr class="even">
-<td align="left">ZIP</td>
-<td align="left"><span class="math display">\[\textrm{var}(X) = \lambda (1 - r)(1 + \lambda r)\]</span></td>
+<td>ZIP</td>
+<td><span class="math display">\[\textrm{var}(X) = \lambda (1 - r)(1 + \lambda r)\]</span></td>
 </tr>
 <tr class="odd">
-<td align="left">NB</td>
-<td align="left"><span class="math display">\[\textrm{var}(X) = \lambda + \frac{\lambda^2}{\theta} \]</span></td>
+<td>NB</td>
+<td><span class="math display">\[\textrm{var}(X) = \lambda + \frac{\lambda^2}{\theta} \]</span></td>
 </tr>
 <tr class="even">
-<td align="left">ZINB</td>
-<td align="left"><span class="math display">\[\textrm{var}(X) = (1 - r) \lambda \left( 1 + r\lambda  + \frac{1}{\theta} \right)\]</span></td>
+<td>ZINB</td>
+<td><span class="math display">\[\textrm{var}(X) = (1 - r) \lambda \left( 1 + r\lambda  + \frac{1}{\theta} \right)\]</span></td>
 </tr>
 </tbody>
 </table>
@@ -292,18 +355,39 @@ $(document).ready(function () {
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
+
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
