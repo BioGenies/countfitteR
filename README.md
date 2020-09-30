@@ -1,9 +1,9 @@
   <!-- badges: start -->
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
-![pkgdown](https://github.com/biongram/countfitteR/workflows/pkgdown/badge.svg)
-![check](https://github.com/biongram/countfitteR/workflows/check/badge.svg)
-[![R build status](https://github.com/biongram/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/biongram/countfitteR/actions)
+![pkgdown](https://github.com/BioGenies/countfitteR/workflows/pkgdown/badge.svg)
+![check](https://github.com/BioGenies/countfitteR/workflows/check/badge.svg)
+[![R build status](https://github.com/BioGenies/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/BioGenies/countfitteR/actions)
   <!-- badges: end -->
 
 # countfitteR
@@ -21,7 +21,7 @@ install.packages("countfitteR")
 However, you can also install the developmental version of countfitteR directly from GitHub
 
 ```R
-devtools::install_github("biongram/countfitteR")
+devtools::install_github("BioGenies/countfitteR")
 ```
 
 ## Run countfitteR
@@ -34,7 +34,7 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.3. https://cran.r-project.org/package=countfitteR.
+Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.4. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex
@@ -42,7 +42,7 @@ Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdu
   author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Roediger and Michal Burdukiewicz},
   title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
   year = {2020},
-  note = {R package version 1.3},
+  note = {R package version 1.4},
   url = {https://CRAN.R-project.org/package=countfitteR},
 }
 ```

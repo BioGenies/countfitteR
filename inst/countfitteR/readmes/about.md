@@ -1,6 +1,6 @@
 ## About  
 
-The countfitteR web server relies on function from the [countfitteR](https://github.com/biongram/countfitteR) package for **R**.
+The countfitteR web server relies on function from the [countfitteR](https://github.com/BioGenies/countfitteR) package for **R**.
 
 ### Authors
 
@@ -18,7 +18,7 @@ The countfitteR web server relies on function from the [countfitteR](https://git
   
 ### How to cite
 
-Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.3. https://cran.r-project.org/package=countfitteR.
+Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.4. https://cran.r-project.org/package=countfitteR.
 
 
 ```tex
@@ -26,7 +26,7 @@ Chilimoniuk J, Gosiewska A, Słowik J, Roediger S and Burdukiewicz M (2020). cou
   author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz},
   title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},
   year = {2020},
-  note = {R package version 1.3},
+  note = {R package version 1.4},
   url = {https://CRAN.R-project.org/package=countfitteR},
 }
 ```
