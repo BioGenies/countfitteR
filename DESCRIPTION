@@ -52,9 +52,9 @@ Suggests:
     shinyWidgets,
     spelling,
     testthat
-Date: 2020-09-12
-URL: https://github.com/biongram/countfitteR
-BugReports: https://github.com/biongram/countfitteR/issues
+Date: 2020-09-30
+URL: https://github.com/biogenies/countfitteR
+BugReports: https://github.com/biogenies/countfitteR/issues
 RoxygenNote: 7.1.1
 Imports: 
     ggplot2,
