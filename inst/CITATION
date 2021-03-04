@@ -1,24 +1,14 @@
 citHeader("To cite countfitteR in publications, please use:")
 
-if(!exists("meta") || is.null(meta)) meta <- packageDescription("countfitteR") 
-year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date) 
-vers <- paste("R package version", meta$Version)
-title <- paste0(meta[["Package"]], ": ", tolower(meta[["Title"]]))
-url <- paste0("https://cran.r-project.org/package=", meta[["Package"]])
 
-citEntry(entry = "Manual",
-  author = "Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Stefan Roediger and Michal Burdukiewicz",
-  title = title,
-  year = year, 
-  note = vers,
-  url = "https://CRAN.R-project.org/package=countfitteR",
-  textVersion = paste0("Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (", 
-           year, 
-           "). ", 
-           title,
-           ". ",
-           vers, 
-           ". ", 
-           url,
-           ".")
+citEntry(entry = "Article",
+  author = "Jarosław Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Rödiger and Michał Burdukiewicz",
+  title = "countfitteR: efficient selection of count distributions to assess DNA damage",
+  year = 2021, 
+  issn = {2305-5847},
+  journal = "Annals of Translational Medicine",
+  url = "https://atm.amegroups.com/article/view/63994",
+  textVersion = paste0("Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2021). ", 
+           "countfitteR: efficient selection of count distributions to assess DNA damage. ",
+           "Annals of Translational Medicine, https://atm.amegroups.com/article/view/63994")
 )
