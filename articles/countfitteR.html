@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -46,8 +48,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/BioGenies/countfitteR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/BioGenies/countfitteR/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -65,11 +67,11 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>countfitteR package - an overview</h1>
-                        <h4 class="author">Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz</h4>
+                        <h4 data-toc-skip class="author">Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz</h4>
             
-            <h4 class="date">2020-09-30</h4>
+            <h4 data-toc-skip class="date">2021-03-04</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/BioGenies/countfitteR/blob/master/vignettes/countfitteR.Rmd"><code>vignettes/countfitteR.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/BioGenies/countfitteR/blob/master/vignettes/countfitteR.Rmd" class="external-link"><code>vignettes/countfitteR.Rmd</code></a></small>
       <div class="hidden name"><code>countfitteR.Rmd</code></div>
 
     </div>
@@ -84,16 +86,16 @@
 <div id="data-sets" class="section level1">
 <h1 class="hasAnchor">
 <a href="#data-sets" class="anchor"></a>Data sets</h1>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># Load countfitteR package</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BioGenies/countfitteR">countfitteR</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Load countfitteR package</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/BioGenies/countfitteR" class="external-link">countfitteR</a></span><span class="op">)</span>
 
 <span class="co"># Assign the csv file to filename</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"case_study"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"case_study"</span><span class="op">)</span>
 
 <span class="va">processed_counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/process_counts.html">process_counts</a></span><span class="op">(</span><span class="va">case_study</span><span class="op">)</span>
 
-<span class="fu"><a href="../reference/fit_counts.html">fit_counts</a></span><span class="op">(</span><span class="va">processed_counts</span>, model <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="../reference/fit_counts.html">fit_counts</a></span><span class="op">(</span><span class="va">processed_counts</span>, model <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span></code></pre></div>
 <pre><code>## $L3_AF_DMSO_B_10_FITC_pois
 ## $L3_AF_DMSO_B_10_FITC_pois$coefficients
 ##       lambda 
@@ -1136,16 +1138,16 @@
 <a href="#references" class="anchor"></a>References</h1>
 <div id="refs" class="references">
 <div id="ref-reddig_dna_2018">
-<p>Reddig, Annika, Claudia E. Rübe, Stefan Rödiger, Peter Schierack, Dirk Reinhold, and Dirk Roggenbuck. 2018. “DNA Damage Assessment and Potential Applications in Laboratory Diagnostics and Precision Medicine.” <em>Journal of Laboratory and Precision Medicine</em> 3 (4). <a href="http://jlpm.amegroups.com/article/view/4305">http://jlpm.amegroups.com/article/view/4305</a>.</p>
+<p>Reddig, Annika, Claudia E. Rübe, Stefan Rödiger, Peter Schierack, Dirk Reinhold, and Dirk Roggenbuck. 2018. “DNA Damage Assessment and Potential Applications in Laboratory Diagnostics and Precision Medicine.” <em>Journal of Laboratory and Precision Medicine</em> 3 (4). <a href="http://jlpm.amegroups.com/article/view/4305" class="external-link">http://jlpm.amegroups.com/article/view/4305</a>.</p>
 </div>
 <div id="ref-rodiger_quantification_2018">
-<p>Rödiger, Stefan, Marius Liefold, Madeleine Ruhe, Mark Reinwald, Eberhard Beck, and P. Markus Deckert. 2018. “Quantification of DNA Double-Strand Breaks in Peripheral Blood Mononuclear Cells from Healthy Donors Exposed to Bendamustine by an Automated γH2AX Assay—an Exploratory Study.” <em>Journal of Laboratory and Precision Medicine</em> 3 (5). <a href="http://jlpm.amegroups.com/article/view/4370">http://jlpm.amegroups.com/article/view/4370</a>.</p>
+<p>Rödiger, Stefan, Marius Liefold, Madeleine Ruhe, Mark Reinwald, Eberhard Beck, and P. Markus Deckert. 2018. “Quantification of DNA Double-Strand Breaks in Peripheral Blood Mononuclear Cells from Healthy Donors Exposed to Bendamustine by an Automated γH2AX Assay—an Exploratory Study.” <em>Journal of Laboratory and Precision Medicine</em> 3 (5). <a href="http://jlpm.amegroups.com/article/view/4370" class="external-link">http://jlpm.amegroups.com/article/view/4370</a>.</p>
 </div>
 <div id="ref-rodiger_highly_2013">
-<p>Rödiger, Stefan, Peter Schierack, Alexander Böhm, Jörg Nitschke, Ingo Berger, Ulrike Frömmel, Carsten Schmidt, et al. 2013. “A Highly Versatile Microscope Imaging Technology Platform for the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.” <em>Advances in Biochemical Engineering/Biotechnology</em> 133: 35–74. <a href="https://doi.org/10.1007/10_2011_132">https://doi.org/10.1007/10_2011_132</a>.</p>
+<p>Rödiger, Stefan, Peter Schierack, Alexander Böhm, Jörg Nitschke, Ingo Berger, Ulrike Frömmel, Carsten Schmidt, et al. 2013. “A Highly Versatile Microscope Imaging Technology Platform for the Multiplex Real-Time Detection of Biomolecules and Autoimmune Antibodies.” <em>Advances in Biochemical Engineering/Biotechnology</em> 133: 35–74. <a href="https://doi.org/10.1007/10_2011_132" class="external-link">https://doi.org/10.1007/10_2011_132</a>.</p>
 </div>
 <div id="ref-willitzki_new_2012">
-<p>Willitzki, Annika, Rico Hiemann, Vanessa Peters, Ulrich Sack, Peter Schierack, Stefan Rödiger, Ursula Anderer, et al. 2012. “New Platform Technology for Comprehensive Serological Diagnostics of Autoimmune Diseases.” <em>Clinical &amp; Developmental Immunology</em> 2012: 284740. <a href="https://doi.org/10.1155/2012/284740">https://doi.org/10.1155/2012/284740</a>.</p>
+<p>Willitzki, Annika, Rico Hiemann, Vanessa Peters, Ulrich Sack, Peter Schierack, Stefan Rödiger, Ursula Anderer, et al. 2012. “New Platform Technology for Comprehensive Serological Diagnostics of Autoimmune Diseases.” <em>Clinical &amp; Developmental Immunology</em> 2012: 284740. <a href="https://doi.org/10.1155/2012/284740" class="external-link">https://doi.org/10.1155/2012/284740</a>.</p>
 </div>
 </div>
 </div>
@@ -1162,11 +1164,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Jaroslaw Chilimoniuk, Michal Burdukiewicz.</p>
+  <p></p>
+<p>Developed by Jaroslaw Chilimoniuk, Michal Burdukiewicz.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link external-link">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
@@ -1174,6 +1178,8 @@
 
   
 
+
+  
 
   </body>
 </html>

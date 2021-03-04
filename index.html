@@ -29,6 +29,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -57,7 +59,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/BioGenies/countfitteR/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -74,39 +76,40 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<p><!-- badges: start --> <a href="https://cran.r-project.org/package=countfitteR"><img src="http://www.r-pkg.org/badges/version/countfitteR" alt="CRAN_Status_Badge"></a> <a href="https://cran.r-project.org/package=countfitteR"><img src="http://cranlogs.r-pkg.org/badges/countfitteR" alt="Downloads"></a> <img src="https://github.com/BioGenies/countfitteR/workflows/pkgdown/badge.svg" alt="pkgdown"><img src="https://github.com/BioGenies/countfitteR/workflows/check/badge.svg" alt="check"><a href="https://github.com/BioGenies/countfitteR/actions"><img src="https://github.com/BioGenies/countfitteR/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <!-- badges: end --></p>
+<p><!-- badges: start --> <a href="https://atm.amegroups.com/article/view/63994" class="external-link"><img src="https://img.shields.io/badge/published%20in-ATM-green.svg" alt="published in: Annals of Translational Medicine"></a> <a href="https://cran.r-project.org/package=countfitteR" class="external-link"><img src="http://www.r-pkg.org/badges/version/countfitteR" alt="CRAN_Status_Badge"></a> <a href="https://cran.r-project.org/package=countfitteR" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/countfitteR" alt="Downloads"></a> <img src="https://github.com/BioGenies/countfitteR/workflows/pkgdown/badge.svg" alt="pkgdown"><img src="https://github.com/BioGenies/countfitteR/workflows/check/badge.svg" alt="check"><a href="https://github.com/BioGenies/countfitteR/actions" class="external-link"><img src="https://github.com/BioGenies/countfitteR/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <!-- badges: end --></p>
 <div id="countfitter" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#countfitter" class="anchor"></a>countfitteR</h1></div>
-<p>countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. The functions of countfitteR can also be accessed via the R console for coustomized analysis pipelines.</p>
+<p>countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. The functions of countfitteR can also be accessed via the R console for customized analysis pipelines.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p><em>countfitteR</em> is available on <a href="https://cran.r-project.org/package=countfitteR">CRAN</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"countfitteR"</span><span class="op">)</span></pre></div>
+<p><em>countfitteR</em> is available on <a href="https://cran.r-project.org/package=countfitteR" class="external-link">CRAN</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"countfitteR"</span><span class="op">)</span></code></pre></div>
 <p>However, you can also install the developmental version of countfitteR directly from GitHub</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"BioGenies/countfitteR"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"BioGenies/countfitteR"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="run-countfitter" class="section level2">
 <h2 class="hasAnchor">
 <a href="#run-countfitter" class="anchor"></a>Run countfitteR</h2>
 <p>To run countfitteR type the following command into an R console.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu">countfitteR</span><span class="fu">::</span><span class="fu"><a href="reference/countfitteR_gui.html">countfitteR_gui</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">countfitteR</span><span class="fu">::</span><span class="fu"><a href="reference/countfitteR_gui.html">countfitteR_gui</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="how-to-cite" class="section level2">
 <h2 class="hasAnchor">
 <a href="#how-to-cite" class="anchor"></a>How to cite</h2>
-<p>Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2020). countfitteR: comprehensive automatized evaluation of distribution models for count data. R package version 1.4. <a href="https://cran.r-project.org/package=countfitteR" class="uri">https://cran.r-project.org/package=countfitteR</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1"></a>@Manual{,</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  author = {Jaroslaw Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Roediger and Michal Burdukiewicz},</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  title = {countfitteR: comprehensive automatized evaluation of distribution models for count data},</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  year = {2020},</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  note = {R package version 1.4},</span>
-<span id="cb4-6"><a href="#cb4-6"></a>  url = {https://CRAN.R-project.org/package=countfitteR},</span>
-<span id="cb4-7"><a href="#cb4-7"></a>}</span></code></pre></div>
+<p>Chilimoniuk, J., Gosiewska, A., Słowik, J., Weiss, R., Deckert, P.M., Rödiger, S., and Burdukiewicz, M. (2021). countfitteR: efficient selection of count distributions to assess DNA damage. Annals of Translational Medicine.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1"></a>@Article{,</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  author = "Jarosław Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Rödiger and Michał Burdukiewicz",</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  title = "countfitteR: efficient selection of count distributions to assess DNA damage",</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  year = 2021, </span>
+<span id="cb4-5"><a href="#cb4-5"></a>  issn = {2305-5847},</span>
+<span id="cb4-6"><a href="#cb4-6"></a>  journal = "Annals of Translational Medicine",</span>
+<span id="cb4-7"><a href="#cb4-7"></a>  url = "https://atm.amegroups.com/article/view/63994",</span>
+<span id="cb4-8"><a href="#cb4-8"></a>}</span></code></pre></div>
 </div>
 </div>
 
@@ -114,7 +117,7 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=countfitteR">https://​cloud.r-project.org/​package=countfitteR</a>
 </li>
@@ -124,37 +127,45 @@
 </li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
 </ul>
 </div>
+
+
 <div class="citation">
-<h2>Citation</h2>
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
 <li><a href="authors.html">Citing countfitteR</a></li>
 </ul>
 </div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Jaroslaw Chilimoniuk <br><small class="roles"> Maintainer, contributor </small> <a href="https://orcid.org/0000-0001-5467-018X" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Michal Burdukiewicz <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-8926-582X" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li><a href="authors.html">All authors...</a></li>
+<li><a href="authors.html">More on authors...</a></li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Jaroslaw Chilimoniuk, Michal Burdukiewicz.</p>
+  <p></p>
+<p>Developed by Jaroslaw Chilimoniuk, Michal Burdukiewicz.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
@@ -162,6 +173,8 @@
 
   
 
+
+  
 
   </body>
 </html>
