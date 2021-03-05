@@ -9,7 +9,7 @@
 
 # countfitteR
 
-countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. The functions of countfitteR can also be accessed via the R console for customized analysis pipelines.
+countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. The functions of countfitteR can be accessed through our [web server](http://biongram.biotech.uni.wroc.pl/countfitteR/) or via the R console for customized analysis pipelines.
 
 ## Installation
 
