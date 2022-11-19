@@ -9,7 +9,9 @@
 
 # countfitteR
 
-countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. The functions of countfitteR can be accessed through our [web server](http://biongram.biotech.uni.wroc.pl/countfitteR/) or via the R console for customized analysis pipelines.
+countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. 
+
+The functions of countfitteR can also be accessed through our [web server (Broken ATM)](http://biongram.biotech.uni.wroc.pl/countfitteR/) or via the R console for customized analysis pipelines.
 
 ## Installation
 
@@ -46,5 +48,24 @@ Chilimoniuk, J., Gosiewska, A., Słowik, J., Weiss, R., Deckert, P.M., Rödiger,
   issn = {2305-5847},
   journal = "Annals of Translational Medicine",
   url = "https://atm.amegroups.com/article/view/63994",
+}
+
+@article{chilimoniuk_countfitter_2021,
+	title = {{countfitteR}: efficient selection of count distributions to assess {DNA} damage},
+	volume = {0},
+	issn = {2305-5847, 2305-5839},
+	shorttitle = {{countfitteR}},
+	url = {https://atm.amegroups.com/article/view/63994},
+	doi = {10.21037/atm-20-6363},
+	abstract = {countfitteR: efficient selection of count distributions to assess DNA damage},
+	language = {en},
+	number = {0},
+	urldate = {2021-03-15},
+	journal = {Annals of Translational Medicine},
+	author = {Chilimoniuk, Jarosław and Gosiewska, Alicja and Słowik, Jadwiga and Weiss, Romano and Deckert, P. Markus and Rödiger, Stefan and Burdukiewicz, Michał},
+	month = mar,
+	year = {2021},
+	note = {Number: 0
+Publisher: AME Publishing Company}
 }
 ```
