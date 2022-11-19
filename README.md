@@ -37,7 +37,8 @@ countfitteR::countfitteR_gui()
 
 ## How to cite
 
-Chilimoniuk, J., Gosiewska, A., Słowik, J., Weiss, R., Deckert, P.M., Rödiger, S., and Burdukiewicz, M. (2021). countfitteR: efficient selection of count distributions to assess DNA damage. Annals of Translational Medicine.
+- Chilimoniuk, J., Gosiewska, A., Słowik, J., Weiss, R., Deckert, P.M., Rödiger, S., and Burdukiewicz, M. (2021). countfitteR: efficient selection of count distributions to assess DNA damage. Annals of Translational Medicine.
+- Chilimoniuk, J., Gosiewska, A., Słowik, J., Weiss, R., Deckert, P.M., Rödiger, S., Burdukiewicz, M., (2021). countfitteR: efficient selection of count distributions to assess DNA damage. *Annals of Translational Medicine*. https://doi.org/10.21037/atm-20-6363
 
 
 ```tex
