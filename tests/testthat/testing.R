@@ -42,7 +42,11 @@ test_that("plot_fit", {
   expect_equal(cmp[1,5], 3.639184)
   # expect_equal(cmp[6,5], NA)
   expect_equal(cmp[18,5], 1.819557, tolerance = 3.65e-07)
-  expect_equal(p$labels[[1]], "x")
+  if ("get_labs" %in% getNamespaceExports("ggplot2")) {
+    expect_equal(ggplot2::get_labs(p)$x, "x")
+  } else {
+    expect_equal(p$labels[[1]], "x")
+  }
   expect_equal(p$coordinates$clip, "on")
   expect_equal(p$coordinates$limits$x, NULL)
 })
