@@ -7,12 +7,11 @@ bibentry(
         journal = "Annals of Translational Medicine",
         year = 2021,
         issn = "2305-5847",
-        url = "https://atm.amegroups.com/article/view/63994",
+        url = "https://atm.amegroups.org/article/view/63994/html",
         note = "To cite countfitteR in publications, please use:",
         textVersion = paste0(
             "Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Rödiger S and Burdukiewicz M (2021). ",
             "countfitteR: efficient selection of count distributions to assess DNA damage. ",
-            "Annals of Translational Medicine, https://atm.amegroups.com/article/view/63994"
+            "Annals of Translational Medicine, https://atm.amegroups.org/article/view/63994/html"
         ),
-        key = "Chilimoniuk2021countfitteR"
     )

@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz" />
+
+<meta name="date" content="2025-07-01" />
+
+<title>countfitteR package - an overview</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">countfitteR package - an overview</h1>
+<h4 class="author">Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga
+Słowik, Stefan Rödiger, Michał Burdukiewicz</h4>
+<h4 class="date">2025-07-01</h4>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#data-sets" id="toc-data-sets"><span class="toc-section-number">2</span> Data sets</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+</ul>
+</div>
+
+<div id="introduction" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p><strong>countfitteR</strong> is a R package and shiny app designed to
+perform analysis of count data. This vignette covers important features
+and data sets of the app. We extended our automatized imaging platform
+<span class="citation">Willitzki et al. (2012)</span> for a
+multiparametric analysis of cell damage (DNA double strand breaks) <span class="citation">Rödiger et al. (2018)</span>. Digital image analysis of
+the DSB biomarkers gamma H2AX was used to describe the alteration of the
+cell phenotype.</p>
+</div>
+<div id="data-sets" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Data sets</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># Load countfitteR package</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(countfitteR)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Assign the csv file to filename</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;case_study&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>processed_counts <span class="ot">&lt;-</span> <span class="fu">process_counts</span>(case_study)</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu">fit_counts</span>(processed_counts, <span class="at">model =</span> <span class="st">&quot;all&quot;</span>)</span></code></pre></div>
+<pre><code>## $L3_AF_DMSO_B_10_FITC_pois
+## $L3_AF_DMSO_B_10_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_DMSO_B_10_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_DMSO_B_10_FITC_pois$BIC
+## [1] 4.65396
+## 
+## $L3_AF_DMSO_B_10_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_100_ETP_11_FITC_pois
+## $L3_AF_100_ETP_11_FITC_pois$coefficients
+## lambda 
+##   2.32 
+## 
+## $L3_AF_100_ETP_11_FITC_pois$confint
+##           lower    upper
+## lambda 2.039876 2.638591
+## 
+## $L3_AF_100_ETP_11_FITC_pois$BIC
+## [1] 898.1618
+## 
+## $L3_AF_100_ETP_11_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_100_ETP_12_FITC_pois
+## $L3_AF_100_ETP_12_FITC_pois$coefficients
+##   lambda 
+## 3.215686 
+## 
+## $L3_AF_100_ETP_12_FITC_pois$confint
+##           lower    upper
+## lambda 2.885854 3.583216
+## 
+## $L3_AF_100_ETP_12_FITC_pois$BIC
+## [1] 1008.888
+## 
+## $L3_AF_100_ETP_12_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_Med_C_13_FITC_pois
+## $L3_AF_Med_C_13_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_Med_C_13_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_Med_C_13_FITC_pois$BIC
+## [1] 4.624973
+## 
+## $L3_AF_Med_C_13_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_Med_C_14_FITC_pois
+## $L3_AF_Med_C_14_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_Med_C_14_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_Med_C_14_FITC_pois$BIC
+## [1] 4.691348
+## 
+## $L3_AF_Med_C_14_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_DMSo_C_15_FITC_pois
+## $L3_AF_DMSo_C_15_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_DMSo_C_15_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_DMSo_C_15_FITC_pois$BIC
+## [1] 4.624973
+## 
+## $L3_AF_DMSo_C_15_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_DMSO_C_16_FITC_pois
+## $L3_AF_DMSO_C_16_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_DMSO_C_16_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_DMSO_C_16_FITC_pois$BIC
+## [1] 4.624973
+## 
+## $L3_AF_DMSO_C_16_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_100_ETP_17_FITC_pois
+## $L3_AF_100_ETP_17_FITC_pois$coefficients
+##   lambda 
+## 5.571429 
+## 
+## $L3_AF_100_ETP_17_FITC_pois$confint
+##           lower    upper
+## lambda 5.137759 6.041704
+## 
+## $L3_AF_100_ETP_17_FITC_pois$BIC
+## [1] 1254.79
+## 
+## $L3_AF_100_ETP_17_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_100_ETP_18_FITC_pois
+## $L3_AF_100_ETP_18_FITC_pois$coefficients
+## lambda 
+##   4.13 
+## 
+## $L3_AF_100_ETP_18_FITC_pois$confint
+##           lower    upper
+## lambda 3.750293 4.548152
+## 
+## $L3_AF_100_ETP_18_FITC_pois$BIC
+## [1] 852.1981
+## 
+## $L3_AF_100_ETP_18_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_Med_D_19_FITC_pois
+## $L3_AF_Med_D_19_FITC_pois$coefficients
+##       lambda 
+## 3.775135e-12 
+## 
+## $L3_AF_Med_D_19_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_Med_D_19_FITC_pois$BIC
+## [1] 3.89182
+## 
+## $L3_AF_Med_D_19_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_Med_A_1_FITC_pois
+## $L3_AF_Med_A_1_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_Med_A_1_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_Med_A_1_FITC_pois$BIC
+## [1] 4.615121
+## 
+## $L3_AF_Med_A_1_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_Med_D_20_FITC_pois
+## $L3_AF_Med_D_20_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_Med_D_20_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_Med_D_20_FITC_pois$BIC
+## [1] 4.615121
+## 
+## $L3_AF_Med_D_20_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_DMSo_D_21_FITC_pois
+## $L3_AF_DMSo_D_21_FITC_pois$coefficients
+##     lambda 
+## 0.03921569 
+## 
+## $L3_AF_DMSo_D_21_FITC_pois$confint
+##             lower     upper
+## lambda 0.01471861 0.1044847
+## 
+## $L3_AF_DMSo_D_21_FITC_pois$BIC
+## [1] 44.89051
+## 
+## $L3_AF_DMSo_D_21_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_DMSO_D_22_FITC_pois
+## $L3_AF_DMSO_D_22_FITC_pois$coefficients
+##       lambda 
+## 1.388794e-12 
+## 
+## $L3_AF_DMSO_D_22_FITC_pois$confint
+##        lower upper
+## lambda     0   Inf
+## 
+## $L3_AF_DMSO_D_22_FITC_pois$BIC
+## [1] 4.65396
+## 
+## $L3_AF_DMSO_D_22_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_100_ETP_23_FITC_pois
+## $L3_AF_100_ETP_23_FITC_pois$coefficients
+##   lambda 
+## 3.252427 
+## 
+## $L3_AF_100_ETP_23_FITC_pois$confint
+##           lower    upper
+## lambda 2.922143 3.620042
+## 
+## $L3_AF_100_ETP_23_FITC_pois$BIC
+## [1] 904.4198
+## 
+## $L3_AF_100_ETP_23_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_100_ETP_24_FITC_pois
+## $L3_AF_100_ETP_24_FITC_pois$coefficients
+##   lambda 
+## 4.122642 
+## 
+## $L3_AF_100_ETP_24_FITC_pois$confint
+##           lower    upper
+## lambda 3.753679 4.527871
+## 
+## $L3_AF_100_ETP_24_FITC_pois$BIC
+## [1] 1069.925
+## 
+## $L3_AF_100_ETP_24_FITC_pois$model
+## [1] &quot;pois&quot;
+## 
+## 
+## $L3_AF_DMSO_B_10_FITC_zip
+## $L3_AF_DMSO_B_10_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_B_10_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_B_10_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_B_10_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_100_ETP_11_FITC_zip
+## $L3_AF_100_ETP_11_FITC_zip$coefficients
+##    lambda         r 
+## 9.6660843 0.7599853 
+## 
+## $L3_AF_100_ETP_11_FITC_zip$confint
+##            lower      upper
+## lambda 8.4986398 10.9938989
+## r      0.8336233  0.6667831
+## 
+## $L3_AF_100_ETP_11_FITC_zip$BIC
+## [1] 350.7979
+## 
+## $L3_AF_100_ETP_11_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_100_ETP_12_FITC_zip
+## $L3_AF_100_ETP_12_FITC_zip$coefficients
+##    lambda         r 
+## 9.6464351 0.6666451 
+## 
+## $L3_AF_100_ETP_12_FITC_zip$confint
+##            lower      upper
+## lambda 8.6567015 10.7493264
+## r      0.7511469  0.5698801
+## 
+## $L3_AF_100_ETP_12_FITC_zip$BIC
+## [1] 422.6681
+## 
+## $L3_AF_100_ETP_12_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_Med_C_13_FITC_zip
+## $L3_AF_Med_C_13_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_C_13_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_C_13_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_Med_C_13_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_Med_C_14_FITC_zip
+## $L3_AF_Med_C_14_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_C_14_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_C_14_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_Med_C_14_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_DMSo_C_15_FITC_zip
+## $L3_AF_DMSo_C_15_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSo_C_15_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSo_C_15_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_DMSo_C_15_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_DMSO_C_16_FITC_zip
+## $L3_AF_DMSO_C_16_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_C_16_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_C_16_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_C_16_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_100_ETP_17_FITC_zip
+## $L3_AF_100_ETP_17_FITC_zip$coefficients
+##    lambda         r 
+## 9.4347312 0.4094769 
+## 
+## $L3_AF_100_ETP_17_FITC_zip$confint
+##            lower      upper
+## lambda 8.7000833 10.2314139
+## r      0.5057206  0.3197023
+## 
+## $L3_AF_100_ETP_17_FITC_zip$BIC
+## [1] 785.1512
+## 
+## $L3_AF_100_ETP_17_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_100_ETP_18_FITC_zip
+## $L3_AF_100_ETP_18_FITC_zip$coefficients
+##   lambda        r 
+## 7.240419 0.429591 
+## 
+## $L3_AF_100_ETP_18_FITC_zip$confint
+##            lower     upper
+## lambda 6.5730901 7.9754980
+## r      0.5281578 0.3363081
+## 
+## $L3_AF_100_ETP_18_FITC_zip$BIC
+## [1] 529.0745
+## 
+## $L3_AF_100_ETP_18_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_Med_D_19_FITC_zip
+## $L3_AF_Med_D_19_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_D_19_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_D_19_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_Med_D_19_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_Med_A_1_FITC_zip
+## $L3_AF_Med_A_1_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_A_1_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_A_1_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_Med_A_1_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_Med_D_20_FITC_zip
+## $L3_AF_Med_D_20_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_D_20_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_D_20_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_Med_D_20_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_DMSo_D_21_FITC_zip
+## $L3_AF_DMSo_D_21_FITC_zip$coefficients
+##    lambda         r 
+## 3.9206890 0.9899978 
+## 
+## $L3_AF_DMSo_D_21_FITC_zip$confint
+##            lower      upper
+## lambda 1.4119173 10.8871829
+## r      0.9985954  0.9323372
+## 
+## $L3_AF_DMSo_D_21_FITC_zip$BIC
+## [1] 23.71735
+## 
+## $L3_AF_DMSo_D_21_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_DMSO_D_22_FITC_zip
+## $L3_AF_DMSO_D_22_FITC_zip$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_D_22_FITC_zip$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_D_22_FITC_zip$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_D_22_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_100_ETP_23_FITC_zip
+## $L3_AF_100_ETP_23_FITC_zip$coefficients
+##    lambda         r 
+## 7.2775775 0.5530893 
+## 
+## $L3_AF_100_ETP_23_FITC_zip$confint
+##            lower     upper
+## lambda 6.5367714 8.1023384
+## r      0.6460777 0.4562321
+## 
+## $L3_AF_100_ETP_23_FITC_zip$BIC
+## [1] 510.5238
+## 
+## $L3_AF_100_ETP_23_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_100_ETP_24_FITC_zip
+## $L3_AF_100_ETP_24_FITC_zip$coefficients
+##    lambda         r 
+## 8.9171717 0.5376739 
+## 
+## $L3_AF_100_ETP_24_FITC_zip$confint
+##           lower     upper
+## lambda 8.118659 9.7942229
+## r      0.630148 0.4425329
+## 
+## $L3_AF_100_ETP_24_FITC_zip$BIC
+## [1] 546.5235
+## 
+## $L3_AF_100_ETP_24_FITC_zip$model
+## [1] &quot;zip&quot;
+## 
+## 
+## $L3_AF_DMSO_B_10_FITC_nb
+## $L3_AF_DMSO_B_10_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_B_10_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_B_10_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_B_10_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_100_ETP_11_FITC_nb
+## $L3_AF_100_ETP_11_FITC_nb$coefficients
+##     lambda      theta 
+## 2.32000000 0.08621744 
+## 
+## $L3_AF_100_ETP_11_FITC_nb$confint
+##         lower    upper
+## lambda 1.1756 4.578429
+## 
+## $L3_AF_100_ETP_11_FITC_nb$BIC
+## [1] 283.9301
+## 
+## $L3_AF_100_ETP_11_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_100_ETP_12_FITC_nb
+## $L3_AF_100_ETP_12_FITC_nb$coefficients
+##       lambda        theta 
+##     3.215686 42652.987498 
+## 
+## $L3_AF_100_ETP_12_FITC_nb$confint
+##           lower    upper
+## lambda 2.885839 3.583234
+## 
+## $L3_AF_100_ETP_12_FITC_nb$BIC
+## [1] 1013.438
+## 
+## $L3_AF_100_ETP_12_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_Med_C_13_FITC_nb
+## $L3_AF_Med_C_13_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_C_13_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_C_13_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_C_13_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_Med_C_14_FITC_nb
+## $L3_AF_Med_C_14_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_C_14_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_C_14_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_C_14_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_DMSo_C_15_FITC_nb
+## $L3_AF_DMSo_C_15_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSo_C_15_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSo_C_15_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSo_C_15_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_DMSO_C_16_FITC_nb
+## $L3_AF_DMSO_C_16_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_C_16_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_C_16_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_C_16_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_100_ETP_17_FITC_nb
+## $L3_AF_100_ETP_17_FITC_nb$coefficients
+##    lambda     theta 
+## 5.5714286 0.3442529 
+## 
+## $L3_AF_100_ETP_17_FITC_nb$confint
+##           lower    upper
+## lambda 3.981797 7.795681
+## 
+## $L3_AF_100_ETP_17_FITC_nb$BIC
+## [1] 555.458
+## 
+## $L3_AF_100_ETP_17_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_100_ETP_18_FITC_nb
+## $L3_AF_100_ETP_18_FITC_nb$coefficients
+##    lambda     theta 
+## 4.1300000 0.3921204 
+## 
+## $L3_AF_100_ETP_18_FITC_nb$confint
+##           lower    upper
+## lambda 2.976535 5.730454
+## 
+## $L3_AF_100_ETP_18_FITC_nb$BIC
+## [1] 490.2015
+## 
+## $L3_AF_100_ETP_18_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_Med_D_19_FITC_nb
+## $L3_AF_Med_D_19_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_D_19_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_D_19_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_D_19_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_Med_A_1_FITC_nb
+## $L3_AF_Med_A_1_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_A_1_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_A_1_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_A_1_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_Med_D_20_FITC_nb
+## $L3_AF_Med_D_20_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_D_20_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_D_20_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_D_20_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_DMSo_D_21_FITC_nb
+## $L3_AF_DMSo_D_21_FITC_nb$coefficients
+##       lambda        theta 
+## 3.921569e-02 3.132226e+03 
+## 
+## $L3_AF_DMSo_D_21_FITC_nb$confint
+##             lower     upper
+## lambda 0.01471826 0.1044872
+## 
+## $L3_AF_DMSo_D_21_FITC_nb$BIC
+## [1] 49.5117
+## 
+## $L3_AF_DMSo_D_21_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_DMSO_D_22_FITC_nb
+## $L3_AF_DMSO_D_22_FITC_nb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_D_22_FITC_nb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_D_22_FITC_nb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_D_22_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_100_ETP_23_FITC_nb
+## $L3_AF_100_ETP_23_FITC_nb$coefficients
+##    lambda     theta 
+## 3.2524272 0.2332405 
+## 
+## $L3_AF_100_ETP_23_FITC_nb$confint
+##           lower  upper
+## lambda 2.149926 4.9203
+## 
+## $L3_AF_100_ETP_23_FITC_nb$BIC
+## [1] 426.6125
+## 
+## $L3_AF_100_ETP_23_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_100_ETP_24_FITC_nb
+## $L3_AF_100_ETP_24_FITC_nb$coefficients
+##    lambda     theta 
+## 4.1226415 0.2386911 
+## 
+## $L3_AF_100_ETP_24_FITC_nb$confint
+##           lower    upper
+## lambda 2.761353 6.155017
+## 
+## $L3_AF_100_ETP_24_FITC_nb$BIC
+## [1] 481.1145
+## 
+## $L3_AF_100_ETP_24_FITC_nb$model
+## [1] &quot;nb&quot;
+## 
+## 
+## $L3_AF_DMSO_B_10_FITC_zinb
+## $L3_AF_DMSO_B_10_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_B_10_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_B_10_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_B_10_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_100_ETP_11_FITC_zinb
+## $L3_AF_100_ETP_11_FITC_zinb$coefficients
+##    lambda     theta         r 
+## 9.1831594 1.5462921 0.7473636 
+## 
+## $L3_AF_100_ETP_11_FITC_zinb$confint
+##            lower      upper
+## lambda 6.4023305 13.1718313
+## r      0.8270573  0.6466367
+## 
+## $L3_AF_100_ETP_11_FITC_zinb$BIC
+## [1] 277.5103
+## 
+## $L3_AF_100_ETP_11_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_100_ETP_12_FITC_zinb
+## $L3_AF_100_ETP_12_FITC_zinb$coefficients
+##    lambda     theta         r 
+## 9.3744201 2.1000871 0.6569722 
+## 
+## $L3_AF_100_ETP_12_FITC_zinb$confint
+##           lower      upper
+## lambda 7.208861 12.1905177
+## r      0.745087  0.5565278
+## 
+## $L3_AF_100_ETP_12_FITC_zinb$BIC
+## [1] 358.827
+## 
+## $L3_AF_100_ETP_12_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_Med_C_13_FITC_zinb
+## $L3_AF_Med_C_13_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_C_13_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_C_13_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_C_13_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_Med_C_14_FITC_zinb
+## $L3_AF_Med_C_14_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_C_14_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_C_14_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_C_14_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_DMSo_C_15_FITC_zinb
+## $L3_AF_DMSo_C_15_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSo_C_15_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSo_C_15_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSo_C_15_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_DMSO_C_16_FITC_zinb
+## $L3_AF_DMSO_C_16_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_C_16_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_C_16_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_C_16_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_100_ETP_17_FITC_zinb
+## $L3_AF_100_ETP_17_FITC_zinb$coefficients
+##    lambda     theta         r 
+## 8.5692769 1.0976189 0.3498196 
+## 
+## $L3_AF_100_ETP_17_FITC_zinb$confint
+##            lower      upper
+## lambda 6.5382573 11.2312048
+## r      0.4788107  0.2396031
+## 
+## $L3_AF_100_ETP_17_FITC_zinb$BIC
+## [1] 551.4754
+## 
+## $L3_AF_100_ETP_17_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_100_ETP_18_FITC_zinb
+## $L3_AF_100_ETP_18_FITC_zinb$coefficients
+##   lambda    theta        r 
+## 6.965092 2.373989 0.407043 
+## 
+## $L3_AF_100_ETP_18_FITC_zinb$confint
+##           lower     upper
+## lambda 5.686007 8.5319122
+## r      0.513995 0.3082315
+## 
+## $L3_AF_100_ETP_18_FITC_zinb$BIC
+## [1] 476.3609
+## 
+## $L3_AF_100_ETP_18_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_Med_D_19_FITC_zinb
+## $L3_AF_Med_D_19_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_D_19_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_D_19_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_D_19_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_Med_A_1_FITC_zinb
+## $L3_AF_Med_A_1_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_A_1_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_A_1_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_A_1_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_Med_D_20_FITC_zinb
+## $L3_AF_Med_D_20_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_Med_D_20_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_Med_D_20_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_Med_D_20_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_DMSo_D_21_FITC_zinb
+## $L3_AF_DMSo_D_21_FITC_zinb$coefficients
+##       lambda        theta            r 
+## 3.920675e+00 5.844842e+04 9.899977e-01 
+## 
+## $L3_AF_DMSo_D_21_FITC_zinb$confint
+##            lower     upper
+## lambda 1.4118576 10.887564
+## r      0.9985954  0.932337
+## 
+## $L3_AF_DMSo_D_21_FITC_zinb$BIC
+## [1] 28.34238
+## 
+## $L3_AF_DMSo_D_21_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_DMSO_D_22_FITC_zinb
+## $L3_AF_DMSO_D_22_FITC_zinb$coefficients
+## lambda 
+##     NA 
+## 
+## $L3_AF_DMSO_D_22_FITC_zinb$confint
+##        lower upper
+## lambda    NA    NA
+## 
+## $L3_AF_DMSO_D_22_FITC_zinb$BIC
+## [1] NA
+## 
+## $L3_AF_DMSO_D_22_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_100_ETP_23_FITC_zinb
+## $L3_AF_100_ETP_23_FITC_zinb$coefficients
+##    lambda     theta         r 
+## 6.4954122 1.1948827 0.4992731 
+## 
+## $L3_AF_100_ETP_23_FITC_zinb$confint
+##            lower     upper
+## lambda 4.7251026 8.9289869
+## r      0.6239444 0.3746922
+## 
+## $L3_AF_100_ETP_23_FITC_zinb$BIC
+## [1] 423.3666
+## 
+## $L3_AF_100_ETP_23_FITC_zinb$model
+## [1] &quot;zinb&quot;
+## 
+## 
+## $L3_AF_100_ETP_24_FITC_zinb
+## $L3_AF_100_ETP_24_FITC_zinb$coefficients
+##    lambda     theta         r 
+## 8.6811121 2.3406866 0.5251021 
+## 
+## $L3_AF_100_ETP_24_FITC_zinb$confint
+##            lower      upper
+## lambda 7.0289472 10.7216209
+## r      0.6216434  0.4266473
+## 
+## $L3_AF_100_ETP_24_FITC_zinb$BIC
+## [1] 461.0089
+## 
+## $L3_AF_100_ETP_24_FITC_zinb$model
+## [1] &quot;zinb&quot;</code></pre>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-reddig_dna_2018" class="csl-entry">
+Reddig, Annika, Claudia E. Rübe, Stefan Rödiger, Peter Schierack, Dirk
+Reinhold, and Dirk Roggenbuck. 2018. <span>“<span>DNA</span> Damage
+Assessment and Potential Applications in Laboratory Diagnostics and
+Precision Medicine.”</span> <em>Journal of Laboratory and Precision
+Medicine</em> 3 (4). <a href="https://jlpm.amegroups.org/article/view/4305/html">https://jlpm.amegroups.org/article/view/4305/html</a>.
+</div>
+<div id="ref-rodiger_quantification_2018" class="csl-entry">
+Rödiger, Stefan, Marius Liefold, Madeleine Ruhe, Mark Reinwald, Eberhard
+Beck, and P. Markus Deckert. 2018. <span>“Quantification of
+<span>DNA</span> Double-Strand Breaks in Peripheral Blood Mononuclear
+Cells from Healthy Donors Exposed to Bendamustine by an Automated
+γ<span>H</span>2AX Assay—an Exploratory Study.”</span> <em>Journal of
+Laboratory and Precision Medicine</em> 3 (5). <a href="https://jlpm.amegroups.org/article/view/4370/html">https://jlpm.amegroups.org/article/view/4370/html</a>.
+</div>
+<div id="ref-rodiger_highly_2013" class="csl-entry">
+Rödiger, Stefan, Peter Schierack, Alexander Böhm, Jörg Nitschke, Ingo
+Berger, Ulrike Frömmel, Carsten Schmidt, et al. 2013. <span>“A Highly
+Versatile Microscope Imaging Technology Platform for the Multiplex
+Real-Time Detection of Biomolecules and Autoimmune Antibodies.”</span>
+<em>Advances in Biochemical Engineering/Biotechnology</em> 133: 35–74.
+<a href="https://doi.org/10.1007/10_2011_132">https://doi.org/10.1007/10_2011_132</a>.
+</div>
+<div id="ref-willitzki_new_2012" class="csl-entry">
+Willitzki, Annika, Rico Hiemann, Vanessa Peters, Ulrich Sack, Peter
+Schierack, Stefan Rödiger, Ursula Anderer, et al. 2012. <span>“New
+Platform Technology for Comprehensive Serological Diagnostics of
+Autoimmune Diseases.”</span> <em>Clinical &amp; Developmental
+Immunology</em> 2012: 284740. <a href="https://doi.org/10.1155/2012/284740">https://doi.org/10.1155/2012/284740</a>.
+</div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

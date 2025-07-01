@@ -1,0 +1,49 @@
+---
+title: "countfitteR package - an overview"
+author: "Jarosław Chilimoniuk, Alicja Gosiewska, Jadwiga Słowik, Stefan Rödiger, Michał Burdukiewicz"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    number_sections: true
+    toc: true
+    toc_depth: 4
+header-includes:
+    - \usepackage[font={small}]{caption}
+bibliography: countfitteR.bib
+# bibliography: bib.json
+# nocite: '@*'
+classoption: a4paper
+vignette: >
+  %\VignetteIndexEntry{countfitteR package - an overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Introduction
+
+**countfitteR** is a R package and shiny app designed to perform analysis of count data. 
+This vignette covers important features and data sets of the app. 
+We extended our automatized imaging platform [@rodiger_highly_2013, 
+@willitzki_new_2012] for a multiparametric analysis of cell damage (DNA double 
+strand breaks) [@reddig_dna_2018, @rodiger_quantification_2018]. 
+Digital image analysis of the DSB biomarkers gamma H2AX was used to describe the 
+alteration of the cell phenotype.
+
+# Data sets
+
+```{r eval=TRUE, echo=TRUE, warning=FALSE}
+# Load countfitteR package
+library(countfitteR)
+
+# Assign the csv file to filename
+data("case_study")
+
+processed_counts <- process_counts(case_study)
+
+fit_counts(processed_counts, model = "all")
+```
+
+
+
+# References
+
