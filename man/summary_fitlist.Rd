@@ -10,14 +10,7 @@ summary_fitlist(fitlist)
 \item{fitlist}{a list of fits, as created by \code{\link{fit_counts}}.}
 }
 \value{
-Data frame with summarised results of all distribution models. 
-\itemize{
- \item{Count: }{the name of the original count.}
- \item{lambda: }{\eqn{\lambda} - Poisson mean, lower and upper confidence intervals.}
- \item{BIC: }{Bayesian information criterion}
- \item{theta: }{\eqn{\theta} - dispersion parameter}
- \item{r: }{probability of excess zeros.}
-}
+Data frame with summarised results of all distribution models.
 }
 \description{
 Counts are fitted to model(s) using the count name as the explanatory variable.

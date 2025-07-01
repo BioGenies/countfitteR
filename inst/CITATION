@@ -1,14 +1,18 @@
 citHeader("To cite countfitteR in publications, please use:")
 
-
-citEntry(entry = "Article",
-  author = "Jarosław Chilimoniuk and Alicja Gosiewska and Jadwiga Słowik and Romano Weiss and P. Markus Deckert and Stefan Rödiger and Michał Burdukiewicz",
-  title = "countfitteR: efficient selection of count distributions to assess DNA damage",
-  year = 2021, 
-  issn = {2305-5847},
-  journal = "Annals of Translational Medicine",
-  url = "https://atm.amegroups.com/article/view/63994",
-  textVersion = paste0("Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Roediger S and Burdukiewicz M (2021). ", 
-           "countfitteR: efficient selection of count distributions to assess DNA damage. ",
-           "Annals of Translational Medicine, https://atm.amegroups.com/article/view/63994")
-)
+bibentry(
+        bibtype = "Article",
+        author = c(person("Chilimoniuk", "Jarosław"), person("Gosiewska", "Alicja"), person("Słowik", "Jadwiga"), person("Weiss", "Romano"), person("Deckert", "P. Markus"), person("Rödiger", "Stefan"), person("Burdukiewicz", "Michał")),
+        title = "countfitteR: efficient selection of count distributions to assess DNA damage",
+        journal = "Annals of Translational Medicine",
+        year = 2021,
+        issn = "2305-5847",
+        url = "https://atm.amegroups.com/article/view/63994",
+        note = "To cite countfitteR in publications, please use:",
+        textVersion = paste0(
+            "Chilimoniuk J, Gosiewska A, Słowik J, Weiss R, Deckert PM, Rödiger S and Burdukiewicz M (2021). ",
+            "countfitteR: efficient selection of count distributions to assess DNA damage. ",
+            "Annals of Translational Medicine, https://atm.amegroups.com/article/view/63994"
+        ),
+        key = "Chilimoniuk2021countfitteR"
+    )

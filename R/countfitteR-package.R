@@ -24,7 +24,7 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c("x", "value", "n", "mode
 #' @importFrom tools md5sum
 #' @importFrom pscl zeroinfl
 #' @author Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
-#' @docType package
+"_PACKAGE"
 #' @name countfitteR-package
 #' @aliases countfitteR
 #' @examples

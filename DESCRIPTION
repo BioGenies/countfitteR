@@ -1,8 +1,8 @@
 Package: countfitteR
 Type: Package
 Title: Comprehensive Automatized Evaluation of Distribution Models for Count Data
-Version: 1.4
-Authors@R:  c(person("Jaroslaw", "Chilimoniuk", 
+Version: 1.5
+Authors@R: c(person("Jaroslaw", "Chilimoniuk", 
            email = "jaroslaw.chilimoniuk@gmail.com", 
            comment = c(ORCID = "0000-0001-5467-018X"),
            role = c("cre", "ctb")),
@@ -55,7 +55,7 @@ Suggests:
 Date: 2020-09-30
 URL: https://github.com/BioGenies/countfitteR
 BugReports: https://github.com/BioGenies/countfitteR/issues
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.2
 Imports: 
     ggplot2,
     MASS,

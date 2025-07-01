@@ -24,6 +24,14 @@ df <- data.frame(pois = rpois(25, 0.3),
 
 cmp <- compare_fit(df, fitlist = fit_counts(df, model = "all"))
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/BioGenies/countfitteR}
+  \item Report bugs at \url{https://github.com/BioGenies/countfitteR/issues}
+}
+
+}
 \author{
 Jaroslaw Chilimoniuk, Stefan Roediger, Michal Burdukiewcz
 }

@@ -13,13 +13,6 @@ get_count_names <- function(fitlist) {
 #' \code{r} for ZIP and ZINB).
 #' @inheritParams compare_fit
 #' @return Data frame with summarised results of all distribution models. 
-#' \itemize{
-#'  \item{Count: }{the name of the original count.}
-#'  \item{lambda: }{\eqn{\lambda} - Poisson mean, lower and upper confidence intervals.}
-#'  \item{BIC: }{Bayesian information criterion}
-#'  \item{theta: }{\eqn{\theta} - dispersion parameter}
-#'  \item{r: }{probability of excess zeros.}
-#' }
 #' @seealso \code{\link{fit_counts}}
 #' @examples
 #' df <- data.frame(poisson = rpois(25, 0.3), binomial = rbinom(25, 1, 0.8))

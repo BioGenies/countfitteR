@@ -1,7 +1,7 @@
   <!-- badges: start -->
 [![published in: Annals of Translational Medicine](https://img.shields.io/badge/published%20in-ATM-green.svg)](https://atm.amegroups.com/article/view/63994)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
-[![Downloads](http://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
+[![Downloads](https://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
 ![pkgdown](https://github.com/BioGenies/countfitteR/workflows/pkgdown/badge.svg)
 ![check](https://github.com/BioGenies/countfitteR/workflows/check/badge.svg)
 [![R build status](https://github.com/BioGenies/countfitteR/workflows/R-CMD-check/badge.svg)](https://github.com/BioGenies/countfitteR/actions)
@@ -11,7 +11,7 @@
 
 countfitteR is a web server based on Shiny technology for selecting the most appropriate count distribution in provided data sets. 
 
-The functions of countfitteR can also be accessed through our [web server](http://biongram.biotech.uni.wroc.pl/countfitter/) or via the R console for customized analysis pipelines.
+<!-- The functions of countfitteR can also be accessed through our [web server](http://biongram.biotech.uni.wroc.pl/countfitter/) or via the R console for customized analysis pipelines. -->
 
 ## Installation
 
