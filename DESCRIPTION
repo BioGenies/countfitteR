@@ -52,7 +52,7 @@ Suggests:
     shinyWidgets,
     spelling,
     testthat
-Date: 2020-09-30
+Date: 2025-07-01
 URL: https://github.com/BioGenies/countfitteR
 BugReports: https://github.com/BioGenies/countfitteR/issues
 RoxygenNote: 7.3.2

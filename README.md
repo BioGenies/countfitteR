@@ -1,5 +1,5 @@
   <!-- badges: start -->
-[![published in: Annals of Translational Medicine](https://img.shields.io/badge/published%20in-ATM-green.svg)](https://atm.amegroups.com/article/view/63994)
+[![published in: Annals of Translational Medicine](https://img.shields.io/badge/published%20in-ATM-green.svg)](https://atm.amegroups.org/article/view/63994/html)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/countfitteR)](https://cran.r-project.org/package=countfitteR)
 [![Downloads](https://cranlogs.r-pkg.org/badges/countfitteR)](https://cran.r-project.org/package=countfitteR)
 ![pkgdown](https://github.com/BioGenies/countfitteR/workflows/pkgdown/badge.svg)
@@ -48,7 +48,7 @@ countfitteR::countfitteR_gui()
   year = 2021, 
   issn = {2305-5847},
   journal = "Annals of Translational Medicine",
-  url = "https://atm.amegroups.com/article/view/63994",
+  url = "https://atm.amegroups.org/article/view/63994/html",
 }
 
 @article{chilimoniuk_countfitter_2021,
@@ -56,7 +56,7 @@ countfitteR::countfitteR_gui()
 	volume = {0},
 	issn = {2305-5847, 2305-5839},
 	shorttitle = {{countfitteR}},
-	url = {https://atm.amegroups.com/article/view/63994},
+	url = {https://atm.amegroups.org/article/view/63994/html},
 	doi = {10.21037/atm-20-6363},
 	abstract = {countfitteR: efficient selection of count distributions to assess DNA damage},
 	language = {en},
